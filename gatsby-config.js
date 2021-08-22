@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: `Arclight Music`,
+    description: `APUK was set up to help struggling schools fund music with music and give young musicians the chance to play shows with bigger names where other promoters ...`,
+    author: `@monocode-uk`,
+    siteUrl: `https://www.arclightmusic.co.uk/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
