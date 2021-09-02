@@ -1,0 +1,29 @@
+@import "./layout";
+
+.upcoming-events {
+  background-color: $hightlightColour;
+  padding: 20px;
+  .upcoming-events__inner-container {
+    max-width: $pageWidth;
+    margin: 0 auto;
+    p {
+      font-size: 0.88rem;
+      color: $primaryColour;
+      margin-bottom: 3px;
+    }
+    .upcoming-events__title {
+      display: flex;
+      align-items: center;
+      h2 {
+        color: $primaryColour;
+        font-size: 2rem;
+        font-weight: 500;
+        margin-bottom: 0;
+      }
+      svg {
+        margin-left: 16px;
+        width: 20px;
+      }
+    }
+  }
+}

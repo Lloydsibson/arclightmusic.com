@@ -1,12 +1,21 @@
 module.exports = {
   siteMetadata: {
     title: `Arclight Music`,
-    description: `APUK was set up to help struggling schools fund music with music and give young musicians the chance to play shows with bigger names where other promoters ...`,
+    description: `Arclight Music was set up to help struggling schools fund music with music and give young musicians the chance to play shows with bigger names where other promoters ...`,
     author: `@monocode-uk`,
     siteUrl: `https://www.arclightmusic.co.uk/`,
   },
   plugins: [
+    `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown-pages`,
+        path: `${__dirname}/src/markdown-pages`,
+      },
+    },
+    `gatsby-transformer-remark`,
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
