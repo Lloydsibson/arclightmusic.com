@@ -105,6 +105,7 @@ header.-open {
   background-color: rgba(45, 139, 128, 0.9);
   width: 100%;
   border-radius: 0px 0px 20px 20px;
+  z-index: 9;
   .sub-nav__inner-container {
     margin: 0;
     display: flex;
@@ -113,7 +114,8 @@ header.-open {
     width: 33.333%;
     h4 {
       color: $primaryColour;
-      font-weight: 500;
+      font-weight: 400;
+      font-size: 1.3rem;
     }
     ul {
       margin: 0;
@@ -122,11 +124,15 @@ header.-open {
         color: $primaryColour;
         display: block;
         margin-bottom: 15px;
+        cursor: default;
         li {
           display: inline;
           font-weight: 300;
+          transition: all 0.1s ease-in-out;
           &:hover {
             text-decoration: underline;
+            //color: $altColour;
+            cursor: pointer;
           }
         }
       }

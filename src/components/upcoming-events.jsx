@@ -1,15 +1,77 @@
 import * as React from "react"
-import { useState, useEffect } from "react"
+//import { useState, useEffect } from "react"
 import "./upcoming-events.scss"
 
 const UpcomingEvents = () => {
+  const day = new Date().getDate()
+  const monthRaw = new Date().getMonth()
+  let month = ""
+  const year = new Date().getFullYear()
+
+  const nth = d => {
+    if (d > 3 && d < 21) {
+      return `${d}th`
+    } else {
+      switch (d % 10) {
+        case 1:
+          return `${d}st`
+        case 2:
+          return `${d}nd`
+        case 3:
+          return `${d}rd`
+        default:
+          return `${d}th`
+      }
+    }
+  }
+
+  switch (monthRaw) {
+    case 0:
+      month = "January"
+      break
+    case 1:
+      month = "February"
+      break
+    case 2:
+      month = "March"
+      break
+    case 3:
+      month = "April"
+      break
+    case 4:
+      month = "May"
+      break
+    case 5:
+      month = "June"
+      break
+    case 6:
+      month = "July"
+      break
+    case 7:
+      month = "August"
+      break
+    case 8:
+      month = "September"
+      break
+    case 9:
+      month = "October"
+      break
+    case 10:
+      month = "November"
+      break
+    case 12:
+      month = "December"
+      break
+    default:
+      month = "..."
+  }
+
+  const currentFullDate = `${nth(day)} ${month} ${year}`
+
   return (
     <div className="upcoming-events">
       <div className="upcoming-events__inner-container">
-        <p>
-          Today, {new Date().getDate()} {new Date().getMonth()}
-          {new Date().getFullYear()}
-        </p>
+        <p>Today, {currentFullDate}</p>
         <div className="upcoming-events__title">
           <h2>Upcoming Events</h2>
           <svg

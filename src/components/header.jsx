@@ -13,7 +13,7 @@ const Header = ({ siteTitle }) => {
   }
 
   return (
-    <header onMouseLeave={e => headerSubNavHandler(e)}>
+    <header onMouseLeave={e => headerSubNavHandler(e)} role="presentation">
       <div className="logo-container">
         <h1>
           <Link to="/">
@@ -39,7 +39,12 @@ const Header = ({ siteTitle }) => {
           <Link to="/covid" activeClassName="active">
             <li>COVID</li>
           </Link>
-          <a className="dropdown more" onMouseEnter={e => dropDownHandler(e)}>
+          <a
+            href="#0"
+            className="dropdown more"
+            onMouseEnter={e => dropDownHandler(e)}
+            role="button"
+          >
             <li>More</li>
             <svg
               className="arrow"
