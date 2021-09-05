@@ -23,8 +23,6 @@ const IndexPage = () => {
       <div className="white-background">
         <div className="divider">
           <svg
-            width="1920"
-            height="277"
             viewBox="0 0 1920 277"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -39,8 +37,8 @@ const IndexPage = () => {
             />
           </svg>
         </div>
-        <div className="mission">
-          <div className="mission__image">
+        <div className="ep-01">
+          <div className="ep-01__image">
             <StaticImage
               src="../images/mission-image.jpg"
               width={900}
@@ -49,11 +47,11 @@ const IndexPage = () => {
               alt="venue stage"
             />
           </div>
-          <div className="mission__text">
+          <div className="ep-01__information">
             <p className="ep-number">EP.01</p>
             <h2 className="ep-title">Our Misson</h2>
             <h3 className="ep-sub-title">
-              Arclight was founded in 2019 with 2 main Goals:
+              Arclight was founded in 2019 with <span>2 main Goals:</span>
             </h3>
             <h4 className="ep-text">
               <span>1.</span> To give younger musicians more opportunity to get
@@ -67,6 +65,104 @@ const IndexPage = () => {
             <Link to="about" className="learn-more-btn">
               <button>Learn More</button>
             </Link>
+          </div>
+        </div>
+        <div className="ep-02">
+          <p className="ep-number">EP.02</p>
+          <h2 className="ep-title">What We Offer</h2>
+          <h4 className="ep-text">
+            Currently we offer events with our dedicated store opening in the
+            near future. Keep an eye out as we will be launching our Musician
+            Finder forum - think of 'Join My Band' but better.
+          </h4>
+          <div className="ep-02__cards">
+            <Link to="events" className="ep-card">
+              <div className="ep-card__icon">
+                <svg
+                  className="events-icon"
+                  viewBox="0 0 120 138"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M107.143 17.1788H94.2857V3.22102C94.2857 1.44946 92.8393 0 91.0714 0H80.3571C78.5893 0 77.1429 1.44946 77.1429 3.22102V17.1788H42.8571V3.22102C42.8571 1.44946 41.4107 0 39.6429 0H28.9286C27.1607 0 25.7143 1.44946 25.7143 3.22102V17.1788H12.8571C5.75893 17.1788 0 22.9498 0 30.0628V124.546C0 131.659 5.75893 137.43 12.8571 137.43H107.143C114.241 137.43 120 131.659 120 124.546V30.0628C120 22.9498 114.241 17.1788 107.143 17.1788ZM105.536 124.546H14.4643C13.5804 124.546 12.8571 123.821 12.8571 122.936V42.9469H107.143V122.936C107.143 123.821 106.42 124.546 105.536 124.546Z"
+                    fill="#37AA9C"
+                  />
+                </svg>
+                <p>{new Date().getDate()}</p>
+              </div>
+              <h5>Events</h5>
+            </Link>
+            <div className="ep-card">
+              <div className="coming-soon-overlay">
+                <p>Coming Soon</p>
+              </div>
+              <div className="ep-card__icon">
+                <svg
+                  viewBox="0 0 120 100"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M117.276 23.0615L104.631 2.91672C103.501 1.10835 101.495 0 99.3515 0H20.6408C18.4977 0 16.491 1.10835 15.361 2.91672L2.71663 23.0615C-3.81012 33.4645 1.97628 47.9314 14.1725 49.5842C15.0493 49.7009 15.9455 49.7592 16.8417 49.7592C22.6086 49.7592 27.7131 47.2314 31.22 43.323C34.7269 47.2314 39.8509 49.7592 45.5984 49.7592C51.3653 49.7592 56.4698 47.2314 59.9767 43.323C63.4836 47.2314 68.6076 49.7592 74.355 49.7592C80.122 49.7592 85.2265 47.2314 88.7334 43.323C92.2598 47.2314 97.3643 49.7592 103.112 49.7592C104.027 49.7592 104.904 49.7009 105.781 49.5842C118.016 47.9509 123.822 33.4839 117.276 23.0615ZM103.151 56.001C101.202 56.001 99.2736 55.7093 97.4033 55.2621V74.668H22.5891V55.2621C20.7188 55.6899 18.79 56.001 16.8417 56.001C15.6727 56.001 14.4843 55.9232 13.3348 55.7677C12.2437 55.6121 11.1722 55.3593 10.1396 55.0677V93.335C10.1396 96.7767 12.9256 99.5573 16.3741 99.5573H103.657C107.106 99.5573 109.892 96.7767 109.892 93.335V55.0677C108.84 55.3788 107.788 55.6315 106.697 55.7677C105.508 55.9232 104.339 56.001 103.151 56.001Z"
+                    fill="#37AA9C"
+                  />
+                </svg>
+              </div>
+              <h5>Store</h5>
+            </div>
+            <div className="ep-card">
+              <div className="coming-soon-overlay">
+                <p>Coming Soon</p>
+              </div>
+              <div className="ep-card__icon">
+                <svg
+                  width="120"
+                  height="105"
+                  viewBox="0 0 120 105"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M60 0C26.8594 0 0 21.8203 0 48.75C0 60.375 5.01563 71.0156 13.3594 79.3828C10.4297 91.1953 0.632812 101.719 0.515625 101.836C0 102.375 -0.140625 103.172 0.164062 103.875C0.46875 104.578 1.125 105 1.875 105C17.4141 105 29.0625 97.5469 34.8281 92.9531C42.4922 95.8359 51 97.5 60 97.5C93.1406 97.5 120 75.6797 120 48.75C120 21.8203 93.1406 0 60 0Z"
+                    fill="#37AA9C"
+                  />
+                </svg>
+              </div>
+              <h5>Musician Finder</h5>
+            </div>
+          </div>
+        </div>
+        <div className="ep-03">
+          <div className="ep-03__information">
+            <p className="ep-number">EP.03</p>
+            <h2 className="ep-title">Rage Against Cancer</h2>
+            <h4 className="ep-text">
+              Arclight Music are proud to welcome, along with our new team, Rage
+              Against Cancer Festival to the family.
+            </h4>
+            <h4 className="ep-text">
+              All profits from the festival will go directly to Teenage Cancer
+              Trust as always and we couldn’t be more proud to be a part of this
+              incredible annual festival.
+            </h4>
+            <div className="ep-03-buttons">
+              <Link to="rac" className="learn-more-btn donate">
+                <button>Donate</button>
+              </Link>
+              <Link to="rac" className="learn-more-btn alt">
+                <button>Learn More</button>
+              </Link>
+            </div>
+          </div>
+          <div className="ep-03__image">
+            <StaticImage
+              src="../images/rac-image.jpg"
+              width={850}
+              quality={95}
+              formats={["AUTO", "WEBP", "AVIF"]}
+              alt="live band"
+            />
           </div>
         </div>
       </div>

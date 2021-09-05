@@ -11,7 +11,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import "./layout.scss"
 
-import AnnoucementBar from "./annoucement-bar"
 import Footer from "./footer"
 
 const Layout = ({ children }) => {
@@ -27,7 +26,6 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <AnnoucementBar />
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <main>{children}</main>
       <Footer />

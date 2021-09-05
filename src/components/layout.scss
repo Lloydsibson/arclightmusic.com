@@ -29,6 +29,11 @@ body {
   background-color: $secondaryColour;
 }
 
+// ADJUST FOR FIXED HEADER
+body {
+  padding-top: 123px;
+}
+
 // SETS SITE WIDE WIDTH
 #___gatsby {
   //max-width: 1600px;

@@ -1,14 +1,29 @@
 @import "./layout";
 
+.header-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  //background-color: $secondaryColour;
+  z-index: 999;
+  //border-bottom: 1px solid $hightlightColour;
+  background-color: rgba($secondaryColour, 0.75);
+  backdrop-filter: blur(5px);
+  &:before {
+    content: "";
+    display: block;
+    filter: blur(10px);
+  }
+}
+
 header {
   max-width: $pageWidth;
   margin: 0 auto;
   position: relative;
-  background-color: $secondaryColour;
+  //background-color: $secondaryColour;
   display: flex;
   justify-content: space-between;
   padding: 0 10px;
-  background-color: $secondaryColour;
 }
 
 .logo-container {
@@ -115,8 +130,9 @@ header.-open {
     width: 33.333%;
     h4 {
       color: $primaryColour;
-      font-weight: 400;
-      font-size: 1.3rem;
+      font-weight: 500;
+      font-size: 1rem;
+      text-transform: uppercase;
     }
     ul {
       margin: 0;
@@ -130,6 +146,7 @@ header.-open {
           display: inline;
           font-weight: 300;
           transition: all 0.1s ease-in-out;
+          font-size: 0.9rem;
           &:hover {
             text-decoration: underline;
             //color: $altColour;
