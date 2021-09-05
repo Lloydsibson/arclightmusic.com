@@ -1,0 +1,70 @@
+@import "../components/layout";
+
+.white-background {
+  background-color: $primaryColour;
+  .divider {
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+  .mission {
+    max-width: $pageWidth;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    .mission__image {
+      width: 60%;
+    }
+    .mission__text {
+      width: 40%;
+      max-width: 500px;
+    }
+  }
+}
+
+.ep-number {
+  color: $hightlightColour;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.ep-title {
+  font-size: 4rem;
+  color: $secondaryColour;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.ep-sub-title {
+  font-size: 1.575rem;
+  font-weight: 500;
+  line-height: 35px;
+}
+
+.ep-text {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 25px;
+  span {
+    font-weight: 700;
+  }
+}
+
+.learn-more-btn {
+  button {
+    border: unset;
+    padding: 15px 25px;
+    color: $primaryColour;
+    background-color: $secondaryColour;
+    border-radius: 50px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 214px;
+    margin-top: 10px;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.85;
+    }
+  }
+}

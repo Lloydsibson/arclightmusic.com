@@ -1,0 +1,26 @@
+@import "../layout";
+
+.partner-carousel {
+  max-width: $pageWidth;
+  margin: 20px auto 40px auto;
+  filter: grayscale(1);
+  .partner-carousel__title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    svg {
+      margin-left: 16px;
+      width: 20px;
+    }
+  }
+  .slick-slider {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .slick-slide {
+    img {
+      max-width: 125px;
+      margin: 0 auto;
+    }
+  }
+}

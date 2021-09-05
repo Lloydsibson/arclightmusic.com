@@ -5,10 +5,10 @@ import { Link } from "gatsby"
 import React from "react"
 import Slider from "react-slick"
 
-import "./hp-carousel.scss"
+import "./homepage-carousel.scss"
 
 // IMPORTS IMAGES
-import HalloweenBanner from "../images/Halloween-eventbrite-banner.jpg"
+import HalloweenBanner from "/src/images/Halloween-eventbrite-banner.jpg"
 
 const HomePageCarousel = () => {
   const carouselData = [
@@ -37,7 +37,7 @@ const HomePageCarousel = () => {
       title: "Hey!",
       subtitle:
         "Want to be a Partner or interested in playing at the next event?",
-      info: "Just fill in the form on the contact page and we will aim to respond to all enquiries within 3 working days",
+      info: "Just fill in the form on the contact page",
       btnOneText: "Contact",
       btnOneLink: "/events",
       btnTwoText: "More Info",
@@ -54,7 +54,7 @@ const HomePageCarousel = () => {
     slidesToScroll: 1,
     accessibility: true,
     autoplay: true,
-    autoplaySpeed: 10500,
+    autoplaySpeed: 8500,
     lazyLoad: true,
     fade: 2500,
   }
@@ -63,11 +63,10 @@ const HomePageCarousel = () => {
     <div className="hp-carousel">
       <Slider {...settings}>
         {carouselData.map((data, key) => (
-          <div>
+          <div key={key}>
             <div
               className="hp-slide"
               style={{ backgroundImage: `url(${data.image})` }}
-              key={key}
             >
               <div className="hp-slide__inner-container">
                 <div className="slide-title">
