@@ -9,6 +9,8 @@ import { StaticImage } from "gatsby-plugin-image"
 import UpcomingEvents from "../components/upcoming-events"
 import HomePageCarousel from "../components/carousels/homepage-carousel"
 import PartnersCarousel from "../components/carousels/partners-carousel"
+import InstagramFeed from "../components/instagram-feed"
+import Reviews from "../components/reviews"
 import Seo from "../components/seo"
 
 import "normalize.css"
@@ -71,9 +73,10 @@ const IndexPage = () => {
           <p className="ep-number">EP.02</p>
           <h2 className="ep-title">What We Offer</h2>
           <h4 className="ep-text">
-            Currently we offer events with our dedicated store opening in the
-            near future. Keep an eye out as we will be launching our Musician
-            Finder forum - think of 'Join My Band' but better.
+            Currently we only offer Events however our dedicated Arclight
+            Apparel store will be opening in the near future. Keep an eye out as
+            we will be launching our Musician Finder forum at later date - think
+            of 'Join My Band' but better.
           </h4>
           <div className="ep-02__cards">
             <Link to="events" className="ep-card">
@@ -165,6 +168,8 @@ const IndexPage = () => {
             />
           </div>
         </div>
+        <InstagramFeed />
+        <Reviews />
       </div>
     </Layout>
   )

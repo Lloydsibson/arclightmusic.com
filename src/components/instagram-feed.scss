@@ -1,0 +1,60 @@
+@import "./layout";
+
+.instagram-feed {
+  max-width: 1920px;
+  margin: 75px auto;
+  background-image: url(../images/layered-peaks-haikei.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .instagram-feed__inner-container {
+    position: relative;
+    max-width: $pageWidth;
+    margin: 75px auto 50px auto;
+    padding: 60px 40px 90px 40px;
+    .ep-number {
+      color: #94f3e4;
+    }
+    .instagram__title {
+      display: flex;
+      align-items: center;
+      margin-bottom: 35px;
+    }
+    svg {
+      margin-left: 16px;
+      width: 20px;
+    }
+  }
+}
+
+// FEED STYLING
+.instagram-feed .juicer-feed,
+.instagram-feed .juicer-feed li.feed-item {
+  background-color: unset !important;
+}
+
+.instagram-feed .juicer-feed h1.referral {
+  display: none;
+}
+.juicer-feed.slider .slick-prev,
+.juicer-feed.slider .slick-next {
+  display: none !important;
+}
+.juicer-feed.slider li.feed-item {
+  margin-right: 20px;
+  filter: grayscale(1);
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    filter: unset;
+  }
+}
+
+body .juicer-feed.slider.j-modern li.feed-item a.j-image img {
+  border-radius: 15px;
+}
+
+.juicer-feed.slider .j-text {
+  background: rgba(51, 63, 68, 0.9);
+  border-radius: 15px;
+}
+/////

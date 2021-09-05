@@ -24,7 +24,7 @@
           text-transform: uppercase;
           color: $primaryColour;
           font-weight: 600;
-          margin-bottom: 5px;
+          margin-bottom: 0px;
         }
         h4 {
           font-size: 2rem;
@@ -32,6 +32,7 @@
           color: $primaryColour;
           font-weight: 400;
           margin-bottom: 8px;
+          line-height: 40px;
         }
         p {
           font-size: 1rem;

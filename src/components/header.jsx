@@ -14,6 +14,21 @@ const Header = ({ siteTitle }) => {
     e.currentTarget.parentNode.parentNode.parentNode.classList.toggle("-open")
   }
 
+  // ALTER HEADER ON SCROLL POSITION
+  const headerPosition = () => {
+    if (window.scrollY > 90) {
+      //console.log("MORE then 129")
+      document.querySelector(".header-container").classList.add("slim")
+    } else {
+      //console.log("LESS then 129")
+      document.querySelector(".header-container").classList.remove("slim")
+    }
+  }
+  document.addEventListener("scroll", () => {
+    headerPosition()
+  })
+  ///////
+
   return (
     <div className="header-container">
       <AnnoucementBar />

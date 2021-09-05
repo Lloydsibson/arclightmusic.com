@@ -13,6 +13,25 @@ $altColourTwo: #d1d1d1;
 
 $pageWidth: 1600px;
 
+// SELECTING TEXT COLOUR
+::selection {
+  background: $hightlightColour;
+  color: $primaryColour;
+}
+
+// SCROLLBAR
+body::-webkit-scrollbar-track {
+  background: $secondaryColour;
+}
+body::-webkit-scrollbar-thumb {
+  background: $hightlightColour;
+  //border-radius: 20px;
+}
+body::-webkit-scrollbar {
+  width: 5px;
+  height: 7px;
+}
+
 :root {
   font-size: 16px;
 }
@@ -287,7 +306,7 @@ h2 {
   line-height: 1.1;
   color: $primaryColour;
   font-size: 2rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 h3 {
   margin-left: 0;

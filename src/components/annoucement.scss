@@ -4,6 +4,7 @@
   width: 100%;
   background-color: $primaryColour;
   padding: 10px 20px;
+  transition: all 0.3s ease-in-out;
   text-align: center;
   .annoucement-bar__inner-container {
     max-width: $pageWidth;
@@ -18,5 +19,11 @@
         text-decoration: underline;
       }
     }
+  }
+}
+
+.header-container.slim {
+  .annoucement-bar {
+    padding: 5px 20px;
   }
 }
