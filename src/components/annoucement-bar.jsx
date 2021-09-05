@@ -1,12 +1,15 @@
 import * as React from "react"
 import "./annoucement.scss"
+import { Link } from "gatsby"
 
 const AnnoucementBar = () => (
   <div className="annoucement-bar">
     <div className="annoucement-bar__inner-container">
-      <h3>
-        We're Back! Buy Your Tickets <span>Today</span>
-      </h3>
+      <Link to="events">
+        <h3>
+          We're Back! Buy Your Tickets <span>Today</span>
+        </h3>
+      </Link>
     </div>
   </div>
 )

@@ -9,14 +9,17 @@
   .annoucement-bar__inner-container {
     max-width: $pageWidth;
     margin: 0 auto;
-    h3 {
-      color: $secondaryColour;
-      font-size: 0.688rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      margin-bottom: 0;
-      span {
-        text-decoration: underline;
+    a {
+      text-decoration: unset;
+      h3 {
+        color: $secondaryColour;
+        font-size: 0.688rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 0;
+        span {
+          text-decoration: underline;
+        }
       }
     }
   }

@@ -52,7 +52,7 @@ const Reviews = () => {
               <img src={info.photo} alt="reviewer" />
               <div className="review__name">
                 <h5>{info.name}</h5>
-                <a href={info.rating} target="_blank">
+                <a href={info.rating} target="_blank" rel="noreferrer">
                   {info.rating}
                 </a>
               </div>
