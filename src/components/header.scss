@@ -140,7 +140,7 @@ header.-open {
   top: 91px;
   left: 0;
   padding: 40px;
-  background-color: rgba(45, 139, 128, 0.9);
+  background-color: rgba(45, 139, 128, 0.98);
   width: 100%;
   border-radius: 0px 0px 20px 20px;
   z-index: 9;
@@ -167,12 +167,15 @@ header.-open {
         li {
           display: inline;
           font-weight: 300;
-          transition: all 0.1s ease-in-out;
-          font-size: 0.9rem;
+          transition: all 0.2s ease-in-out;
+          padding-bottom: 1px;
+          border-bottom: 2px solid transparent;
+          font-size: 1rem;
           &:hover {
-            text-decoration: underline;
+            // text-decoration: underline;
             //color: $altColour;
             cursor: pointer;
+            border-bottom: 2px solid $primaryColour;
           }
         }
       }

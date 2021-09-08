@@ -16,14 +16,14 @@ const Reviews = () => {
     },
     {
       photo: ArclightMusicLogo,
-      name: "Hey! Leave a review",
+      name: "Leave us a review",
       rating: "https://www.facebook.com/pg/ArclightPromotionsUK/reviews/",
       reviewTitle: "-",
       review: "-",
     },
     {
       photo: ArclightMusicLogo,
-      name: "Hey! Leave a review",
+      name: "Leave us a review",
       rating: "https://www.facebook.com/pg/ArclightPromotionsUK/reviews/",
       reviewTitle: "-",
       review: "-",
@@ -62,7 +62,7 @@ const Reviews = () => {
         <div className="review-container">
           <div className="review">
             <h5>Facebook Review</h5>
-            <p>Sick team to work with. 5/5</p>
+            <p>"Sick team to work with. 5/5"</p>
           </div>
         </div>
       </div>

@@ -8,7 +8,8 @@ const UpcomingEvents = () => {
   let month = ""
   const year = new Date().getFullYear()
 
-  const nth = d => {
+  // ADDS 'ST', 'ND', 'RD' OR 'TH' TO DAY
+  const ordinalSuffix = d => {
     if (d > 3 && d < 21) {
       return `${d}th`
     } else {
@@ -25,6 +26,7 @@ const UpcomingEvents = () => {
     }
   }
 
+  // CONVERTS MONTH NUMBER TO MONTH NAME 
   switch (monthRaw) {
     case 0:
       month = "January"
@@ -66,7 +68,7 @@ const UpcomingEvents = () => {
       month = "..."
   }
 
-  const currentFullDate = `${nth(day)} ${month} ${year}`
+  const currentFullDate = `${ordinalSuffix(day)} ${month} ${year}`
 
   return (
     <div className="upcoming-events">
