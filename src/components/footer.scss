@@ -48,6 +48,19 @@
           transition: all 0.2s ease-in-out;
         }
       }
+      a.active {
+        &:hover {
+          cursor: default;
+          h4 {
+            cursor: default;
+          }
+        }
+        h4 {
+          //font-weight: 600;
+          opacity: 0.2;
+          border-color: $primaryColour;
+        }
+      }
     }
     .footer-column.logo {
       margin-top: -20px;

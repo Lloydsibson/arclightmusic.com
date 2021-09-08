@@ -7,7 +7,7 @@
   //background-color: $secondaryColour;
   z-index: 999;
   //border-bottom: 1px solid $hightlightColour;
-  background-color: rgba($secondaryColour, 0.75);
+  background-color: $secondaryColour;
   backdrop-filter: blur(5px);
   &:before {
     content: "";
@@ -30,7 +30,7 @@
     }
   }
   .sub-nav {
-    top: 71px;
+    top: 71.5px;
   }
 }
 
@@ -140,7 +140,10 @@ header.-open {
   top: 91px;
   left: 0;
   padding: 40px;
-  background-color: rgba(45, 139, 128, 0.98);
+  background-color: #333;
+  // border-left: 1px solid $hightlightColour;
+  // border-right: 1px solid $hightlightColour;
+  // border-bottom: 1px solid $hightlightColour;
   width: 100%;
   border-radius: 0px 0px 20px 20px;
   z-index: 9;
@@ -175,8 +178,22 @@ header.-open {
             // text-decoration: underline;
             //color: $altColour;
             cursor: pointer;
-            border-bottom: 2px solid $primaryColour;
+            border-bottom: 2px solid $hightlightColour;
           }
+        }
+      }
+      a.active {
+        &:hover {
+          cursor: default;
+          li {
+            cursor: default;
+          }
+        }
+        li {
+          //font-weight: 600;
+          opacity: 0.2;
+          border-color: $primaryColour;
+          // color: $tertiaryColor;
         }
       }
     }

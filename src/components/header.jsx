@@ -7,10 +7,13 @@ import "./header.scss"
 import AnnoucementBar from "./annoucement-bar"
 
 const Header = ({ siteTitle }) => {
-  const headerSubNavHandler = e => {
+  const onMouseLeaveHandler = e => {
     e.currentTarget.classList.remove("-open")
   }
-  const dropDownHandler = e => {
+  const onMouseEnterHandler = e => {
+    e.currentTarget.parentNode.parentNode.parentNode.classList.toggle("-open")
+  }
+  const onKeyPressHandler = e => {
     e.currentTarget.parentNode.parentNode.parentNode.classList.toggle("-open")
   }
 
@@ -32,7 +35,7 @@ const Header = ({ siteTitle }) => {
   return (
     <div className="header-container">
       <AnnoucementBar />
-      <header onMouseLeave={e => headerSubNavHandler(e)} role="presentation">
+      <header onMouseLeave={e => onMouseLeaveHandler(e)} role="presentation">
         <div className="logo-container">
           <h1>
             <Link to="/">
@@ -61,7 +64,8 @@ const Header = ({ siteTitle }) => {
             <a
               href="#0"
               className="dropdown more"
-              onMouseEnter={e => dropDownHandler(e)}
+              onMouseEnter={e => onMouseEnterHandler(e)}
+              onKeyDown={e => onKeyPressHandler(e)}
               role="button"
             >
               <li>More</li>
@@ -115,6 +119,9 @@ const Header = ({ siteTitle }) => {
                 <li>Privacy</li>
               </Link>
               <Link to="/returns-and-refunds" activeClassName="active">
+                <li>Returns & Refunds</li>
+              </Link>
+              <Link to="/" activeClassName="active">
                 <li>Returns & Refunds</li>
               </Link>
             </ul>

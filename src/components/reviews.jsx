@@ -16,18 +16,18 @@ const Reviews = () => {
     },
     {
       photo: ArclightMusicLogo,
-      name: "Leave us a review",
+      name: "Did you enjoy our last event? Leave a review!",
       rating: "https://www.facebook.com/pg/ArclightPromotionsUK/reviews/",
       reviewTitle: "-",
       review: "-",
     },
-    {
-      photo: ArclightMusicLogo,
-      name: "Leave us a review",
-      rating: "https://www.facebook.com/pg/ArclightPromotionsUK/reviews/",
-      reviewTitle: "-",
-      review: "-",
-    },
+    // {
+    //   photo: ArclightMusicLogo,
+    //   name: "How did we do? Let us know by leaving a review",
+    //   rating: "https://www.facebook.com/pg/ArclightPromotionsUK/reviews/",
+    //   reviewTitle: "-",
+    //   review: "-",
+    // },
   ]
 
   return (

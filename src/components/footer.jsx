@@ -32,35 +32,35 @@ const Footer = () => {
             </div>
             <div className="footer-column">
               <h3>Services</h3>
-              <Link to="events">
+              <Link to="/events" activeClassName="active">
                 <h4>Events</h4>
               </Link>
-              <Link to="rac-festival">
+              <Link to="/rac-festival" activeClassName="active">
                 <h4>Rac Festival</h4>
               </Link>
             </div>
             <div className="footer-column">
               <h3>Information</h3>
-              <Link to="about">
+              <Link to="/about" activeClassName="active">
                 <h4>About</h4>
               </Link>
-              <Link to="team">
+              <Link to="/team" activeClassName="active">
                 <h4>Team</h4>
               </Link>
-              <Link to="partners">
+              <Link to="/partners" activeClassName="active">
                 <h4>Partners</h4>
               </Link>
-              <Link to="artists">
+              <Link to="/artists" activeClassName="active">
                 <h4>Artists</h4>
               </Link>
             </div>
 
             <div className="footer-column">
               <h3>Useful Links</h3>
-              <Link to="covid">
+              <Link to="/covid" activeClassName="active">
                 <h4>COVID</h4>
               </Link>
-              <Link to="contact">
+              <Link to="/contact" activeClassName="active">
                 <h4>Contact</h4>
               </Link>
             </div>
@@ -109,10 +109,10 @@ const Footer = () => {
         <div className="footer-info">
           <div className="footer-info__policies-links">
             <div className="policy-row">
-              <Link to="privacy-policy">
+              <Link to="/privacy-policy" activeClassName="active">
                 <h4>Privacy Policy</h4>
               </Link>
-              <Link to="cookie-policy">
+              <Link to="/cookie-policy" activeClassName="active">
                 <h4>Cookie Policy</h4>
               </Link>
             </div>
