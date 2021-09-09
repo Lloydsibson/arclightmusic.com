@@ -14,13 +14,13 @@ const Reviews = () => {
       reviewTitle: "Facebook Review",
       review: "Sick team to work with. 5/5",
     },
-    {
-      photo: ArclightMusicLogo,
-      name: "Did you enjoy our last event? Leave a review!",
-      rating: "https://www.facebook.com/pg/ArclightPromotionsUK/reviews/",
-      reviewTitle: "-",
-      review: "-",
-    },
+    // {
+    //   photo: ArclightMusicLogo,
+    //   name: "Did you enjoy our last event? Leave a review!",
+    //   rating: "https://www.facebook.com/pg/ArclightPromotionsUK/reviews/",
+    //   reviewTitle: "-",
+    //   review: "-",
+    // },
     // {
     //   photo: ArclightMusicLogo,
     //   name: "How did we do? Let us know by leaving a review",

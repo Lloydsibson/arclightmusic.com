@@ -3,6 +3,7 @@
 .hp-carousel {
   max-width: $pageWidth;
   margin: 40px auto 0 auto;
+  width: 100%;
   .slick-list {
     border-radius: 15px;
     .hp-slide {
@@ -117,4 +118,50 @@
       }
     }
   }
+}
+
+// TABLETS
+@media only screen and (min-width: 767px) and (max-width: 992px) {
+}
+
+// PHONES/TABLETS
+@media only screen and (max-width: 767px) {
+  .hp-carousel {
+    margin: 32px auto 0 auto;
+    .slick-list {
+      border-radius: unset;
+      .hp-slide {
+        .hp-slide__inner-container {
+          width: 100%;
+          padding: 20px;
+          .slide-btns {
+            flex-direction: column;
+            text-align: center;
+            a {
+              margin-bottom: 15px;
+              margin-right: 0;
+              .slide-btn {
+                padding: 17px 50px;
+              }
+            }
+          }
+          h3 {
+            font-size: 2.8rem;
+            //word-break: break-all;
+          }
+          h4 {
+            font-size: 1.4rem;
+            line-height: 30px;
+          }
+          p {
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// SMALL IPHONE
+@media only screen and (max-width: 320px) {
 }

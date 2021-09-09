@@ -636,3 +636,21 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+// TABLETS
+@media only screen and (min-width: 767px) and (max-width: 992px) {
+}
+
+// PHONES/TABLETS
+@media only screen and (max-width: 767px) {
+  body {
+    padding-top: 0;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+// SMALL IPHONE
+@media only screen and (max-width: 320px) {
+}

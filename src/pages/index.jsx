@@ -19,8 +19,10 @@ const IndexPage = () => {
   return (
     <Layout>
       <Seo title="Home" />
-      <UpcomingEvents />
-      <HomePageCarousel />
+      <div className="hp-group">
+        <UpcomingEvents />
+        <HomePageCarousel />
+      </div>
       <PartnersCarousel />
       <div className="white-background">
         <div className="divider">

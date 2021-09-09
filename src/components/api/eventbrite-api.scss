@@ -99,6 +99,35 @@
   }
 }
 
+//  HIDES ANY MORE EVENT CARDS BEYOND 5
+.event-card-container {
+  a {
+    &:nth-child(n + 6) {
+      display: none;
+    }
+  }
+}
+
+// TABLETS
+@media only screen and (min-width: 767px) and (max-width: 992px) {
+}
+
+// PHONES/TABLETS
+@media only screen and (max-width: 767px) {
+  //  HIDES ANY MORE EVENT CARDS BEYOND 4
+  .event-card-container {
+    a {
+      &:nth-child(n + 5) {
+        display: none;
+      }
+    }
+  }
+}
+
+// SMALL IPHONE
+@media only screen and (max-width: 320px) {
+}
+
 // #events {
 //   display: none;
 //   justify-content: space-evenly;

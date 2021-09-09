@@ -84,11 +84,13 @@
           }
         }
         h5 {
-          font-size: 2.4rem;
+          font-size: 2rem;
           color: #fff;
           font-weight: 500;
           margin-bottom: 0px;
-          &:last-child {
+        }
+        &:last-child {
+          h5 {
             font-size: 1.8rem;
           }
         }
@@ -226,4 +228,129 @@
       opacity: 0.85;
     }
   }
+}
+
+.hp-group {
+  display: flex;
+  flex-direction: column;
+}
+
+// TABLETS
+@media only screen and (min-width: 767px) and (max-width: 992px) {
+}
+
+// PHONES/TABLETS
+@media only screen and (max-width: 767px) {
+  .white-background {
+    padding-bottom: 20px;
+    .ep-01,
+    .ep-02,
+    .ep-03 {
+      padding: 0 20px;
+      flex-direction: column;
+    }
+    .ep-01 {
+      margin: 25px auto 50px auto;
+      .ep-01__image {
+        width: 100%;
+      }
+      .ep-01__information {
+        width: 100%;
+      }
+    }
+    .ep-02 {
+      align-items: flex-start;
+      margin: 30px auto;
+      .ep-text {
+        text-align: left;
+      }
+      .ep-02__cards {
+        flex-direction: column;
+        margin: 5px auto 20px auto;
+        .ep-card {
+          width: 100%;
+          max-width: 300px;
+          margin: 0 auto 20px auto;
+          padding: 30px;
+          .ep-card__icon {
+            p {
+              font-size: 2rem;
+              top: 30px;
+            }
+          }
+          &:last-child {
+            margin-right: auto;
+            margin-bottom: 0;
+            h5 {
+              font-size: 1.2rem;
+            }
+          }
+          h5 {
+            font-size: 1.3rem;
+          }
+        }
+        .coming-soon-overlay {
+          p {
+            font-size: 1.3rem;
+          }
+        }
+      }
+    }
+    .ep-03 {
+      .ep-03__information {
+        width: 100%;
+        margin-bottom: 50px;
+      }
+      .ep-03__image {
+        width: 100%;
+      }
+    }
+  }
+  .ep-number {
+    font-size: 1.2rem;
+  }
+  .ep-title {
+    font-size: 2.9rem;
+  }
+  .ep-sub-title {
+    font-size: 1.3rem;
+    line-height: 30px;
+  }
+  .ep-card:nth-child(1) .ep-card__icon {
+    margin-bottom: 20px;
+    max-width: 70px;
+  }
+  .ep-card:nth-child(2) .ep-card__icon {
+    margin-bottom: 26px;
+    margin-top: 10px;
+    max-width: 85px;
+  }
+  .ep-card:nth-child(3) .ep-card__icon {
+    margin-bottom: 21.63px;
+    margin-top: 10px;
+    max-width: 85px;
+  }
+  .hp-group {
+    .upcoming-events {
+      order: 2;
+    }
+    .hp-carousel {
+      order: 1;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+// MEDIUM IPHONE
+@media only screen and (max-width: 450px) {
+  .white-background {
+    .learn-more-btn button {
+      max-width: 413px !important;
+      padding: 20px 25px;
+    }
+  }
+}
+
+// SMALL IPHONE
+@media only screen and (max-width: 320px) {
 }

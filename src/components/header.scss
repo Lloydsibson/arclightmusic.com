@@ -200,5 +200,17 @@ header.-open {
   }
 }
 
-@media only screen and (max-width: 1250px) {
+// TABLETS
+@media only screen and (min-width: 767px) and (max-width: 992px) {
+}
+
+// PHONES/TABLETS
+@media only screen and (max-width: 767px) {
+  .header-container {
+    // display: none;
+  }
+}
+
+// SMALL IPHONE
+@media only screen and (max-width: 320px) {
 }

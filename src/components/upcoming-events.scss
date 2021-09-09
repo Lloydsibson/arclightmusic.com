@@ -22,3 +22,38 @@
     }
   }
 }
+
+// TABLETS
+@media only screen and (min-width: 767px) and (max-width: 992px) {
+}
+
+// PHONES/TABLETS
+@media only screen and (max-width: 767px) {
+  .upcoming-events {
+    .upcoming-events__inner-container {
+      p {
+      }
+      .upcoming-events__title {
+      }
+      .upcoming-events__events {
+        flex-direction: column;
+        .event-card-container {
+          flex-direction: column;
+          a {
+            width: 100%;
+            max-width: 500px;
+            margin-right: 0;
+            margin-bottom: 20px;
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// SMALL IPHONE
+@media only screen and (max-width: 320px) {
+}

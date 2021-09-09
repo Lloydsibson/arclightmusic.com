@@ -14,6 +14,10 @@ import { faInstagram } from "@fortawesome/free-brands-svg-icons"
 import { faFacebookF } from "@fortawesome/free-brands-svg-icons"
 
 const Footer = () => {
+  const toggleFooterAccordian = e => {
+    e.currentTarget.classList.toggle("-open")
+  }
+
   return (
     <footer className="footer-background">
       <div className="footer-inner-container">
@@ -30,39 +34,54 @@ const Footer = () => {
                 />
               </Link>
             </div>
-            <div className="footer-column">
+            <div
+              className="footer-column"
+              onClick={e => toggleFooterAccordian(e)}
+            >
               <h3>Services</h3>
-              <Link to="/events" activeClassName="active">
-                <h4>Events</h4>
-              </Link>
-              <Link to="/rac-festival" activeClassName="active">
-                <h4>Rac Festival</h4>
-              </Link>
+              <div className="footer-column__list">
+                <Link to="/events" activeClassName="active">
+                  <h4>Events</h4>
+                </Link>
+                <Link to="/rac-festival" activeClassName="active">
+                  <h4>Rac Festival</h4>
+                </Link>
+              </div>
             </div>
-            <div className="footer-column">
+            <div
+              className="footer-column"
+              onClick={e => toggleFooterAccordian(e)}
+            >
               <h3>Information</h3>
-              <Link to="/about" activeClassName="active">
-                <h4>About</h4>
-              </Link>
-              <Link to="/team" activeClassName="active">
-                <h4>Team</h4>
-              </Link>
-              <Link to="/partners" activeClassName="active">
-                <h4>Partners</h4>
-              </Link>
-              <Link to="/artists" activeClassName="active">
-                <h4>Artists</h4>
-              </Link>
+              <div className="footer-column__list">
+                <Link to="/about" activeClassName="active">
+                  <h4>About</h4>
+                </Link>
+                <Link to="/team" activeClassName="active">
+                  <h4>Team</h4>
+                </Link>
+                <Link to="/partners" activeClassName="active">
+                  <h4>Partners</h4>
+                </Link>
+                <Link to="/artists" activeClassName="active">
+                  <h4>Artists</h4>
+                </Link>
+              </div>
             </div>
 
-            <div className="footer-column">
+            <div
+              className="footer-column"
+              onClick={e => toggleFooterAccordian(e)}
+            >
               <h3>Useful Links</h3>
-              <Link to="/covid" activeClassName="active">
-                <h4>COVID</h4>
-              </Link>
-              <Link to="/contact" activeClassName="active">
-                <h4>Contact</h4>
-              </Link>
+              <div className="footer-column__list">
+                <Link to="/covid" activeClassName="active">
+                  <h4>COVID</h4>
+                </Link>
+                <Link to="/contact" activeClassName="active">
+                  <h4>Contact</h4>
+                </Link>
+              </div>
             </div>
           </div>
           <div className="footer-links__social">

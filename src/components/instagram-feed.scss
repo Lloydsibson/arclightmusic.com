@@ -58,3 +58,23 @@ body .juicer-feed.slider.j-modern li.feed-item a.j-image img {
   border-radius: 15px;
 }
 /////
+
+// TABLETS
+@media only screen and (min-width: 767px) and (max-width: 992px) {
+}
+
+// PHONES/TABLETS
+@media only screen and (max-width: 767px) {
+  .instagram-feed {
+    margin: 20px auto;
+    background-position: left;
+    .instagram-feed__inner-container {
+      margin: 50px auto;
+      padding: 40px 20px;
+    }
+  }
+}
+
+// SMALL IPHONE
+@media only screen and (max-width: 320px) {
+}

@@ -29,6 +29,21 @@ const PartnersCarousel = () => {
       link: "/partners",
       alt: "monocode logo",
     },
+    {
+      image: StayfreeLogo,
+      link: "/partners",
+      alt: "stayfree logo",
+    },
+    {
+      image: ShedLogo,
+      link: "/partners",
+      alt: "the shed logo",
+    },
+    {
+      image: MonocodeLogo,
+      link: "/partners",
+      alt: "monocode logo",
+    },
   ]
 
   var settings = {
@@ -40,7 +55,7 @@ const PartnersCarousel = () => {
     slidesToScroll: 1,
     accessibility: true,
     autoplay: true,
-    autoplaySpeed: 2500,
+    autoplaySpeed: 3500,
     lazyLoad: true,
     //fade: 2500,
   }
@@ -48,7 +63,7 @@ const PartnersCarousel = () => {
   return (
     <div className="partner-carousel">
       <div className="partner-carousel__title">
-        <h2>Our Partners</h2>{" "}
+        <h2>Our Partners</h2>
         <svg
           width="26"
           height="22"

@@ -24,3 +24,27 @@
     }
   }
 }
+
+// TABLETS
+@media only screen and (min-width: 767px) and (max-width: 992px) {
+}
+
+// PHONES/TABLETS
+@media only screen and (max-width: 767px) {
+  .partner-carousel {
+    margin: 50px auto;
+    padding: 0 20px;
+    .partner-carousel__title {
+      margin-bottom: 30px;
+    }
+    .slick-slide {
+      img {
+        max-width: 75px;
+      }
+    }
+  }
+}
+
+// SMALL IPHONE
+@media only screen and (max-width: 320px) {
+}

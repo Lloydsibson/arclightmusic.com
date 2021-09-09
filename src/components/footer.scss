@@ -7,7 +7,7 @@
   .footer-inner-container {
     max-width: $pageWidth;
     margin: 0 auto;
-    padding: 120px 0 70px 0;
+    padding: 120px 20px 70px 20px;
   }
 }
 
@@ -129,12 +129,141 @@
   .footer-info__copyright {
     color: $altColour;
     font-size: 0.9rem;
+    line-height: 21px;
     a {
       color: $altColour;
       margin-left: 5px;
       transition: all 0.3s ease-in-out;
       &:hover {
         color: $primaryColour;
+      }
+    }
+  }
+}
+
+// TABLETS
+@media only screen and (min-width: 767px) and (max-width: 992px) {
+}
+
+// PHONES/TABLETS
+@media only screen and (max-width: 767px) {
+  .footer-background {
+    .footer-inner-container {
+      max-width: $pageWidth;
+      margin: 0 auto;
+      padding-top: 50px;
+      padding-bottom: 25px;
+    }
+  }
+
+  .footer-links {
+    flex-direction: column;
+    margin-bottom: 15px;
+    .footer-links__nav {
+      width: 100%;
+      flex-direction: column;
+      .footer-column.logo {
+        margin-top: 0;
+        margin-right: 0;
+        margin-bottom: 30px;
+        &:after {
+          content: unset;
+        }
+        a {
+          max-width: 170px;
+          display: block;
+          margin-bottom: 10px;
+        }
+      }
+      .footer-column {
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 5px;
+        position: relative;
+        &:after {
+          content: "+";
+          display: block;
+          font-size: 25px;
+          color: $altColour;
+          position: absolute;
+          top: -3px;
+          right: 0;
+        }
+        h3 {
+          font-size: 1.1rem;
+          margin-bottom: 30px;
+        }
+        .footer-column__list {
+          -webkit-transition: max-height 0.5s;
+          -moz-transition: max-height 0.5s;
+          -ms-transition: max-height 0.5s;
+          -o-transition: max-height 0.5s;
+          transition: max-height 0.5s;
+          overflow: hidden;
+          max-height: 0;
+          margin-bottom: 0;
+          a {
+            // display: none;
+          }
+        }
+      }
+      .footer-column.-open {
+        &:after {
+          content: "-";
+        }
+        .footer-column__list {
+          // HEIGHT OF CONTAINER
+          max-height: 170px;
+        }
+      }
+    }
+    .footer-links__social {
+      width: 100%;
+      justify-content: unset;
+      margin-top: 15px;
+      flex-direction: row;
+      .social-row {
+        justify-content: flex-start;
+        a {
+          margin-right: 20px;
+          .footer-social-icons {
+            padding: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-info {
+    flex-direction: column;
+    .footer-info__policies-links {
+      width: 100%;
+      margin-bottom: 15px;
+      .policy-row {
+        a {
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}
+
+// SMALL IPHONE
+@media only screen and (max-width: 320px) {
+  .footer-links {
+    .footer-links__nav {
+      .footer-column.logo {
+      }
+      .footer-column {
+      }
+    }
+    .footer-links__social {
+      flex-direction: column;
+      .social-row {
+        a {
+          .footer-social-icons {
+          }
+        }
       }
     }
   }
