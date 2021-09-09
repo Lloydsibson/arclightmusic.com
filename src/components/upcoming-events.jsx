@@ -2,6 +2,8 @@ import * as React from "react"
 //import { useState, useEffect } from "react"
 import "./upcoming-events.scss"
 
+import EventbriteEvents from "./api/eventbrite-api"
+
 const UpcomingEvents = () => {
   const day = new Date().getDate()
   const monthRaw = new Date().getMonth()
@@ -26,7 +28,7 @@ const UpcomingEvents = () => {
     }
   }
 
-  // CONVERTS MONTH NUMBER TO MONTH NAME 
+  // CONVERTS MONTH NUMBER TO MONTH NAME
   switch (monthRaw) {
     case 0:
       month = "January"
@@ -89,7 +91,9 @@ const UpcomingEvents = () => {
             />
           </svg>
         </div>
-        <div className="upcoming-events__events"></div>
+        <div className="upcoming-events__events">
+          <EventbriteEvents />
+        </div>
       </div>
     </div>
   )

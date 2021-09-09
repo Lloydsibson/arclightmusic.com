@@ -2,7 +2,7 @@
 
 .upcoming-events {
   background-color: $hightlightColour;
-  padding: 20px;
+  padding: 30px 20px;
   .upcoming-events__inner-container {
     max-width: $pageWidth;
     margin: 0 auto;
@@ -14,6 +14,7 @@
     .upcoming-events__title {
       display: flex;
       align-items: center;
+      margin-bottom: 25px;
       svg {
         margin-left: 16px;
         width: 20px;

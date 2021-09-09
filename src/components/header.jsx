@@ -121,8 +121,8 @@ const Header = ({ siteTitle }) => {
               <Link to="/returns-and-refunds" activeClassName="active">
                 <li>Returns & Refunds</li>
               </Link>
-              <Link to="/" activeClassName="active">
-                <li>Returns & Refunds</li>
+              <Link to="/covid" activeClassName="active">
+                <li>COVID</li>
               </Link>
             </ul>
           </div>
