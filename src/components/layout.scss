@@ -50,7 +50,7 @@ body {
 }
 
 // ADJUST FOR FIXED HEADER
-body {
+.page-container {
   padding-top: 123px;
 }
 
@@ -664,7 +664,7 @@ pre tt:after {
 
 // PHONES/TABLETS
 @media only screen and (max-width: 767px) {
-  body {
+  .page-container {
     padding-top: 32px;
   }
   h2 {

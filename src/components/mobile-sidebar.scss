@@ -27,11 +27,11 @@
       margin-bottom: 0px;
       padding: 0;
       display: block;
-      &:last-child {
-        a {
-          padding-bottom: 0;
-        }
-      }
+      // &:last-child {
+      //   a {
+      //     padding-bottom: 0;
+      //   }
+      // }
       a {
         width: 100%;
         display: block;
@@ -56,7 +56,7 @@
     }
   }
   .nav-divider {
-    height: 2.5px;
+    padding: 1px;
     border-radius: 20px;
     background-color: $altColourTwo;
     margin: 0 auto;
@@ -83,6 +83,7 @@
   ul.nav-list.section-two {
     &:before {
       content: "Policies";
+      padding-top: 10px;
     }
   }
   .mobile-sidebar__footer {
@@ -104,6 +105,55 @@
       padding: 0;
       color: $primaryColour;
       text-decoration: unset;
+    }
+  }
+  .mobile-nav-cta {
+    padding: 0 20px;
+    margin: 30px auto 25px auto;
+
+    .mobile-nav-cta__inner-container {
+      position: relative;
+      padding: 25px;
+      background-color: $tertiaryColor;
+      border-radius: 15px;
+      box-shadow: rgb(0 0 0 / 7%) 0px 1px 2px, rgb(0 0 0 / 7%) 0px 2px 4px,
+        rgb(0 0 0 / 7%) 0px 4px 8px, rgb(0 0 0 / 7%) 0px 8px 16px,
+        rgb(0 0 0 / 7%) 0px 16px 32px, rgb(0 0 0 / 7%) 0px 32px 64px;
+
+      .mobile-nav-cta-icon {
+        position: absolute;
+        top: -25px;
+        left: 50%;
+        margin-left: -29.4px;
+        padding: 15px 12px;
+        border-radius: 50px;
+        background-color: $hightlightColourHover;
+        box-shadow: rgb(0 0 0 / 7%) 0px 1px 2px, rgb(0 0 0 / 7%) 0px 2px 4px,
+          rgb(0 0 0 / 7%) 0px 4px 8px, rgb(0 0 0 / 7%) 0px 8px 16px,
+          rgb(0 0 0 / 7%) 0px 16px 32px, rgb(0 0 0 / 7%) 0px 32px 64px;
+        svg {
+          color: $primaryColour;
+          font-size: 1.8rem;
+        }
+      }
+
+      .mobile-nav-cta-title {
+        color: $primaryColour;
+        font-weight: 600;
+        text-align: center;
+        font-size: 0.88rem;
+        padding-top: 30px;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+      }
+      .mobile-nav-cta-text {
+        color: $primaryColour;
+        text-align: center;
+        font-weight: 300;
+        margin-bottom: 0;
+        font-size: 0.88rem;
+        line-height: 21px;
+      }
     }
   }
 }
