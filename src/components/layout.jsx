@@ -26,8 +26,8 @@ const Layout = ({ children }) => {
   `)
 
   const NavOverlayToggle = () => {
-    const body = document.body
-    body.classList.remove("menu-open")
+    const html = document.documentElement
+    html.classList.remove("menu-open")
     // REMOVES MOBILE NAV AFTER NAV CLOSES
     setTimeout(() => {
       const menu = document.querySelector(".mobile-sidebar")

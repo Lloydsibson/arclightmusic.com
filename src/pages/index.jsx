@@ -163,7 +163,7 @@ const IndexPage = () => {
           <div className="ep-03__image">
             <StaticImage
               src="../images/rac-image.jpg"
-              width={850}
+              width={715}
               quality={95}
               formats={["AUTO", "WEBP", "AVIF"]}
               alt="live band"

@@ -253,6 +253,12 @@
       margin: 25px auto 50px auto;
       .ep-01__image {
         width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+        .gatsby-image-wrapper > div {
+          max-width: 500px !important;
+        }
       }
       .ep-01__information {
         width: 100%;
@@ -299,10 +305,15 @@
     .ep-03 {
       .ep-03__information {
         width: 100%;
+        max-width: unset;
         margin-bottom: 50px;
       }
       .ep-03__image {
         width: 100%;
+        justify-content: center;
+        .gatsby-image-wrapper > div {
+          max-width: 500px !important;
+        }
       }
     }
   }
@@ -337,6 +348,10 @@
     .hp-carousel {
       order: 1;
     }
+  }
+  .white-background .ep-01 .ep-01__information .ep-text,
+  .white-background .ep-01 .ep-01__information .ep-sub-title {
+    max-width: unset;
   }
 }
 
