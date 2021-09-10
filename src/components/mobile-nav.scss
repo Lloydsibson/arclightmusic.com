@@ -1,0 +1,93 @@
+@import "./layout";
+
+.mobile-nav {
+  position: fixed;
+  bottom: 20px;
+  width: 100%;
+  padding: 0 10px;
+  z-index: 18;
+  .mobile-nav_inner-container {
+    width: 100%;
+    display: flex;
+    background-color: $primaryColour;
+    border-radius: 50px;
+    padding: 20px;
+    box-shadow: rgb(0 0 0 / 7%) 0px 1px 2px, rgb(0 0 0 / 7%) 0px 2px 4px,
+      rgb(0 0 0 / 7%) 0px 4px 8px, rgb(0 0 0 / 7%) 0px 8px 16px,
+      rgb(0 0 0 / 7%) 0px 16px 32px, rgb(0 0 0 / 7%) 0px 32px 64px;
+
+    a {
+      display: block;
+      width: 20%;
+      color: $secondaryColour;
+      text-decoration: unset;
+      .mobile-nav-icon {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg {
+          font-size: 1.4rem;
+          color: $altColour;
+        }
+        // p {
+        //   margin-bottom: 0;
+        // }
+      }
+    }
+    a.active {
+      .mobile-nav-icon {
+        svg {
+          color: $hightlightColour;
+        }
+      }
+    }
+    // MENU ICON
+    .mobile-nav-icon.menu {
+      width: 20%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      svg {
+        font-size: 1.4rem;
+        color: $secondaryColour;
+      }
+      //   p {
+      //     margin: 0;
+      //   }
+    }
+    // STORE ICON
+    .mobile-nav-icon.store {
+      width: 20%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      svg {
+        font-size: 1.4rem;
+        color: #dedede;
+      }
+      // p {
+      //   margin: 0;
+      // }
+    }
+  }
+}
+
+// TABLETS
+@media only screen and (min-width: 767px) and (max-width: 992px) {
+}
+
+// PHONES/TABLETS
+@media only screen and (min-width: 767px) {
+  .mobile-nav {
+    display: none;
+  }
+}
+
+// PHONES/TABLETS
+@media only screen and (max-width: 767px) {
+}
+
+// SMALL IPHONE
+@media only screen and (max-width: 320px) {
+}

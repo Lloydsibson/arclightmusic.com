@@ -7,7 +7,7 @@ const AnnoucementBar = () => (
     <div className="annoucement-bar__inner-container">
       <Link to="events">
         <h3>
-          We're Back! Buy Your Tickets <span>Today</span>
+          We're Back! Buy Your Tickets <span>Today</span> 🎉🎉🎉
         </h3>
       </Link>
     </div>

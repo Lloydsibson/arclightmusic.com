@@ -12,29 +12,29 @@ import HalloweenBanner from "/src/images/Halloween-eventbrite-banner.jpg"
 
 const HomePageCarousel = () => {
   const carouselData = [
-    {
-      image: HalloweenBanner,
-      title: "Arclight Apparel",
-      subtitle: "No Music, No Life T-shirt",
-      info: "Range of Colours Available",
-      btnOneText: "Buy T-Shirt",
-      btnOneLink: "/events",
-      btnTwoText: "More Apparel",
-      btnTwoLink: "/events",
-    },
+    // {
+    //   image: HalloweenBanner,
+    //   title: "Arclight Apparel",
+    //   subtitle: "No Music, No Life T-shirt",
+    //   info: "Range of Colours Available",
+    //   btnOneText: "Buy T-Shirt",
+    //   btnOneLink: "/events",
+    //   btnTwoText: "More Apparel",
+    //   btnTwoLink: "/events",
+    // },
     {
       image: HalloweenBanner,
       title: "Arclight Promotions",
-      subtitle: "Battle of the Bands",
-      info: "25th December | Doors open at 7pm",
+      subtitle: "Funding Music with Music",
+      info: "Check out the latest events near you",
       btnOneText: "Buy Tickets",
       btnOneLink: "/events",
-      btnTwoText: "More Events",
+      btnTwoText: "See Events",
       btnTwoLink: "/events",
     },
     {
       image: HalloweenBanner,
-      title: "Hey!",
+      title: "Reach Out",
       subtitle:
         "Want to be a Partner or interested in playing at the next event?",
       info: "Just fill in the form on the contact page",

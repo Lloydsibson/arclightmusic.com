@@ -208,6 +208,9 @@ header.-open {
 @media only screen and (max-width: 767px) {
   .header-container {
     // display: none;
+    header {
+      display: none;
+    }
   }
 }
 

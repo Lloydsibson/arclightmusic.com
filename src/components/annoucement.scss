@@ -30,3 +30,39 @@
     padding: 5px 20px;
   }
 }
+
+// TABLETS
+@media only screen and (min-width: 767px) and (max-width: 992px) {
+}
+
+// PHONES/TABLETS
+@media only screen and (max-width: 767px) {
+  .annoucement-bar {
+    box-shadow: rgb(0 0 0 / 7%) 0px 1px 2px, rgb(0 0 0 / 7%) 0px 2px 4px,
+      rgb(0 0 0 / 7%) 0px 4px 8px, rgb(0 0 0 / 7%) 0px 8px 16px,
+      rgb(0 0 0 / 7%) 0px 16px 32px, rgb(0 0 0 / 7%) 0px 32px 64px;
+  }
+  body .header-container.slim {
+    background-color: unset;
+    .annoucement-bar {
+      padding: 10px 20px;
+      //background-color: $tertiaryColor;
+      -webkit-backdrop-filter: blur(5px);
+      backdrop-filter: blur(5px);
+      border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
+      background: rgba($tertiaryColor, 0.65);
+      .annoucement-bar__inner-container {
+        a {
+          h3 {
+            color: $primaryColour;
+            font-size: 0.65rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// SMALL IPHONE
+@media only screen and (max-width: 320px) {
+}

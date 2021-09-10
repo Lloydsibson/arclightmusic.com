@@ -127,13 +127,13 @@
 // PHONES/TABLETS
 @media only screen and (max-width: 767px) {
   .hp-carousel {
-    margin: 32px auto 0 auto;
+    margin: 0 auto;
     .slick-list {
       border-radius: unset;
       .hp-slide {
         .hp-slide__inner-container {
           width: 100%;
-          padding: 20px;
+          padding: 20px 20px 50px 20px;
           .slide-btns {
             flex-direction: column;
             text-align: center;
@@ -155,6 +155,20 @@
           }
           p {
             font-size: 0.9rem;
+          }
+        }
+      }
+    }
+    .slick-dots {
+      position: absolute;
+      bottom: 20px;
+      margin: 0;
+      li {
+        margin: 0;
+        button {
+          &:before {
+            color: #333;
+            opacity: 1;
           }
         }
       }
