@@ -1,1 +1,149 @@
 @import "./layout";
+
+.mobile-sidebar {
+  display: none;
+  height: 100%;
+  overflow-y: scroll;
+  width: 80%;
+  z-index: 60;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  .mobile-sidebar__logo {
+    padding: 10px 20px;
+    // border-bottom: 0.5px solid #444;
+    background-color: #222;
+  }
+  ul {
+    padding: 20px;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    li {
+      margin-bottom: 0px;
+      padding: 0;
+      display: block;
+      &:last-child {
+        a {
+          padding-bottom: 0;
+        }
+      }
+      a {
+        width: 100%;
+        display: block;
+        font-size: 1rem;
+        font-weight: 300;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-align-items: center;
+        align-items: center;
+        padding: 10px;
+        margin: 2.5px auto;
+        color: $primaryColour;
+        text-decoration: unset;
+        border-radius: 5px;
+      }
+      a.active {
+        background-color: #37aa9c;
+        box-shadow: rgb(0 0 0 / 7%) 0px 1px 2px, rgb(0 0 0 / 7%) 0px 2px 4px,
+          rgb(0 0 0 / 7%) 0px 4px 8px, rgb(0 0 0 / 7%) 0px 8px 16px,
+          rgb(0 0 0 / 7%) 0px 16px 32px, rgb(0 0 0 / 7%) 0px 32px 64px;
+      }
+    }
+  }
+  .nav-divider {
+    height: 2.5px;
+    border-radius: 20px;
+    background-color: $altColourTwo;
+    margin: 0 auto;
+    width: calc(100% - 40px);
+  }
+  ul.nav-list {
+    &:before {
+      display: block;
+      font-size: 1rem;
+      color: $primaryColour;
+      font-weight: 500;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  ul.nav-list.section-one {
+    &:before {
+      content: "Arclight Music";
+    }
+  }
+  ul.nav-list.section-two {
+    &:before {
+      content: "Policies";
+    }
+  }
+  .mobile-sidebar__footer {
+    background-color: #222;
+    // border-top: 1px solid #333;
+    padding: 20px;
+    width: 100%;
+    display: -webkit-flex;
+    display: flex;
+    a {
+      width: 100%;
+      display: block;
+      font-size: 1rem;
+      font-weight: 300;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-align-items: center;
+      align-items: center;
+      padding: 0;
+      color: $primaryColour;
+      text-decoration: unset;
+    }
+  }
+}
+
+body.menu-open .mobile-sidebar-overlay {
+  width: 20%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: block;
+  z-index: 999;
+}
+
+// body.menu-open .mobile-sidebar {
+//   display: flex;
+// }
+
+// TABLETS
+@media only screen and (max-width: 900px) {
+  .mobile-sidebar-overlay {
+    display: none;
+  }
+}
+
+// TABLETS
+@media only screen and (min-width: 767px) and (max-width: 992px) {
+}
+
+// PHONES/TABLETS
+@media only screen and (min-width: 767px) {
+  .mobile-sidebar {
+    display: none;
+  }
+}
+
+// PHONES/TABLETS
+@media only screen and (max-width: 767px) {
+}
+
+// SMALL IPHONE
+@media only screen and (max-width: 320px) {
+}

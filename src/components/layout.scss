@@ -46,6 +46,7 @@ html {
 body {
   font-family: "Poppins", serif;
   background-color: $secondaryColour;
+  overflow-x: hidden;
 }
 
 // ADJUST FOR FIXED HEADER
@@ -57,6 +58,25 @@ body {
 #___gatsby {
   //max-width: 1600px;
   margin: 0 auto;
+}
+
+.page-container {
+  transition: transform 0.4s ease, -webkit-transform 0.4s ease;
+  z-index: 99;
+  position: relative;
+  background-color: $secondaryColour;
+}
+
+@media only screen and (max-width: 767px) {
+  body.menu-open .page-container {
+    transform: translate3d(80%, 0, 0);
+    -webkit-transform: translate3d(80%, 0, 0);
+    -moz-transform: translate3d(80%, 0, 0);
+    -ms-transform: translate3d(80%, 0, 0);
+    -o-transform: translate3d(80%, 0, 0);
+    -webkit-filter: drop-shadow(2px 4px 6px #000);
+    filter: drop-shadow(2px 4px 6px #000);
+  }
 }
 
 article,
@@ -631,6 +651,7 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
+
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;

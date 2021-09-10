@@ -12,6 +12,7 @@ import Header from "./header"
 import "./layout.scss"
 
 import Footer from "./footer"
+import MobileSideBar from "./mobile-sidebar"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -24,11 +25,28 @@ const Layout = ({ children }) => {
     }
   `)
 
+  const NavOverlayToggle = () => {
+    const body = document.body
+    body.classList.remove("menu-open")
+    // REMOVES MOBILE NAV AFTER NAV CLOSES
+    setTimeout(() => {
+      const menu = document.querySelector(".mobile-sidebar")
+      menu.style.display = "none"
+    }, 400)
+  }
+
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <main>{children}</main>
-      <Footer />
+      <div className="page-container">
+        <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+        <main>{children}</main>
+        <Footer />
+      </div>
+      <MobileSideBar />
+      <div
+        className="mobile-sidebar-overlay"
+        onClick={e => NavOverlayToggle(e)}
+      ></div>
     </>
   )
 }

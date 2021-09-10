@@ -12,6 +12,16 @@ import { faComment } from "@fortawesome/free-solid-svg-icons"
 import { faBars } from "@fortawesome/free-solid-svg-icons"
 
 const MobileNav = () => {
+  const body = document.body
+  const NavItemToggle = () => {
+    body.classList.add("menu-open")
+    body.scrollTop = 0 // For Safari
+    document.documentElement.scrollTop = 0 // For Chrome, Firefox, IE and Opera
+    // REMOVES MOBILE NAV AFTER NAV CLOSES
+    const menu = document.querySelector(".mobile-sidebar")
+    menu.style.display = "flex"
+  }
+
   return (
     <div className="mobile-nav">
       <div className="mobile-nav_inner-container">
@@ -41,7 +51,7 @@ const MobileNav = () => {
           </div>
         </Link>
 
-        <div className="mobile-nav-icon menu">
+        <div className="mobile-nav-icon menu" onClick={e => NavItemToggle(e)}>
           <FontAwesomeIcon icon={faBars} alt="menu icon" />
           {/* <p>Menu</p> */}
         </div>
