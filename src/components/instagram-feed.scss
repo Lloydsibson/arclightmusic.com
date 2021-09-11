@@ -58,10 +58,94 @@ body .juicer-feed.slider.j-modern li.feed-item a.j-image img {
   background: rgba(51, 63, 68, 0.9);
   border-radius: 15px;
 }
+// HIDES BRANDING
+[data-source="juicer"] {
+  display: none !important;
+}
+// HIDES OVERLAY MESSAGE
+.j-text,
+.j-meta {
+  display: none !important;
+}
+
+.j-overlay .j-overlay-content {
+  border-radius: 20px;
+}
+
+.j-post-overlay.juicer-feed a.juicer-button {
+  background-color: $hightlightColour;
+  color: $primaryColour;
+  border: unset;
+  border-radius: 50px;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 17px;
+  width: 100%;
+  max-width: 260px;
+}
+.j-post-overlay.juicer-feed ul.j-share {
+  margin: 20px;
+}
+.j-post-overlay.juicer-feed ul.j-share a,
+.j-post-overlay.juicer-feed ul.j-share a:before {
+  color: $secondaryColour;
+}
+
+.j-overlay .j-close {
+  background-position: center;
+  background-size: 20px 20px;
+  padding: 20px;
+  background-color: $secondaryColour;
+  border-radius: 50px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.j-post-overlay.juicer-feed .j-overlay-text {
+  padding: 70px 25px 25px;
+}
+
+.j-post-overlay.juicer-feed .j-navigate {
+  bottom: 20px;
+  right: 20px;
+}
+
+.j-post-overlay.juicer-feed .j-navigate a.j-next {
+  margin-left: 7px;
+}
+.j-post-overlay.juicer-feed .j-navigate a.j-previous {
+  margin-right: 7px;
+}
+
+.j-post-overlay.juicer-feed .j-navigate a.j-previous:before,
+.j-post-overlay.juicer-feed .j-navigate a.j-next:before {
+  font-size: 20px;
+}
+
+.j-post-overlay.juicer-feed .j-overlay-text .j-message a,
+.j-post-overlay.juicer-feed .j-overlay-text .j-edit a {
+  word-break: break-all;
+}
 /////
 
 // TABLETS
-@media only screen and (min-width: 767px) and (max-width: 992px) {
+@media only screen and (max-width: 800px) {
+  body .j-overlay .j-overlay-content {
+    width: 85% !important;
+  }
+  .j-post-overlay.juicer-feed ul.j-share {
+    position: unset;
+    text-align: center;
+  }
+  .j-post-overlay.juicer-feed .j-navigate {
+    position: unset;
+    margin-top: 0;
+  }
+  .j-post-overlay.juicer-feed .j-overlay-text {
+    padding: 25px;
+  }
+  .j-post-overlay.juicer-feed a.juicer-button {
+    max-width: unset;
+  }
 }
 
 // PHONES/TABLETS
