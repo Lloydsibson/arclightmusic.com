@@ -25,6 +25,7 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      filter: grayscale(1);
       .up-card__overlay {
         background-color: rgba($secondaryColour, 0.85);
         width: 100%;
