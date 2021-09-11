@@ -76,6 +76,7 @@
           text-decoration: unset;
           transition: all 0.3s ease-in-out;
           position: relative;
+          box-shadow: $boxshadow;
           &:last-child {
             margin-right: 0;
           }
@@ -124,6 +125,7 @@
           align-items: center;
           justify-content: center;
           z-index: 9;
+          box-shadow: $boxshadow;
           p {
             color: #fff;
             font-size: 1.7rem;
@@ -157,14 +159,21 @@
           background-color: $hightlightColour;
           margin-right: 2.5%;
           max-width: 214px;
+          box-shadow: $boxshadow;
+          border: 1px solid #37aa9c;
+          &:hover {
+            background-color: $hightlightColourHover;
+            opacity: 1;
+          }
         }
       }
       .learn-more-btn.alt {
         button {
           background-color: unset;
-          border: 1px solid $secondaryColour;
+          // border: 1px solid $secondaryColour;
           color: $secondaryColour;
           max-width: 214px;
+          box-shadow: $boxshadow;
           &:hover {
             background-color: $secondaryColour;
             color: $primaryColour;
@@ -236,6 +245,7 @@
     padding: 15px 25px;
     color: $primaryColour;
     background-color: $secondaryColour;
+    box-shadow: $boxshadow;
     border-radius: 50px;
     font-size: 0.88rem;
     font-weight: 500;

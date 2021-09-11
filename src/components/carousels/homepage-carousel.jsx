@@ -9,6 +9,7 @@ import "./homepage-carousel.scss"
 
 // IMPORTS IMAGES
 import HalloweenBanner from "/src/images/Halloween-eventbrite-banner.jpg"
+import ContactBanner from "/src/images/mission-image.jpg"
 
 const HomePageCarousel = () => {
   const carouselData = [
@@ -29,11 +30,11 @@ const HomePageCarousel = () => {
       info: "Check out the latest events near you",
       btnOneText: "Buy Tickets",
       btnOneLink: "/events",
-      btnTwoText: "See Events",
+      btnTwoText: "All Events",
       btnTwoLink: "/events",
     },
     {
-      image: HalloweenBanner,
+      image: ContactBanner,
       title: "You There!",
       subtitle:
         "Want to be a Partner or interested in playing at the next event?",

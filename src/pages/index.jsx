@@ -78,8 +78,8 @@ const IndexPage = () => {
             <h4 className="ep-text">
               Currently we only offer Events however our dedicated Arclight
               Apparel store will be opening in the near future. Keep an eye out
-              as we will be launching our Musician Finder forum at later date -
-              think of 'Join My Band' but better.
+              as we will be launching our Musician Finder forum at a later date
+              - think of 'Join My Band' but better.
             </h4>
             <div className="ep-02__cards">
               <Link to="events" className="ep-card">

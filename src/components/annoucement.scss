@@ -6,6 +6,7 @@
   padding: 10px 20px;
   transition: all 0.3s ease-in-out;
   text-align: center;
+  box-shadow: $boxshadow;
   .annoucement-bar__inner-container {
     max-width: $pageWidth;
     margin: 0 auto;
@@ -43,11 +44,11 @@
 
 // PHONES/TABLETS
 @media only screen and (max-width: 767px) {
-  .annoucement-bar {
-    box-shadow: rgb(0 0 0 / 7%) 0px 1px 2px, rgb(0 0 0 / 7%) 0px 2px 4px,
-      rgb(0 0 0 / 7%) 0px 4px 8px, rgb(0 0 0 / 7%) 0px 8px 16px,
-      rgb(0 0 0 / 7%) 0px 16px 32px, rgb(0 0 0 / 7%) 0px 32px 64px;
-  }
+  // .annoucement-bar {
+  //   box-shadow: rgb(0 0 0 / 7%) 0px 1px 2px, rgb(0 0 0 / 7%) 0px 2px 4px,
+  //     rgb(0 0 0 / 7%) 0px 4px 8px, rgb(0 0 0 / 7%) 0px 8px 16px,
+  //     rgb(0 0 0 / 7%) 0px 16px 32px, rgb(0 0 0 / 7%) 0px 32px 64px;
+  // }
   body .header-container.slim {
     background-color: unset;
     .annoucement-bar {
@@ -55,7 +56,7 @@
       //background-color: $tertiaryColor;
       -webkit-backdrop-filter: blur(5px);
       backdrop-filter: blur(5px);
-      border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
+      // border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
       background: rgba($tertiaryColor, 0.65);
       .annoucement-bar__inner-container {
         a {
@@ -70,5 +71,5 @@
 }
 
 // SMALL IPHONE
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 305px) {
 }

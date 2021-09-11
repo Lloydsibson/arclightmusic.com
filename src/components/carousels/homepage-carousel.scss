@@ -10,6 +10,8 @@
       position: relative;
       height: 500px;
       max-height: 500px;
+      background-position: center;
+      background-size: cover;
       .hp-slide__inner-container {
         height: 100%;
         width: 45%;
@@ -43,6 +45,7 @@
         }
         .slide-btns {
           display: flex;
+          align-items: center;
           a {
             display: block;
             margin-right: 20px;
@@ -58,10 +61,13 @@
             .slide-btn.cta {
               background-color: $primaryColour;
               color: $secondaryColour;
+              box-shadow: $boxshadow;
+              border: 1px solid $primaryColour;
             }
             .slide-btn.more {
-              border: 3px solid $altColour;
+              border: 1px solid $altColour;
               color: $primaryColour;
+              box-shadow: $boxshadow;
             }
             &:hover {
               opacity: 0.6;
@@ -150,6 +156,7 @@
             a {
               margin-bottom: 15px;
               margin-right: 0;
+              width: 100%;
               .slide-btn {
                 padding: 19.75px 50px;
                 max-width: 335px;
@@ -167,6 +174,10 @@
           p {
             font-size: 0.9rem;
           }
+        }
+        .slide-overlay {
+          background: linear-gradient(-90deg, transparent, #1a1a1a 55%);
+          backdrop-filter: blur(2px);
         }
       }
     }

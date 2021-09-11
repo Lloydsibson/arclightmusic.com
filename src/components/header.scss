@@ -81,6 +81,7 @@ header {
         height: 40px;
         padding: 10px 30px;
         border-radius: 70px;
+        box-shadow: $boxshadow;
         &:hover {
           background-color: $hightlightColourHover;
         }
@@ -140,6 +141,7 @@ header.-open {
   left: 0;
   padding: 40px;
   background-color: #333;
+  box-shadow: $boxshadow;
   // border-left: 1px solid $hightlightColour;
   // border-right: 1px solid $hightlightColour;
   // border-bottom: 1px solid $hightlightColour;
