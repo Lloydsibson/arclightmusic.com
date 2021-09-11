@@ -16,7 +16,7 @@ const EventbriteEvents = () => {
           `https://www.eventbriteapi.com/v3/organizers/28941769095/events/?status=live&order_by=start_asc&token=M3QX3EGISISAIVAZQEGL`
         )
         const events = await eventFetch.json()
-        console.log(events)
+        //console.log(events)
         const eventsData = await events.events
         // // IF EVENT DATA EXISTS...
         if (eventsData.length > 0) {

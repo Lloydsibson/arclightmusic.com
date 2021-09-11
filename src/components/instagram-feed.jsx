@@ -1,7 +1,17 @@
 import * as React from "react"
+import { useEffect } from "react"
 import "./instagram-feed.scss"
 
 const InstagramFeed = () => {
+  useEffect(() => {
+    const script = document.createElement("script")
+    script.src = "https://assets.juicer.io/embed.js"
+    script.async = true
+    document.body.appendChild(script)
+    return () => {
+      document.body.removeChild(script)
+    }
+  }, [])
   return (
     <div className="instagram-feed">
       <div className="instagram-feed__inner-container">
