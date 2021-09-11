@@ -1,4 +1,5 @@
 import * as React from "react"
+//import { useEffect } from "react"
 import { Link } from "gatsby"
 
 import "./mobile-nav.scss"
@@ -12,11 +13,15 @@ import { faComment } from "@fortawesome/free-solid-svg-icons"
 import { faBars } from "@fortawesome/free-solid-svg-icons"
 
 const MobileNav = () => {
-  const html = document.documentElement
+  // useEffect(() => {
+  //   const html = document.documentElement
+  // }, [])
+
   const NavItemToggle = () => {
+    const html = document.documentElement
     html.classList.remove("menu-open")
     html.scrollTop = 0 // For Safari
-    document.documentElement.scrollTop = 0 // For Chrome, Firefox, IE and Opera
+    //document.documentElement.scrollTop = 0 // For Chrome, Firefox, IE and Opera
     // REMOVES MOBILE NAV AFTER NAV CLOSES
     setTimeout(() => {
       const menu = document.querySelector(".mobile-sidebar")
@@ -25,6 +30,7 @@ const MobileNav = () => {
   }
 
   const NavBurgerToggle = () => {
+    const html = document.documentElement
     html.classList.add("menu-open")
     // REMOVES MOBILE NAV AFTER NAV CLOSES
     const menu = document.querySelector(".mobile-sidebar")

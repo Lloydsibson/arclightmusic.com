@@ -25,6 +25,10 @@ const Layout = ({ children }) => {
     }
   `)
 
+  // useEffect(() => {
+  //   const html = document.documentElement
+  // }, [])
+
   const NavOverlayToggle = () => {
     const html = document.documentElement
     html.classList.remove("menu-open")

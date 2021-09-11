@@ -86,7 +86,11 @@ const Footer = () => {
           </div>
           <div className="footer-links__social">
             <div className="social-row">
-              <a href="https://m.me/ArclightPromotionsUK" target="_blank">
+              <a
+                href="https://m.me/ArclightPromotionsUK"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <div className="footer-social-icons">
                   <FontAwesomeIcon icon={faFacebookMessenger} />
                 </div>
@@ -94,6 +98,7 @@ const Footer = () => {
               <a
                 href="https://api.whatsapp.com/send?phone=447739553611"
                 target="_blank"
+                rel="noreferrer"
               >
                 <div className="footer-social-icons">
                   <FontAwesomeIcon icon={faWhatsapp} />
@@ -109,6 +114,7 @@ const Footer = () => {
               <a
                 href="https://www.instagram.com/arclightpromotionsuk/"
                 target="_blank"
+                rel="noreferrer"
               >
                 <div className="footer-social-icons">
                   <FontAwesomeIcon icon={faInstagram} />
@@ -117,6 +123,7 @@ const Footer = () => {
               <a
                 href="https://www.facebook.com/ArclightPromotionsUK"
                 target="_blank"
+                rel="noreferrer"
               >
                 <div className="footer-social-icons">
                   <FontAwesomeIcon icon={faFacebookF} />
@@ -138,7 +145,11 @@ const Footer = () => {
           </div>
           <div className="footer-info__copyright">
             © Arclight Music {new Date().getFullYear()} | Website & Graphics by
-            <a href="https://www.lloydsibson.com/" target="_blank">
+            <a
+              href="https://www.lloydsibson.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
               Monocode
             </a>
           </div>

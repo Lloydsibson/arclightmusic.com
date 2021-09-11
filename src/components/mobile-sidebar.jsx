@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
+//import { useEffect } from "react"
 
 import { StaticImage } from "gatsby-plugin-image"
 import "./mobile-sidebar.scss"
@@ -9,17 +10,22 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faStore } from "@fortawesome/free-solid-svg-icons"
 
 const MobileSideBar = () => {
-  const html = document.documentElement
+  // useEffect(() => {
+  //   const html = document.documentElement
+  // }, [])
+
   const NavItemToggle = () => {
+    const html = document.documentElement
     html.classList.remove("menu-open")
     html.scrollTop = 0 // For Safari
-    document.documentElement.scrollTop = 0 // For Chrome, Firefox, IE and Opera
+    //document.documentElement.scrollTop = 0 // For Chrome, Firefox, IE and Opera
     // REMOVES MOBILE NAV AFTER NAV CLOSES
     setTimeout(() => {
       const menu = document.querySelector(".mobile-sidebar")
       menu.style.display = "none"
     }, 400)
   }
+
   return (
     <nav className="mobile-sidebar" aria-label="Mobile navigation">
       <div className="mobile-sidebar__logo">

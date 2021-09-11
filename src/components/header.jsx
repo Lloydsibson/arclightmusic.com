@@ -1,4 +1,5 @@
 import * as React from "react"
+import { useEffect } from "react"
 import { Link } from "gatsby"
 
 import { StaticImage } from "gatsby-plugin-image"
@@ -8,6 +9,24 @@ import AnnoucementBar from "./annoucement-bar"
 import MobileNav from "./mobile-nav"
 
 const Header = ({ siteTitle }) => {
+  useEffect(() => {
+    // ALTER HEADER ON SCROLL POSITION
+    const headerPosition = () => {
+      if (window.scrollY > 90) {
+        //console.log("MORE then 129")
+        document.querySelector(".header-container").classList.add("slim")
+      } else {
+        //console.log("LESS then 129")
+        document.querySelector(".header-container").classList.remove("slim")
+      }
+
+      document.addEventListener("scroll", () => {
+        headerPosition()
+      })
+      ///////
+    }
+  }, [])
+
   const onMouseLeaveHandler = e => {
     e.currentTarget.classList.remove("-open")
   }
@@ -17,21 +36,6 @@ const Header = ({ siteTitle }) => {
   const onKeyPressHandler = e => {
     e.currentTarget.parentNode.parentNode.parentNode.classList.toggle("-open")
   }
-
-  // ALTER HEADER ON SCROLL POSITION
-  const headerPosition = () => {
-    if (window.scrollY > 90) {
-      //console.log("MORE then 129")
-      document.querySelector(".header-container").classList.add("slim")
-    } else {
-      //console.log("LESS then 129")
-      document.querySelector(".header-container").classList.remove("slim")
-    }
-  }
-  document.addEventListener("scroll", () => {
-    headerPosition()
-  })
-  ///////
 
   return (
     <>

@@ -3,7 +3,7 @@ import "./reviews.scss"
 
 // IMPORTS IMAGES
 import NielImage from "/src/images/neil-fb-review.jpg"
-import ArclightMusicLogo from "/src/images/arclight-music-icon.png"
+//import ArclightMusicLogo from "/src/images/arclight-music-icon.png"
 
 const Reviews = () => {
   const reviewData = [
