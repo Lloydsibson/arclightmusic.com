@@ -19,12 +19,12 @@ const Header = ({ siteTitle }) => {
         //console.log("LESS then 129")
         document.querySelector(".header-container").classList.remove("slim")
       }
-
-      document.addEventListener("scroll", () => {
-        headerPosition()
-      })
-      ///////
     }
+
+    document.addEventListener("scroll", () => {
+      headerPosition()
+    })
+    ///////
   }, [])
 
   const onMouseLeaveHandler = e => {

@@ -5,16 +5,15 @@ export default function HTML(props) {
   return (
     <html {...props.htmlAttributes}>
       <head>
+        {/* REMOVE IN PRODUCTION - HIDES PAGE FROM WEB CRAWLERS */}
+        <meta name="robots" content="noindex" />
+        {/* ---------------------------------------------------- */}
         <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-        <script
-          src="https://assets.juicer.io/embed.js"
-          type="text/javascript"
-        ></script>
         <link
           href="https://assets.juicer.io/embed.css"
           media="all"
@@ -31,6 +30,10 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
+        <script
+          src="https://assets.juicer.io/embed.js"
+          type="text/javascript"
+        ></script>
       </body>
     </html>
   )
