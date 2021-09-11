@@ -8,6 +8,8 @@
   z-index: 18;
   .mobile-nav_inner-container {
     width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
     display: flex;
     background-color: $primaryColour;
     border-radius: 50px;

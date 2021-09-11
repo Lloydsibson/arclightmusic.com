@@ -2,9 +2,10 @@
 
 .upcoming-events {
   background-color: $hightlightColour;
-  padding: 30px 20px;
+  padding: 30px 0px;
   .upcoming-events__inner-container {
     max-width: $pageWidth;
+    padding: 0 20px;
     margin: 0 auto;
     p {
       font-size: 0.88rem;
@@ -24,7 +25,32 @@
 }
 
 // TABLETS
-@media only screen and (min-width: 767px) and (max-width: 992px) {
+@media only screen and (min-width: 767px) and (max-width: 1100px) {
+  .upcoming-events {
+    .upcoming-events__inner-container {
+      p {
+      }
+      .upcoming-events__title {
+      }
+      .upcoming-events__events {
+        flex-direction: row;
+        .event-card-container {
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          a {
+            width: calc(50% - 20px);
+            max-width: 500px;
+            margin: 10px;
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 // PHONES/TABLETS

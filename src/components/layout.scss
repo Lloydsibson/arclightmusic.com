@@ -80,6 +80,15 @@ body {
     -webkit-filter: drop-shadow(2px 4px 6px #000);
     filter: drop-shadow(2px 4px 6px #000);
   }
+  .page-container {
+    padding-top: 36px;
+  }
+}
+
+@media only screen and (max-width: 305px) {
+  .page-container {
+    padding-top: 52px;
+  }
 }
 
 article,
@@ -462,6 +471,7 @@ p {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
+  line-height: 21px;
 }
 pre {
   margin-left: 0;
@@ -666,10 +676,7 @@ pre tt:after {
 }
 
 // PHONES/TABLETS
-@media only screen and (max-width: 767px) {
-  .page-container {
-    padding-top: 32px;
-  }
+@media only screen and (max-width: 992px) {
   h2 {
     font-size: 1.5rem;
   }

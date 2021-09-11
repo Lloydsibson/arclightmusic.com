@@ -34,7 +34,7 @@ const HomePageCarousel = () => {
     },
     {
       image: HalloweenBanner,
-      title: "Reach Out",
+      title: "You There!",
       subtitle:
         "Want to be a Partner or interested in playing at the next event?",
       info: "Just fill in the form on the contact page",

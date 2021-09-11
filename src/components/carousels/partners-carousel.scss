@@ -2,8 +2,9 @@
 
 .partner-carousel {
   max-width: $pageWidth;
-  margin: 20px auto 40px auto;
+  margin: 30px auto 40px auto;
   filter: grayscale(1);
+  padding: 0 20px;
   .partner-carousel__title {
     display: flex;
     align-items: center;
@@ -33,7 +34,6 @@
 @media only screen and (max-width: 767px) {
   .partner-carousel {
     margin: 50px auto;
-    padding: 0 20px;
     .partner-carousel__title {
       margin-bottom: 30px;
     }

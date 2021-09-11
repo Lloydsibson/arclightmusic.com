@@ -121,11 +121,21 @@
 }
 
 // TABLETS
-@media only screen and (min-width: 767px) and (max-width: 992px) {
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .hp-carousel .slick-list .hp-slide .hp-slide__inner-container {
+    width: 60%;
+  }
+}
+
+// TABLETS
+@media only screen and (min-width: 992px) {
+  .hp-carousel {
+    padding: 0 20px;
+  }
 }
 
 // PHONES/TABLETS
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 992px) {
   .hp-carousel {
     margin: 0 auto;
     .slick-list {
@@ -141,8 +151,8 @@
               margin-bottom: 15px;
               margin-right: 0;
               .slide-btn {
-                padding: 17px 50px;
-                max-width: 300px;
+                padding: 19.75px 50px;
+                max-width: 335px;
               }
             }
           }
@@ -178,5 +188,16 @@
 }
 
 // SMALL IPHONE
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 400px) {
+  .hp-carousel {
+    .slick-list {
+      .hp-slide {
+        .hp-slide__inner-container {
+          h3 {
+            word-break: break-all;
+          }
+        }
+      }
+    }
+  }
 }

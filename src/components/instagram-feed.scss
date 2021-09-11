@@ -11,7 +11,7 @@
     position: relative;
     max-width: $pageWidth;
     margin: 75px auto 50px auto;
-    padding: 60px 40px 90px 40px;
+    padding: 80px 20px 85px 20px;
     .ep-number {
       color: #94f3e4;
     }
@@ -64,13 +64,13 @@ body .juicer-feed.slider.j-modern li.feed-item a.j-image img {
 }
 
 // PHONES/TABLETS
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1115px) {
   .instagram-feed {
     margin: 20px auto;
     background-position: left;
     .instagram-feed__inner-container {
       margin: 50px auto;
-      padding: 40px 20px;
+      padding: 50px 20px;
     }
   }
 }

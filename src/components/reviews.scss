@@ -2,71 +2,65 @@
 
 .reviews {
   max-width: 1600px;
-  margin: 0 auto;
+  margin: 0 auto 75px auto;
   padding: 0 20px;
   .reviews__inner-container {
     display: flex;
     justify-content: space-between;
     .review-names-container {
-      width: 50%;
+      width: 45%;
       .reviewer {
         display: flex;
         align-items: center;
         max-width: 500px;
-        padding: 30px;
+        padding: 35px 30px;
         border-radius: 20px;
         margin-bottom: 30px;
+        &:last-child {
+          margin-bottom: 0;
+        }
         img {
           max-width: 50px;
           border-radius: 100%;
           margin-bottom: 0;
+          filter: grayscale(1);
         }
-        &:first-child {
-          img {
-            filter: grayscale(1);
-          }
-
-          box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px,
-            rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px,
-            rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px,
-            rgba(0, 0, 0, 0.07) 0px 32px 64px;
-          .review__name {
-            a {
-              text-decoration: unset;
-              color: $hightlightColour;
-              font-size: 1.5rem;
-              margin-top: unset;
-              &:hover {
-                cursor: default;
-              }
-            }
-          }
+        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px,
+          rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px,
+          rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px,
+          rgba(0, 0, 0, 0.07) 0px 32px 64px;
+      }
+      .review__name {
+        margin-left: 15px;
+        h5 {
+          font-size: 1.2rem;
+          font-weight: 500;
+          margin-bottom: 5px;
         }
-        .review__name {
-          margin-left: 15px;
-          h5 {
-            font-size: 1.2rem;
-            font-weight: 500;
-            margin-bottom: 2px;
-            line-height: 28px;
-          }
-          a {
-            font-size: 0.88rem;
-            display: block;
-            margin-top: 10px;
-            margin-bottom: 0;
-            color: $hightlightColour;
-            word-break: break-all;
-            line-height: 21px;
+        a {
+          font-size: 0.88rem;
+          display: block;
+          margin-top: 10px;
+          margin-bottom: 0;
+          color: $hightlightColour;
+          word-break: break-all;
+          line-height: 21px;
+          text-decoration: unset;
+          color: $hightlightColour;
+          font-size: 1.5rem;
+          margin-top: unset;
+          &:hover {
+            cursor: default;
           }
         }
       }
     }
     .review-container {
       width: 50%;
+      margin-left: 5%;
       .review {
         h5 {
-          font-size: 2rem;
+          font-size: 1.5rem;
           font-weight: 600;
         }
       }
@@ -103,13 +97,24 @@
   }
 }
 
-// TABLETS
-@media only screen and (min-width: 767px) and (max-width: 992px) {
+// DESKTOP
+@media only screen and (min-width: 1100px) {
+  .reviews {
+    .reviews__inner-container {
+      .review-names-container {
+        width: 35%;
+      }
+      .review-container {
+        width: 60%;
+      }
+    }
+  }
 }
 
 // PHONES/TABLETS
 @media only screen and (max-width: 767px) {
   .reviews {
+    margin: 0 auto 50px auto;
     .reviews__inner-container {
       flex-direction: column;
       .review-names-container,
@@ -117,16 +122,26 @@
         width: 100%;
         .review {
           h5 {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             margin-bottom: 15px;
           }
         }
       }
+      .review-names-container {
+        order: 2;
+        .review__name {
+          h5 {
+            font-size: 1rem;
+          }
+        }
+      }
       .review-container {
-        margin-top: 15px;
+        order: 1;
+        margin-top: 0px;
         margin-bottom: 20px;
+        margin-left: 0;
         .review {
-          text-align: center;
+          text-align: left;
         }
       }
     }
