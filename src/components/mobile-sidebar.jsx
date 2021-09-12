@@ -46,7 +46,11 @@ const MobileSideBar = () => {
           </Link>
         </li>
         <li>
-          <Link to="/about" activeClassName="active">
+          <Link
+            to="/about"
+            activeClassName="active"
+            onClick={e => NavItemToggle(e)}
+          >
             About
           </Link>
         </li>

@@ -1,0 +1,81 @@
+@import "./layout";
+
+.info-nav {
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+  border-right: 1px solid $altColour;
+  padding: 0 20px 50px 20px;
+  .info-nav__inner-container {
+    h2 {
+      padding-top: 50px;
+      color: $secondaryColour;
+      margin-bottom: 50px;
+      line-height: 30px;
+      span {
+        display: block;
+        // margin-bottom: 15px;
+      }
+    }
+    .info-nav-links {
+      h3 {
+        font-weight: 600;
+        margin-bottom: 30px;
+        font-size: 1.25rem;
+      }
+      ul {
+        margin: 0 0 40px 0;
+        li {
+          display: block;
+          a {
+            display: block;
+            text-decoration: unset;
+            color: $hightlightColour;
+            h4 {
+              font-weight: 600;
+              text-transform: capitalize;
+              display: inline;
+              border-bottom: 2px solid transparent;
+              transition: all 0.2s ease-in-out;
+            }
+            &:hover {
+              h4 {
+                border-bottom: 2px solid $secondaryColour;
+              }
+            }
+          }
+          a.active {
+            color: $altColour;
+            &:hover {
+              h4 {
+                border-color: $altColour;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// TABLETS
+@media only screen and (max-width: 992px) {
+  .info-nav {
+    width: 100%;
+    border: unset;
+    padding: 0 0 20px 0;
+    .info-nav__inner-container {
+      h2 {
+        display: none;
+      }
+    }
+  }
+}
+
+// PHONES/TABLETS
+@media only screen and (max-width: 767px) {
+}
+
+// SMALL IPHONE
+@media only screen and (max-width: 320px) {
+}
