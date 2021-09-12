@@ -124,79 +124,81 @@ const ArclightPromotionsPage = () => {
               or device’s settings for how you can control or reject cookies, or
               visit the following links:
             </p>
-            <a
-              href="https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Apple Safari
-            </a>
-            <a
-              href="https://support.google.com/chrome/answer/95647?co=GENIE.Platform%3DDesktop&amp;hl=en"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Google Chrome
-            </a>
-            <a
-              href="https://support.microsoft.com/en-us/windows/microsoft-edge-browsing-data-and-privacy-bb8174ba-9d73-dcf2-9b4a-c582b4e640dd"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Microsoft Edge
-            </a>
-            <a
-              href="https://support.microsoft.com/en-gb/help/17442/windows-internet-explorer-delete-manage-cookies"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Microsoft Internet Explorer
-            </a>
-            <a
-              href="https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop?redirectslug=enable-and-disable-cookies-website-preferences&amp;redirectlocale=en-US"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Mozilla Firefox
-            </a>
-            <a
-              href="https://help.opera.com/en/latest/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Opera
-            </a>
-            <a
-              href="https://support.google.com/chrome/answer/95647?co=GENIE.Platform%3DAndroid&amp;hl=en&amp;oco=1"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Android (Chrome)
-            </a>
-            <a
-              href="https://docs.blackberry.com/content/dam/docs-blackberry-com/release-pdfs/en/device-user-guides/BlackBerry-Classic-Smartphone-10.3.3-User-Guide-en.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Blackberry
-            </a>
-            <a
-              href="https://support.google.com/chrome/answer/95647?co=GENIE.Platform%3DiOS&amp;hl=en&amp;oco=1"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Iphone or Ipad (Chrome)
-            </a>
-            <a
-              href="https://support.google.com/chrome/answer/95647?co=GENIE.Platform%3DAndroid&amp;hl=en&amp;oco=1"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Iphone or Ipad (Safari)
-            </a>
+            <div className="cookie-policy-links">
+              <a
+                href="https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Apple Safari
+              </a>
+              <a
+                href="https://support.google.com/chrome/answer/95647?co=GENIE.Platform%3DDesktop&amp;hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Google Chrome
+              </a>
+              <a
+                href="https://support.microsoft.com/en-us/windows/microsoft-edge-browsing-data-and-privacy-bb8174ba-9d73-dcf2-9b4a-c582b4e640dd"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Microsoft Edge
+              </a>
+              <a
+                href="https://support.microsoft.com/en-gb/help/17442/windows-internet-explorer-delete-manage-cookies"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Microsoft Internet Explorer
+              </a>
+              <a
+                href="https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop?redirectslug=enable-and-disable-cookies-website-preferences&amp;redirectlocale=en-US"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Mozilla Firefox
+              </a>
+              <a
+                href="https://help.opera.com/en/latest/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Opera
+              </a>
+              <a
+                href="https://support.google.com/chrome/answer/95647?co=GENIE.Platform%3DAndroid&amp;hl=en&amp;oco=1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Android (Chrome)
+              </a>
+              <a
+                href="https://docs.blackberry.com/content/dam/docs-blackberry-com/release-pdfs/en/device-user-guides/BlackBerry-Classic-Smartphone-10.3.3-User-Guide-en.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Blackberry
+              </a>
+              <a
+                href="https://support.google.com/chrome/answer/95647?co=GENIE.Platform%3DiOS&amp;hl=en&amp;oco=1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Iphone or Ipad (Chrome)
+              </a>
+              <a
+                href="https://support.google.com/chrome/answer/95647?co=GENIE.Platform%3DAndroid&amp;hl=en&amp;oco=1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Iphone or Ipad (Safari)
+              </a>
+            </div>
             <p>
               In addition, you may opt-out of some third-party cookies through
-              the
+              the &nbsp;
               <a
                 href="http://optout.networkadvertising.org/?c=1"
                 target="_blank"
@@ -206,6 +208,7 @@ const ArclightPromotionsPage = () => {
               </a>
               .
             </p>
+
             <h2>Other Tracking Technologies</h2>
             <p>
               In addition to cookies, we may use web beacons, pixel tags, and

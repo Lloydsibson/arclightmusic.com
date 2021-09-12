@@ -127,6 +127,19 @@ body {
           color: #37aa9c;
         }
       }
+      .cookie-policy-links {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        a {
+          display: block;
+          margin-bottom: 10px;
+          color: $hightlightColour;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
     }
   }
 }
