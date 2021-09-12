@@ -28,10 +28,10 @@ const HomePageCarousel = () => {
       title: "Arclight Promotions",
       subtitle: "Funding Music with Music",
       info: "Check out the latest events near you",
-      btnOneText: "Buy Tickets",
+      btnOneText: "All Events",
       btnOneLink: "/events",
-      btnTwoText: "All Events",
-      btnTwoLink: "/events",
+      btnTwoText: "Learn More",
+      btnTwoLink: "/arclight-promotions",
     },
     {
       image: ContactBanner,
@@ -42,7 +42,7 @@ const HomePageCarousel = () => {
       btnOneText: "Contact",
       btnOneLink: "/events",
       btnTwoText: "More Info",
-      btnTwoLink: "/events",
+      btnTwoLink: "/partners",
     },
   ]
 
