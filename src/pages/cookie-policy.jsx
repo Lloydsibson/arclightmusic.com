@@ -9,7 +9,10 @@ import InfoNav from "../components/info-nav"
 const ArclightPromotionsPage = () => {
   return (
     <Layout>
-      <Seo title="Cookie Policy" />
+      <Seo
+        title="Cookie Policy"
+        description="Information on our cookie policy and how these are used throughout our website"
+      />
       <div className="information-page">
         <div className="information-page__inner-container">
           <InfoNav />

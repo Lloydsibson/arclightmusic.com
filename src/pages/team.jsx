@@ -8,7 +8,10 @@ import InfoNav from "../components/info-nav"
 const TeamPage = () => {
   return (
     <Layout>
-      <Seo title="Team" />
+      <Seo
+        title="Team"
+        description="Meet the Arclight Music team and the people behind the events"
+      />
       <div className="information-page">
         <div className="information-page__inner-container">
           <InfoNav />

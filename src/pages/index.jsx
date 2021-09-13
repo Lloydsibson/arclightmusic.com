@@ -18,7 +18,10 @@ import "normalize.css"
 const IndexPage = () => {
   return (
     <Layout>
-      <Seo title="Home" />
+      <Seo
+        title="Home"
+        description="Welcome to Arclight Music! See our latest events and what we offer"
+      />
       <div className="hp-group">
         <UpcomingEvents />
         <HomePageCarousel />
@@ -154,10 +157,10 @@ const IndexPage = () => {
               incredible annual festival.
             </h4>
             <div className="ep-03-buttons">
-              <Link to="rac" className="learn-more-btn donate">
+              <div to="rac" className="learn-more-btn donate">
                 <button>Donate</button>
-              </Link>
-              <Link to="rac" className="learn-more-btn alt">
+              </div>
+              <Link to="rac-festival" className="learn-more-btn alt">
                 <button>Learn More</button>
               </Link>
             </div>

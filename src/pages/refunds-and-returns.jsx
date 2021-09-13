@@ -8,7 +8,10 @@ import InfoNav from "../components/info-nav"
 const RefundAndReturnsPage = () => {
   return (
     <Layout>
-      <Seo title="Refunds and Returns" />
+      <Seo
+        title="Refunds and Returns"
+        description="Information on our refunds and returns policy"
+      />
       <div className="information-page">
         <div className="information-page__inner-container">
           <InfoNav />

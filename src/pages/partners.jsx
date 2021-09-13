@@ -9,7 +9,10 @@ import InfoNav from "../components/info-nav"
 const PartnersPage = () => {
   return (
     <Layout>
-      <Seo title="Partners" />
+      <Seo
+        title="Partners"
+        description="Information on becoming an official partner"
+      />
       <div className="information-page">
         <div className="information-page__inner-container">
           <InfoNav />

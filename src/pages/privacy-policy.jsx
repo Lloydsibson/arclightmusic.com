@@ -8,7 +8,10 @@ import InfoNav from "../components/info-nav"
 const PrivacyPolicyPage = () => {
   return (
     <Layout>
-      <Seo title="Privacy Policy" />
+      <Seo
+        title="Privacy Policy"
+        description="Information on our privacy policy for the Arclight Music website"
+      />
       <div className="information-page">
         <div className="information-page__inner-container">
           <InfoNav />

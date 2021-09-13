@@ -153,20 +153,31 @@
       h4 {
         max-width: 415px;
       }
-      .learn-more-btn.donate {
-        button {
-          background-color: $hightlightColour;
-          margin-right: 2.5%;
-          max-width: 214px;
-          box-shadow: $boxshadow;
-          border: 1px solid #37aa9c;
-          &:hover {
-            background-color: $hightlightColourHover;
-            opacity: 1;
+      .ep-03-buttons {
+        max-width: 450px;
+        display: flex;
+        flex-wrap: wrap;
+        .learn-more-btn.donate {
+          display: block;
+          width: 47.5%;
+          margin-right: 3%;
+          button {
+            background-color: $hightlightColour;
+            max-width: 214px;
+            box-shadow: $boxshadow;
+            border: 1px solid #37aa9c;
+            opacity: 0.3;
+            &:hover {
+              background-color: $hightlightColourHover;
+              // opacity: 1;
+              cursor: not-allowed;
+            }
           }
         }
       }
       .learn-more-btn.alt {
+        width: 47.5%;
+        display: block;
         button {
           background-color: unset;
           // border: 1px solid $secondaryColour;
@@ -409,9 +420,38 @@
 // MEDIUM IPHONE
 @media only screen and (max-width: 450px) {
   .white-background {
-    .learn-more-btn button {
-      max-width: 335px !important;
-      padding: 20px 25px;
+    .learn-more-btn {
+      width: 100%;
+      button {
+        max-width: unset;
+        padding: 21px 25px;
+      }
+    }
+    .ep-03 {
+      .ep-03__information {
+        .ep-03-buttons {
+          width: 100%;
+          .learn-more-btn {
+            width: 100%;
+            button {
+              max-width: unset;
+              padding: 20px 25px;
+            }
+          }
+          .learn-more-btn.donate {
+            width: 100%;
+            margin-right: unset;
+            button {
+              max-width: unset;
+            }
+          }
+          .learn-more-btn.alt {
+            button {
+              padding: 21px 25px;
+            }
+          }
+        }
+      }
     }
   }
 }

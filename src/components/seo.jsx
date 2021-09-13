@@ -10,7 +10,9 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function Seo({ description, lang, meta, title }) {
+import SocialShareThumbnail from "../images/social-share-thumnail.jpg"
+
+function Seo({ description, lang, meta, title, socialImage }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -27,6 +29,7 @@ function Seo({ description, lang, meta, title }) {
 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
+  const defaultSocialShare = SocialShareThumbnail
 
   return (
     <Helmet
@@ -53,8 +56,12 @@ function Seo({ description, lang, meta, title }) {
           content: `website`,
         },
         {
+          property: "og:image",
+          content: socialImage || defaultSocialShare,
+        },
+        {
           name: `twitter:card`,
-          content: `summary`,
+          content: description,
         },
         {
           name: `twitter:creator`,

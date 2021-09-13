@@ -1,10 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `Arclight Music`,
-    description: `Arclight Music was set up to help struggling schools fund music with music and give young musicians the chance to play shows with bigger names where other promoters ...`,
-    author: `@monocode-uk`,
+    description: `Funding Music With Music`,
+    author: `monocode-uk`,
     siteUrl: `https://www.arclightmusic.co.uk/`,
-    
   },
   plugins: [
     `gatsby-plugin-sass`,
@@ -22,11 +21,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `arclight-music-default`,
+        short_name: `arclight-music`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#1a1a1b`,
+        theme_color: `#37aa9c`,
         display: `minimal-ui`,
         icon: `src/images/arclight-music-icon.png`, // This path is relative to the root of the site.
       },

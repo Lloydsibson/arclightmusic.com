@@ -202,6 +202,25 @@
 }
 
 // SMALL IPHONE
+@media only screen and (max-width: 450px) {
+  .hp-carousel {
+    .slick-list {
+      .hp-slide {
+        .hp-slide__inner-container {
+          .slide-btns {
+            a {
+              .slide-btn {
+                max-width: unset;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// SMALL IPHONE
 @media only screen and (max-width: 400px) {
   .hp-carousel {
     .slick-list {

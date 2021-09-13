@@ -8,7 +8,10 @@ import InfoNav from "../components/info-nav"
 const ArclightApparelPage = () => {
   return (
     <Layout>
-      <Seo title="Arclight Apparel" />
+      <Seo
+        title="Arclight Apparel"
+        description="Information on our merchandise division"
+      />
       <div className="information-page">
         <div className="information-page__inner-container">
           <InfoNav />

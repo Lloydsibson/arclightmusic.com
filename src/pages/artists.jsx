@@ -8,7 +8,10 @@ import InfoNav from "../components/info-nav"
 const ArtistsPage = () => {
   return (
     <Layout>
-      <Seo title="Artists" />
+      <Seo
+        title="Artists"
+        description="Information on working with us as an artist"
+      />
       <div className="information-page">
         <div className="information-page__inner-container">
           <InfoNav />

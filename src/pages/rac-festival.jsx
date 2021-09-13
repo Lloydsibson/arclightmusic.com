@@ -8,7 +8,10 @@ import InfoNav from "../components/info-nav"
 const RACPage = () => {
   return (
     <Layout>
-      <Seo title="RAC Festival" />
+      <Seo
+        title="RAC Festival"
+        description="Information on the Rage Against Cancer Festival"
+      />
       <div className="information-page">
         <div className="information-page__inner-container">
           <InfoNav />

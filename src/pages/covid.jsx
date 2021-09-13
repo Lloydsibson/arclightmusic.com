@@ -8,7 +8,10 @@ import InfoNav from "../components/info-nav"
 const CovidPage = () => {
   return (
     <Layout>
-      <Seo title="COVID" />
+      <Seo
+        title="COVID"
+        description="Information about the latest COVID procedures at our events"
+      />
       <div className="information-page">
         <div className="information-page__inner-container">
           <InfoNav />
