@@ -63,15 +63,46 @@
           border: 3px solid $hightlightColour;
         }
       }
-      select {
-        border-radius: 5px;
-        height: 50px;
-        border: unset;
-        padding: 0 5px;
-        &:focus {
-          outline: unset;
-          border: 3px solid $hightlightColour;
+      .custom-select-container {
+        position: relative;
+        width: 100%;
+        select {
+          border-radius: 5px;
+          height: 50px;
+          line-height: 21px;
+          border: unset;
+          padding: 10px 45px 10px 10px;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          width: 100%;
+          &:focus {
+            outline: unset;
+            border: 3px solid $hightlightColour;
+          }
         }
+        svg {
+          position: absolute;
+          font-size: 18px;
+          top: 17px;
+          right: 15px;
+          z-index: 9;
+          path {
+            fill: $secondaryColour;
+          }
+        }
+        // &:after {
+        //   font-family: "Font Awesome 5 Free";
+        //   font-weight: 900;
+        //   content: "\f007";
+        //   position: absolute;
+        //   display: block;
+        //   font-size: 50px;
+        //   top: 10px;
+        //   right: 10px;
+        //   color: $secondaryColour;
+        //   z-index: 9;
+        // }
       }
       textarea {
         border-radius: 5px;
@@ -98,9 +129,9 @@
           border: unset;
           background-color: $hightlightColour;
           color: $primaryColour;
-          padding: 20px 20px;
-          border-radius: 5px;
-          font-size: 0.8rem;
+          padding: 15px 20px;
+          border-radius: 50px;
+          font-size: 0.88rem;
           text-transform: uppercase;
           box-shadow: rgb(0 0 0 / 40%) 0px 2px 4px,
             rgb(0 0 0 / 30%) 0px 7px 13px -3px,
@@ -176,12 +207,20 @@
     .contact-page__text {
       .contact-text {
         max-width: unset;
-        margin-bottom: 30px;
+        margin-bottom: 15px;
       }
     }
     .contact-page__form {
       form {
         padding: 25px 20px;
+        .form-submit-container {
+          .form-submit-container__btns {
+            max-width: unset;
+            button {
+              padding: 21px 25px;
+            }
+          }
+        }
       }
     }
   }
