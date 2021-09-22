@@ -114,6 +114,12 @@ header {
         left: 0;
         top: 0;
       }
+      &:last-child {
+        background-color: #26746c;
+        &:before {
+          content: unset;
+        }
+      }
     }
   }
 }

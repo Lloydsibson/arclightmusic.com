@@ -1,14 +1,103 @@
-import * as React from "react"
+import React, { useState } from "react"
 
+import "./contact.scss"
+
+import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
+//import Recaptcha from "react-google-recaptcha"
+// SITE-KEY = 6LepgIMcAAAAADZ5mL8-ganvF1-rVwQhvSzQy2VK
+// SECRET KEY = 6LepgIMcAAAAABL2L8liWh_hSLYe9wm0Yqn-fTbj
+
 const ContactPage = () => {
+  const [buttonDisabled, setButtonDisabled] = useState(true)
   return (
     <Layout>
       <Seo title="Contact" description="Contact and reach out to us today" />
       <div className="contact-page">
-        <h1>Contact</h1>
+        <div className="contact-page__text">
+          <div className="contact-text">
+            <h1>Contact Us</h1>
+            <h2>
+              We welcome enquiries from all involved in music or education.
+            </h2>
+            <p>
+              We aim to respond to all enquiries within 3 working days however
+              this may be longer on some occasions due to high demand.
+            </p>
+            <p>
+              Please know that you have not been forgotten and we will be in
+              touch as soon as physically possible
+            </p>
+          </div>
+          <div className="contact-image">
+            <StaticImage
+              src="../images/social-media-share.png"
+              width={500}
+              quality={95}
+              formats={["AUTO", "WEBP", "AVIF"]}
+              alt="a group of people on mobiles communicating through social media"
+            />
+          </div>
+        </div>
+
+        <div className="contact-page__form">
+          <form action="https://formspree.io/f/xbjqwqaw" method="POST">
+            <div className="form-input-container">
+              <label>Your Name *</label>
+              <input required type="text" name="name" />
+            </div>
+            <div className="form-input-container">
+              <label>Email Address *</label>
+              <input required type="email" name="_replyto" />
+            </div>
+            <div className="form-input-container">
+              <label>Phone Number</label>
+              <input
+                type="tel"
+                name="phone-number"
+                // pattern="[0-9]{11}"
+                // maxlength="15"
+                // title="Mobile or landline numbers only"
+              />
+            </div>
+            <div className="form-input-container">
+              <label>Who Are You?</label>
+              <select name="who-are-you?">
+                <option value="..."></option>
+                <option value="Band">Band</option>
+                <option value="Promoter">Promoter</option>
+                <option value="Manager">Manager</option>
+                <option value="Venue">Venue</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div className="form-input-container">
+              <label>Message *</label>
+              <textarea required name="message"></textarea>
+            </div>
+            <div className="form-submit-container">
+              <div className="form-submit-container__btns">
+                {/* <Recaptcha
+                  sitekey={RECAPTCHA_SITE_KEY}
+                  size="normal"
+                  theme="light"
+                  tabindex={0}
+                  id="recaptcha-google"
+                  onChange={() => setButtonDisabled(false)}
+                  // callback={}
+                  onExpired={() => setButtonDisabled(true)}
+                  onErrored={() => setButtonDisabled(true)}
+                /> */}
+                <button type="submit">Send Message</button>
+              </div>
+              <div className="form-submit-container__required">
+                <p>* Required</p>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
     </Layout>
   )

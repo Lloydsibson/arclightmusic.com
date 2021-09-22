@@ -118,7 +118,7 @@ const Header = ({ siteTitle }) => {
             <div className="sub-nav__inner-container">
               <h4>Policies</h4>
               <ul>
-                <Link to="/cookies-policy" activeClassName="active">
+                <Link to="/cookie-policy" activeClassName="active">
                   <li>Cookies</li>
                 </Link>
                 <Link to="/privacy-policy" activeClassName="active">

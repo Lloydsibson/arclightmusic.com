@@ -19,7 +19,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <Seo
-        title="Home"
+        title="Funding Music with Music"
         description="Welcome to Arclight Music! See our latest events and what we offer"
       />
       <div className="hp-group">

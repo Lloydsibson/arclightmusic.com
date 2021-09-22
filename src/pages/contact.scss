@@ -1,0 +1,192 @@
+@import "../components/layout";
+
+.contact-page {
+  display: flex;
+  max-width: $pageWidth;
+  margin: 0 auto;
+  padding: 50px 20px 100px 20px;
+}
+
+.contact-page__text {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 40px;
+  .contact-text {
+    max-width: 521px;
+    color: $primaryColour;
+    h1 {
+      padding-top: 25px;
+      font-size: 4rem;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-size: 1.6rem;
+      line-height: 35px;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+  }
+  .contact-image {
+    padding-top: 50px;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.contact-page__form {
+  width: 55%;
+  form {
+    background-color: #333333;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    color: $primaryColour;
+    border-radius: 20px;
+    .form-input-container {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 30px;
+      label {
+        margin-bottom: 10px;
+      }
+      input {
+        border-radius: 5px;
+        height: 50px;
+        border: unset;
+        padding: 0 10px;
+        &:focus {
+          outline: unset;
+          border: 3px solid $hightlightColour;
+        }
+      }
+      select {
+        border-radius: 5px;
+        height: 50px;
+        border: unset;
+        padding: 0 5px;
+        &:focus {
+          outline: unset;
+          border: 3px solid $hightlightColour;
+        }
+      }
+      textarea {
+        border-radius: 5px;
+        height: 200px;
+        border: unset;
+        padding: 10px;
+        resize: vertical;
+        &:focus {
+          outline: unset;
+          border: 3px solid $hightlightColour;
+        }
+      }
+    }
+    .form-submit-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      .form-submit-container__btns {
+        margin-bottom: 10px;
+        width: 100%;
+        max-width: 220px;
+        button {
+          width: 100%;
+          border: unset;
+          background-color: $hightlightColour;
+          color: $primaryColour;
+          padding: 20px 20px;
+          border-radius: 5px;
+          font-size: 0.8rem;
+          text-transform: uppercase;
+          box-shadow: rgb(0 0 0 / 40%) 0px 2px 4px,
+            rgb(0 0 0 / 30%) 0px 7px 13px -3px,
+            rgb(0 0 0 / 20%) 0px -3px 0px inset;
+          transition: all 0.3s ease-in-out 0s;
+          &:hover {
+            background-color: $hightlightColourHover;
+            cursor: pointer;
+          }
+        }
+      }
+      .form-submit-container__required {
+        font-size: 0.8rem;
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .contact-page {
+    padding: 40px 20px 40px 20px;
+    .contact-text {
+      h1 {
+        padding-top: 0;
+        font-size: 2.8rem;
+        margin-bottom: 35px;
+      }
+      h2 {
+        font-size: 1.2rem;
+        line-height: 30px;
+      }
+    }
+    .contact-image {
+      padding-top: 0;
+    }
+  }
+}
+
+// PHONES/TABLETS
+@media only screen and (max-width: 900px) {
+  .contact-page {
+    flex-direction: column;
+    justify-content: center;
+    .contact-page__text,
+    .contact-page__form {
+      width: 100%;
+    }
+    .contact-page__text {
+      margin-bottom: 40px;
+      margin-right: 0;
+    }
+  }
+}
+
+// MEDIUM IPHONE
+@media only screen and (min-width: 767px) and (max-width: 900px) {
+  .contact-page {
+    .contact-page__text {
+      flex-direction: row;
+      .contact-text {
+        margin-right: 40px;
+      }
+    }
+  }
+}
+
+// MEDIUM IPHONE
+@media only screen and (max-width: 767px) {
+  .contact-page {
+    .contact-page__text {
+      .contact-text {
+        max-width: unset;
+        margin-bottom: 30px;
+      }
+    }
+    .contact-page__form {
+      form {
+        padding: 25px 20px;
+      }
+    }
+  }
+}
+
+// SMALL IPHONE
+@media only screen and (max-width: 320px) {
+}
