@@ -1,0 +1,158 @@
+@import "../components/layout";
+
+.events-page {
+  background-color: $primaryColour;
+  .events-page__inner-container {
+    max-width: $pageWidth;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 50px 20px 100px 20px;
+    .events-title-container {
+      padding-bottom: 30px;
+      border-bottom: 2px solid $altColour;
+      .events-title-container__title {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 20px;
+        h1 {
+          font-size: 4rem;
+          margin-top: 0;
+          margin-bottom: 0px;
+        }
+        #events-counter {
+          background-color: $hightlightColour;
+          padding: 5px 15px;
+          border-radius: 50px;
+          color: $primaryColour;
+          font-weight: 600;
+          margin-left: 15px;
+          margin-top: 5px;
+          font-size: 0.88rem;
+        }
+      }
+      .events-title-container__filters {
+        display: flex;
+        align-items: center;
+        label {
+          font-size: 1.2rem;
+          color: $secondaryColour;
+          margin-right: 15px;
+          font-weight: 500;
+        }
+        select#CatSelect {
+          width: 100%;
+          max-width: 178px;
+          border-radius: 5px;
+          font-weight: 500;
+          padding: 0 10px;
+          height: 31px;
+          border: 1px solid $altColour;
+          &:focus {
+            outline: unset;
+            border-color: $hightlightColour;
+          }
+        }
+        a {
+          text-decoration: unset;
+          color: $altColour;
+          margin-left: 50px;
+          h3 {
+            margin: 0;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .contact-page {
+    padding: 40px 20px 40px 20px;
+    .contact-text {
+      h1 {
+        padding-top: 0;
+        font-size: 2.8rem;
+        margin-bottom: 35px;
+      }
+      h2 {
+        font-size: 1.2rem;
+        line-height: 30px;
+      }
+    }
+    .contact-image {
+      padding-top: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .events-page {
+    .events-page__inner-container {
+      padding: 40px 20px 40px 20px;
+      .events-title-container {
+        .events-title-container__title {
+          h1 {
+            font-size: 2.8rem;
+          }
+        }
+        .events-title-container__filters {
+          flex-direction: column;
+          align-items: flex-start;
+          label {
+            margin-bottom: 10px;
+          }
+          select#CatSelect {
+            margin-bottom: 25px;
+          }
+          a {
+            margin-left: 0;
+            h3 {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// PHONES/TABLETS
+@media only screen and (max-width: 600px) {
+  .events-page {
+    .events-page__inner-container {
+      .events-title-container {
+        .events-title-container__filters {
+          flex-direction: column;
+          align-items: flex-start;
+          label {
+            margin-bottom: 10px;
+          }
+          select#CatSelect {
+            margin-bottom: 25px;
+          }
+          a {
+            margin-left: 0;
+            h3 {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// MEDIUM IPHONE
+@media only screen and (min-width: 767px) and (max-width: 900px) {
+}
+
+// MEDIUM IPHONE
+@media only screen and (max-width: 767px) {
+}
+
+// SMALL IPHONE
+@media only screen and (max-width: 320px) {
+}

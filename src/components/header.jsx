@@ -8,7 +8,8 @@ import "./header.scss"
 import AnnoucementBar from "./annoucement-bar"
 import MobileNav from "./mobile-nav"
 
-const Header = ({ siteTitle }) => {
+const Header = () => {
+  //console.log(props)
   useEffect(() => {
     // ALTER HEADER ON SCROLL POSITION
     const headerPosition = () => {
@@ -45,7 +46,7 @@ const Header = ({ siteTitle }) => {
           <div className="logo-container">
             <h1>
               <Link to="/">
-                {siteTitle}
+                {/* {props.siteTitle} */}
                 <StaticImage
                   src="../images/website-logo.png"
                   width={178}

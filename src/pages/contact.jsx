@@ -48,28 +48,29 @@ const ContactPage = () => {
         <div className="contact-page__form">
           <form action="https://formspree.io/f/xbjqwqaw" method="POST">
             <div className="form-input-container">
-              <label>Your Name *</label>
-              <input required type="text" name="name" />
+              <label htmlFor="formName">Your Name *</label>
+              <input required type="text" name="name" id="formName" />
               <input type="text" name="_gotcha" style={{ display: "none" }} />
             </div>
             <div className="form-input-container">
-              <label>Email Address *</label>
-              <input required type="email" name="_replyto" />
+              <label htmlFor="formEmail">Email Address *</label>
+              <input required type="email" name="_replyto" id="formEmail" />
             </div>
             <div className="form-input-container">
-              <label>Phone Number</label>
+              <label htmlFor="formTel">Phone Number</label>
               <input
                 type="tel"
                 name="phone-number"
+                id="formTel"
                 // pattern="[0-9]{11}"
                 // maxlength="15"
                 // title="Mobile or landline numbers only"
               />
             </div>
             <div className="form-input-container">
-              <label>Who Are You?</label>
+              <label htmlFor="whoForm">Who Are You?</label>
               <div className="custom-select-container">
-                <select name="who-are-you?">
+                <select name="who-are-you?" id="whoForm">
                   <option value="..."></option>
                   <option value="Band">Band</option>
                   <option value="Promoter">Promoter</option>
@@ -85,7 +86,7 @@ const ContactPage = () => {
                   role="img"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 448 512"
-                  class="svg-inline--fa fa-chevron-down fa-w-14"
+                  className="svg-inline--fa fa-chevron-down fa-w-14"
                 >
                   <path
                     fill="currentColor"
@@ -96,8 +97,8 @@ const ContactPage = () => {
               </div>
             </div>
             <div className="form-input-container">
-              <label>Message *</label>
-              <textarea required name="message"></textarea>
+              <label htmlFor="messageForm">Message *</label>
+              <textarea required name="message" id="messageForm"></textarea>
             </div>
             <div className="form-submit-container">
               <div className="form-submit-container__btns">
