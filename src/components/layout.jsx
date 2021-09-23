@@ -41,16 +41,17 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <div className="page-container">
-        <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-        <main>{children}</main>
-        <Footer />
-      </div>
+      {/* <div className="page-container"> */}
+      {/* <Header siteTitle={data.site.siteMetadata?.title || `Title`} /> */}
+      {/* <main>{children}</main> */}
+      {children}
+      {/* <Footer /> */}
+      {/* </div>
       <MobileSideBar />
       <div
         className="mobile-sidebar-overlay"
         onClick={e => NavOverlayToggle(e)}
-      ></div>
+      ></div> */}
     </>
   )
 }
