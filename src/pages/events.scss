@@ -10,6 +10,7 @@
     padding: 50px 20px 100px 20px;
     .events-title-container {
       padding-bottom: 30px;
+      margin-bottom: 50px;
       border-bottom: 2px solid $altColour;
       .events-title-container__title {
         display: flex;
@@ -61,6 +62,163 @@
           h3 {
             margin: 0;
             font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}
+
+.eventpage-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .event-card {
+    display: flex;
+    width: calc(50% - 20px);
+    margin-bottom: 40px;
+    // padding: 20px;
+    .event-card__poster {
+      width: 35%;
+      overflow: hidden;
+      position: relative;
+      z-index: 9;
+      display: flex;
+      align-items: center;
+      border-radius: 10px;
+      box-shadow: rgba($tertiaryColor, 0.4) 0px 2px 4px,
+        rgba($tertiaryColor, 0.3) 0px 7px 13px -3px,
+        rgba($tertiaryColor, 0.2) 0px -3px 0px inset;
+      filter: drop-shadow(10px 4px 14px rgba(0, 0, 0, 0.25));
+      img {
+        width: 100%;
+        transform: scale(3);
+        margin: 0;
+      }
+    }
+    .event-card__information {
+      width: 65%;
+      position: relative;
+      background-color: $tertiaryColor;
+      padding: 30px 40px 30px 50px;
+      margin: 15px 0 15px -10px;
+      border-radius: 0px 20px 20px 0;
+      h2 {
+        margin: 0;
+        font-size: 1.5rem;
+        line-height: 36px;
+        max-height: 72px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+      }
+      p.event-summary {
+        color: $altColourTwo;
+        margin-bottom: 15px;
+        max-height: 72px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+      }
+      .event-tag-container {
+        display: flex;
+        align-items: center;
+        margin: 10px auto 15px auto;
+        // justify-content: space-evenly;
+        .event-tag-container__venue {
+          display: flex;
+          align-items: center;
+          background-color: $primaryColour;
+          // padding: 5px;
+          border-radius: 5px;
+          .venue-map-icon__map {
+            background-color: #666666;
+            padding: 6px 10px;
+            border-radius: 5px 0 0 5px;
+            display: flex;
+            align-items: center;
+            svg {
+              color: $primaryColour;
+              font-size: 12px;
+            }
+          }
+          h4 {
+            margin: 0 6px;
+            font-size: 0.77rem;
+          }
+        }
+        .event-tag-container__category {
+          background-color: $primaryColour;
+          padding: 5.25px 25px;
+          margin-left: 10px;
+          border-radius: 5px;
+          h4 {
+            margin: 0;
+            font-size: 0.77rem;
+          }
+        }
+      }
+      .event-time-container {
+        margin-bottom: 30px;
+        p {
+          margin-bottom: 5px;
+          color: $altColourTwo;
+          font-size: 0.9rem;
+        }
+        h5 {
+          color: $primaryColour;
+          font-weight: 600;
+        }
+      }
+      .event-card-footer-container {
+        display: flex;
+        justify-content: space-between;
+        .event-card-footer-container__share {
+          display: flex;
+          align-items: center;
+          p {
+            margin-bottom: 0;
+            margin-left: 10px;
+            color: $altColourTwo;
+            font-weight: 500;
+            font-size: 0.9rem;
+          }
+          &:hover {
+            cursor: pointer;
+          }
+        }
+        .event-card-footer-container__cta {
+          display: flex;
+          align-items: center;
+          h5 {
+            margin-bottom: 0;
+            margin-right: 10px;
+            color: $primaryColour;
+            font-size: 1.1rem;
+            font-weight: 600;
+          }
+          button {
+            text-transform: uppercase;
+            border: unset;
+            color: $primaryColour;
+            background-color: $hightlightColour;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-size: 0.88rem;
+            font-weight: 500;
+            transition: all 0.3s ease-in-out 0s;
+            box-shadow: rgb(0 0 0 / 40%) 0px 2px 4px,
+              rgb(0 0 0 / 30%) 0px 7px 13px -3px,
+              rgb(0 0 0 / 20%) 0px -3px 0px inset;
+
+            &:hover {
+              background-color: $hightlightColourHover;
+              cursor: pointer;
+            }
           }
         }
       }
@@ -146,11 +304,69 @@
 }
 
 // MEDIUM IPHONE
-@media only screen and (min-width: 767px) and (max-width: 900px) {
+@media only screen and (min-width: 767px) and (max-width: 992px) {
+  .eventpage-card-container {
+    flex-direction: row;
+    .event-card {
+      width: calc(50% - 20px);
+    }
+  }
 }
 
 // MEDIUM IPHONE
+@media only screen and (max-width: 992px) {
+  .eventpage-card-container {
+    .event-card {
+      flex-direction: column;
+      .event-card__poster {
+        width: 100%;
+        border-radius: 20px 20px 0 0;
+        box-shadow: unset;
+        filter: unset;
+        img {
+          transform: unset;
+        }
+      }
+      .event-card__information {
+        width: 100%;
+        margin: 0;
+        border-radius: 0 0 20px 20px;
+        padding: 20px;
+        .event-time-container {
+          margin-bottom: 20px;
+        }
+        .event-card-footer-container {
+          flex-direction: column;
+          .event-card-footer-container__share {
+            margin-bottom: 20px;
+          }
+          .event-card-footer-container__cta {
+            flex-direction: column;
+            align-items: flex-start;
+            h5 {
+              margin-bottom: 20px;
+            }
+            a {
+              width: 100%;
+              button {
+                width: 100%;
+                padding: 21px 25px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 767px) {
+  .eventpage-card-container {
+    flex-direction: column;
+    .event-card {
+      width: 100%;
+    }
+  }
 }
 
 // SMALL IPHONE
