@@ -94,6 +94,7 @@
       display: flex;
       align-items: center;
       border-radius: 10px;
+      background-color: $tertiaryColor;
       box-shadow: rgba($tertiaryColor, 0.4) 0px 2px 4px,
         rgba($tertiaryColor, 0.3) 0px 7px 13px -3px,
         rgba($tertiaryColor, 0.2) 0px -3px 0px inset;
@@ -233,6 +234,9 @@
         }
       }
     }
+  }
+  .event-card.hide {
+    display: none;
   }
 }
 
@@ -490,5 +494,11 @@
 }
 
 // SMALL IPHONE
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 370px) {
+  .eventpage-card-container .event-card .event-card__poster {
+    width: 45%;
+  }
+  .eventpage-card-container .event-card .event-card__information {
+    width: 55%;
+  }
 }

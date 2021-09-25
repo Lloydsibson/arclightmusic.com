@@ -151,6 +151,26 @@ const EventPageEventbriteAPI = () => {
     }
   }
 
+  // CATEGORY FILTER
+  const catFilterHandler = e => {
+    //console.log(e.currentTarget.value)
+    const currentSelectedOption = e.currentTarget.value.toString()
+    const allEventCards = document.querySelectorAll(".event-card")
+    if (currentSelectedOption === "All") {
+      allEventCards.forEach(card => {
+        //console.log(card.dataset.category)
+        card.classList.remove("hide")
+      })
+    } else {
+      allEventCards.forEach(card => {
+        //console.log(card.dataset.category)
+        card.dataset.category == currentSelectedOption
+          ? card.classList.remove("hide")
+          : card.classList.add("hide")
+      })
+    }
+  }
+
   return (
     <div className="events-page">
       <div className="events-page__inner-container">
@@ -163,7 +183,7 @@ const EventPageEventbriteAPI = () => {
           </div>
           <div className="events-title-container__filters">
             <label htmlFor="CatSelect">Categories:</label>
-            <select id="CatSelect">
+            <select id="CatSelect" onChange={e => catFilterHandler(e)}>
               <option>All</option>
               <option>Rock</option>
               <option>Metal</option>
