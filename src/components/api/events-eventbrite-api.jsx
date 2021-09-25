@@ -7,9 +7,10 @@ import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons"
 
 const EventPageEventbriteAPI = () => {
   const [numberOfCurrentEvents, setNumberOfCurrentEvents] = useState()
+  const [loadingMessage, setLoadingMessage] = useState()
   const [eventBriteAPIData, setEventBriteAPIData] = useState([])
 
-  console.log(eventBriteAPIData)
+  //console.log(loadingMessage)
 
   useEffect(() => {
     const fetchEventApi = async () => {
@@ -121,6 +122,7 @@ const EventPageEventbriteAPI = () => {
               },
             ])
           }
+          setLoadingMessage(true)
         } else {
         }
       } catch (err) {}
@@ -165,19 +167,35 @@ const EventPageEventbriteAPI = () => {
               <option>All</option>
               <option>Rock</option>
               <option>Metal</option>
-              <option>Alt</option>
+              <option>Pop Punk</option>
+              <option>Alternative</option>
+              <option>Acoustic</option>
               <option>Other</option>
             </select>
             <a href="https://www.eventbrite.co.uk/o/arclight-promotions-uk-28941769095">
               <h3>Past Events</h3>
             </a>
           </div>
+          <p className="loading-message">
+            {loadingMessage === true
+              ? `Events Loaded`
+              : "Loading Events - Please Wait..."}
+          </p>
         </div>
         <div className="eventpage-card-container">
           {eventBriteAPIData.map((data, key) => (
-            <div className="event-card" key={key}>
+            <div
+              className="event-card"
+              key={key}
+              data-category={data.eventSubCategory}
+            >
               <div className="event-card__poster">
-                <img src={data.eventImage} alt="event poster" />
+                {/* <img src={data.eventImage} alt="event poster" /> */}
+                <div
+                  className="event-img"
+                  style={{ backgroundImage: `url(${data.eventImage})` }}
+                  role="img"
+                ></div>
               </div>
               <div className="event-card__information">
                 <h2>{data.eventTitle}</h2>
@@ -204,33 +222,37 @@ const EventPageEventbriteAPI = () => {
                 </div>
 
                 <div className="event-card-footer-container">
-                  <div
-                    className="event-card-footer-container__share"
-                    onClick={e => shareButtonHandler(e)}
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="43"
-                      height="43"
-                      viewBox="0 0 43 43"
-                      fill="none"
+                  <div className="event-card-footer-container__inner-container">
+                    <div
+                      className="event-card-footer-container__share"
+                      onClick={e => shareButtonHandler(e)}
                     >
-                      <circle
-                        cx="21.5"
-                        cy="21.5"
-                        r="20.5"
-                        stroke="#D1D1D1"
-                        strokeWidth="2"
-                      />
-                      <path
-                        d="M26.5 25C25.4403 25 24.4662 25.3665 23.6973 25.9795L18.8933 22.9769C19.0356 22.3334 19.0356 21.6666 18.8933 21.023L23.6973 18.0205C24.4662 18.6335 25.4403 19 26.5 19C28.9853 19 31 16.9853 31 14.5C31 12.0147 28.9853 10 26.5 10C24.0147 10 22 12.0147 22 14.5C22 14.8355 22.037 15.1623 22.1067 15.4769L17.3027 18.4795C16.5338 17.8665 15.5597 17.5 14.5 17.5C12.0147 17.5 10 19.5147 10 22C10 24.4853 12.0147 26.5 14.5 26.5C15.5597 26.5 16.5338 26.1335 17.3027 25.5205L22.1067 28.5231C22.0357 28.8439 21.9999 29.1714 22 29.5C22 31.9853 24.0147 34 26.5 34C28.9853 34 31 31.9853 31 29.5C31 27.0147 28.9853 25 26.5 25Z"
-                        fill="#D1D1D1"
-                      />
-                    </svg>
-                    <p>Share</p>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="43"
+                        height="43"
+                        viewBox="0 0 43 43"
+                        fill="none"
+                      >
+                        <circle
+                          cx="21.5"
+                          cy="21.5"
+                          r="20.5"
+                          stroke="#D1D1D1"
+                          strokeWidth="2"
+                        />
+                        <path
+                          d="M26.5 25C25.4403 25 24.4662 25.3665 23.6973 25.9795L18.8933 22.9769C19.0356 22.3334 19.0356 21.6666 18.8933 21.023L23.6973 18.0205C24.4662 18.6335 25.4403 19 26.5 19C28.9853 19 31 16.9853 31 14.5C31 12.0147 28.9853 10 26.5 10C24.0147 10 22 12.0147 22 14.5C22 14.8355 22.037 15.1623 22.1067 15.4769L17.3027 18.4795C16.5338 17.8665 15.5597 17.5 14.5 17.5C12.0147 17.5 10 19.5147 10 22C10 24.4853 12.0147 26.5 14.5 26.5C15.5597 26.5 16.5338 26.1335 17.3027 25.5205L22.1067 28.5231C22.0357 28.8439 21.9999 29.1714 22 29.5C22 31.9853 24.0147 34 26.5 34C28.9853 34 31 31.9853 31 29.5C31 27.0147 28.9853 25 26.5 25Z"
+                          fill="#D1D1D1"
+                        />
+                      </svg>
+                      <p>Share</p>
+                    </div>
+                    <div className="event-card-footer-container__price">
+                      <h5>{data.eventTicketPrice}</h5>
+                    </div>
                   </div>
-                  <div className="event-card-footer-container__cta">
-                    <h5>{data.eventTicketPrice}</h5>
+                  <div className="event-card-footer-container__btn">
                     <a href={data.eventURL}>
                       <button>Buy Tickets</button>
                     </a>
