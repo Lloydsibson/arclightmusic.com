@@ -50,6 +50,7 @@
           padding: 0 10px;
           height: 31px;
           border: 1px solid $altColour;
+          background-color: $primaryColour;
           &:focus {
             outline: unset;
             border-color: $hightlightColour;
@@ -103,7 +104,7 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        padding-top: 143.23%;
+        padding-top: 143.57%;
         width: 100%;
       }
     }
@@ -138,7 +139,7 @@
       .event-tag-container {
         display: flex;
         align-items: center;
-        margin: 10px auto 15px auto;
+        margin: 10px 0 15px 0;
         // justify-content: space-evenly;
         .event-tag-container__venue {
           display: flex;
@@ -188,47 +189,59 @@
       .event-card-footer-container {
         display: flex;
         justify-content: space-between;
-        .event-card-footer-container__share {
+        .event-card-footer-container__inner-container {
           display: flex;
           align-items: center;
-          p {
-            margin-bottom: 0;
-            margin-left: 10px;
-            color: $altColourTwo;
-            font-weight: 500;
-            font-size: 0.9rem;
+          width: 65%;
+          justify-content: space-between;
+          .event-card-footer-container__share {
+            display: flex;
+            align-items: center;
+            p {
+              margin-bottom: 0;
+              margin-left: 10px;
+              color: $altColourTwo;
+              font-weight: 500;
+              font-size: 0.9rem;
+            }
+            &:hover {
+              cursor: pointer;
+            }
           }
-          &:hover {
-            cursor: pointer;
+          .event-card-footer-container__price {
+            h5 {
+              margin-bottom: 0;
+              margin-right: 10px;
+              color: $primaryColour;
+              font-size: 1.1rem;
+              font-weight: 600;
+            }
           }
         }
-        .event-card-footer-container__cta {
+        .event-card-footer-container__btn {
           display: flex;
           align-items: center;
-          h5 {
-            margin-bottom: 0;
-            margin-right: 10px;
-            color: $primaryColour;
-            font-size: 1.1rem;
-            font-weight: 600;
-          }
-          button {
-            text-transform: uppercase;
-            border: unset;
-            color: $primaryColour;
-            background-color: $hightlightColour;
-            padding: 10px 25px;
-            border-radius: 50px;
-            font-size: 0.88rem;
-            font-weight: 500;
-            transition: all 0.3s ease-in-out 0s;
-            box-shadow: rgb(0 0 0 / 40%) 0px 2px 4px,
-              rgb(0 0 0 / 30%) 0px 7px 13px -3px,
-              rgb(0 0 0 / 20%) 0px -3px 0px inset;
+          justify-content: flex-end;
+          width: 35%;
+          a {
+            button {
+              text-transform: uppercase;
+              border: unset;
+              color: $primaryColour;
+              background-color: $hightlightColour;
+              padding: 10px 25px;
+              border-radius: 50px;
+              font-size: 0.88rem;
+              font-weight: 500;
+              transition: all 0.3s ease-in-out 0s;
+              box-shadow: rgb(0 0 0 / 40%) 0px 2px 4px,
+                rgb(0 0 0 / 30%) 0px 7px 13px -3px,
+                rgb(0 0 0 / 20%) 0px -3px 0px inset;
 
-            &:hover {
-              background-color: $hightlightColourHover;
-              cursor: pointer;
+              &:hover {
+                background-color: $hightlightColourHover;
+                cursor: pointer;
+              }
             }
           }
         }
@@ -317,56 +330,38 @@
   }
 }
 
-// MEDIUM IPHONE
-@media only screen and (min-width: 767px) and (max-width: 992px) {
-  .eventpage-card-container {
-    flex-direction: row;
-    .event-card {
-      width: calc(50% - 20px);
-    }
-  }
-}
-
-// MEDIUM IPHONE
-@media only screen and (min-width: 500px) and (max-width: 992px) {
+@media only screen and (max-width: 1400px) {
   .eventpage-card-container {
     .event-card {
-      flex-direction: column;
-      .event-card__poster {
-        width: 100%;
-        border-radius: 20px 20px 0 0;
-        box-shadow: unset;
-        filter: unset;
-        img {
-          transform: unset;
-        }
-      }
       .event-card__information {
-        width: 100%;
-        margin: 0;
-        border-radius: 0 0 20px 20px;
-        padding: 20px;
-        .event-time-container {
-          margin-bottom: 20px;
+        h2 {
+          font-size: 1.1rem;
+          line-height: 21px;
         }
-        .event-card-footer-container {
-          flex-direction: column;
-          .event-card-footer-container__share {
-            margin-bottom: 20px;
-          }
-          .event-card-footer-container__cta {
-            flex-direction: column;
-            align-items: flex-start;
-            h5 {
-              margin-bottom: 20px;
-            }
-            a {
-              width: 100%;
-              button {
-                width: 100%;
-                padding: 21px 25px;
-              }
-            }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .eventpage-card-container {
+    .event-card {
+      .event-card__information {
+        p.event-summary {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .eventpage-card-container {
+    .event-card {
+      .event-card__information {
+        .event-time-container {
+          p {
+            display: none;
           }
         }
       }
@@ -374,16 +369,19 @@
   }
 }
 
-@media only screen and (min-width: 500px) and (max-width: 767px) {
+@media only screen and (max-width: 1140px) {
   .eventpage-card-container {
-    flex-direction: column;
     .event-card {
-      width: 100%;
+      .event-card__information {
+        p.event-summary {
+          display: none;
+        }
+      }
     }
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 992px) {
   .events-page {
     .events-page__inner-container {
       .events-title-container {
@@ -397,11 +395,45 @@
       }
     }
   }
-
   .eventpage-card-container {
     .event-card {
-      width: 100%;
+      width: calc(50% - 10px);
       margin-bottom: 20px;
+    }
+  }
+}
+
+@media only screen and (max-width: 910px) {
+  .eventpage-card-container {
+    .event-card {
+      .event-card__information {
+        .event-tag-container {
+          margin: 0;
+          .event-tag-container__venue {
+            display: none;
+          }
+          .event-tag-container__category {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 830px) and (max-width: 992px) {
+}
+
+@media only screen and (max-width: 745px) {
+  .eventpage-card-container {
+    .event-card {
+      max-width: 390px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  .eventpage-card-container {
+    .event-card {
       box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
         rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
         rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
@@ -419,21 +451,8 @@
         padding: 10px;
         margin: 0;
         border-radius: 0px 10px 10px 0;
-        h2 {
-          font-size: 1.1rem;
-          line-height: 21px;
-        }
-        .event-tag-container {
-          display: none;
-        }
-        p.event-summary {
-          display: none;
-        }
         .event-time-container {
           margin: 10px 0 0 0;
-          p {
-            display: none;
-          }
           h5 {
             margin: 0;
             font-weight: 400;
@@ -447,6 +466,7 @@
             align-items: center;
             justify-content: space-between;
             margin-bottom: 3px;
+            width: 100%;
             .event-card-footer-container__share {
               order: 2;
               svg {
@@ -484,11 +504,20 @@
                 background-color: #37aa9c;
                 color: #fff;
                 font-weight: 500;
+                box-shadow: $boxshadow;
               }
             }
           }
         }
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 714px) {
+  .eventpage-card-container {
+    .event-card {
+      width: 100%;
     }
   }
 }
