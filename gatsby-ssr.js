@@ -33,3 +33,11 @@ exports.wrapPageElement = ({ element, props }) => {
     </>
   )
 }
+
+exports.onClientEntry = () => {
+  window.addEventListener("load", () => {
+    console.log("Loaded")
+    const loaComp = document.querySelector(".loading-screen")
+    loaComp.classList.add("-show_page")
+  })
+}

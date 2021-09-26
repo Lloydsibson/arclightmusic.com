@@ -13,16 +13,6 @@ import ContactBanner from "/src/images/mission-image.jpg"
 
 const HomePageCarousel = () => {
   const carouselData = [
-    // {
-    //   image: HalloweenBanner,
-    //   title: "Arclight Apparel",
-    //   subtitle: "No Music, No Life T-shirt",
-    //   info: "Range of Colours Available",
-    //   btnOneText: "Buy T-Shirt",
-    //   btnOneLink: "/events",
-    //   btnTwoText: "More Apparel",
-    //   btnTwoLink: "/events",
-    // },
     {
       image: HalloweenBanner,
       title: "Arclight Promotions",
@@ -40,7 +30,7 @@ const HomePageCarousel = () => {
         "Want to be a Partner or interested in playing at the next event?",
       info: "Just fill in the form on the contact page",
       btnOneText: "Contact",
-      btnOneLink: "/events",
+      btnOneLink: "/contact",
       btnTwoText: "More Info",
       btnTwoLink: "/partners",
     },

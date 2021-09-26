@@ -13,6 +13,7 @@
       margin-bottom: 3px;
     }
     .up-message {
+      width: 100%;
       p {
         margin-bottom: 0;
       }
@@ -35,8 +36,6 @@
     .upcoming-events__inner-container {
       // p {
       // }
-      .upcoming-events__title {
-      }
       .upcoming-events__events {
         flex-direction: row;
         .event-card-container {

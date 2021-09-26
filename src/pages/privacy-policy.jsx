@@ -23,7 +23,7 @@ const PrivacyPolicyPage = () => {
               Arclight Music (“we” or “us” or “our”) respects the privacy of our
               users (“user” or “you”). This Privacy Policy explains how we
               collect, use, disclose, and safeguard your information when you
-              visit our website (Arclightmusic.com0, including any other media
+              visit our website (Arclightmusic.com), including any other media
               form, media channel, mobile website, or mobile application related
               or connected thereto (collectively, the “Site”). Please read this
               privacy policy carefully. If you do not agree with the terms of

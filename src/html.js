@@ -23,6 +23,14 @@ export default function HTML(props) {
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
+        <div className="loading-screen">
+          <div className="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
         {props.preBodyComponents}
         <div
           key={`body`}
@@ -30,6 +38,7 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
+        <script async src="https://w.appzi.io/w.js?token=e4JWH"></script>
       </body>
     </html>
   )

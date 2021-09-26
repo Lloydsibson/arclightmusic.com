@@ -103,24 +103,13 @@ const EventbriteEvents = () => {
             document.querySelector(".up-message").style.display = "none"
           }
         } else {
-          // setEventBriteData(
-          //   <div>
-          //     <p>No Events. More Coming Soon...</p>
-          //   </div>
-          // )
           setLoadingMessage(
             "No events. See our social media channels for up-to-date announcements"
           )
-          //   document.querySelector(
-          //     ".event-card-container"
-          //   ).innerHTML = `<div class="up-message"><p>No events. See our social media channels for up-to-date announcements</p></div>`
         }
       } catch (err) {
         //console.log("API - Fetch Failed")
         setLoadingMessage("An issue has occurred. Please try again later")
-        //   document.querySelector(
-        //     ".event-card-container"
-        //   ).innerHTML = `<div class="up-message"><p> <span style="font-size: 20px">⚠️</span> An issue has occurred. Please try again later</p></div>`
       }
     }
     fetchEventApi()
@@ -128,7 +117,7 @@ const EventbriteEvents = () => {
 
   return (
     <div className="event-card-container">
-      <div class="up-message">
+      <div className="up-message">
         <p>{loadingMessage}</p>
       </div>
       {eventBriteData

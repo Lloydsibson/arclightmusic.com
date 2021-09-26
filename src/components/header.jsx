@@ -8,6 +8,8 @@ import "./header.scss"
 import AnnoucementBar from "./annoucement-bar"
 import MobileNav from "./mobile-nav"
 
+import CookieBanner from "./cookiebanner"
+
 const Header = () => {
   //console.log(props)
   useEffect(() => {
@@ -159,6 +161,7 @@ const Header = () => {
         </header>
       </div>
       <MobileNav />
+      <CookieBanner />
     </>
   )
 }
