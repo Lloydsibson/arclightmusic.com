@@ -50,7 +50,7 @@ const MobileSideBar = () => {
             />
           </Link>
         </div>
-        <ul className="nav-list section-one">
+        <ul className="nav-list">
           <li>
             <Link
               to="/"
@@ -60,6 +60,45 @@ const MobileSideBar = () => {
               Home
             </Link>
           </li>
+          <li>
+            <Link
+              to="/events"
+              activeClassName="active"
+              onClick={e => NavItemToggle(e)}
+            >
+              Events
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/rac-festival"
+              activeClassName="active"
+              onClick={e => NavItemToggle(e)}
+            >
+              RAC Festival
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/arclight-promotions"
+              activeClassName="active"
+              onClick={e => NavItemToggle(e)}
+            >
+              Arclight Promotions
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/arclight-apparel"
+              activeClassName="active"
+              onClick={e => NavItemToggle(e)}
+            >
+              Arclight Apparel
+            </Link>
+          </li>
+        </ul>
+        <div className="nav-divider" role="presentation"></div>
+        <ul className="nav-list section-three">
           <li>
             <Link
               to="/about"
@@ -96,27 +135,9 @@ const MobileSideBar = () => {
               Artists
             </Link>
           </li>
-          <li>
-            <Link
-              to="/arclight-promotions"
-              activeClassName="active"
-              onClick={e => NavItemToggle(e)}
-            >
-              Arclight Promotions
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/arclight-apparel"
-              activeClassName="active"
-              onClick={e => NavItemToggle(e)}
-            >
-              Arclight Apparel
-            </Link>
-          </li>
         </ul>
         <div className="nav-divider" role="presentation"></div>
-        <ul className="nav-list section-two">
+        <ul className="nav-list">
           <li>
             <Link
               to="/cookie-policy"
@@ -137,11 +158,32 @@ const MobileSideBar = () => {
           </li>
           <li>
             <Link
-              to="/returns-and-refunds"
+              to="/refunds-and-returns"
               activeClassName="active"
               onClick={e => NavItemToggle(e)}
             >
-              Returns & Refunds
+              Refunds & Returns
+            </Link>
+          </li>
+        </ul>
+        <div className="nav-divider" role="presentation"></div>
+        <ul className="nav-list">
+          <li>
+            <Link
+              to="/covid"
+              activeClassName="active"
+              onClick={e => NavItemToggle(e)}
+            >
+              COVID
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/contact"
+              activeClassName="active"
+              onClick={e => NavItemToggle(e)}
+            >
+              Contact
             </Link>
           </li>
         </ul>

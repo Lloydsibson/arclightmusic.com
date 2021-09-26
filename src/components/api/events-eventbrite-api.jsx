@@ -7,7 +7,7 @@ import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons"
 
 const EventPageEventbriteAPI = () => {
   const [numberOfCurrentEvents, setNumberOfCurrentEvents] = useState()
-  const [loadingMessage, setLoadingMessage] = useState()
+  const [loadingMessage, setLoadingMessage] = useState("Loading Events...")
   const [eventBriteAPIData, setEventBriteAPIData] = useState([])
 
   //console.log(loadingMessage)
@@ -122,10 +122,13 @@ const EventPageEventbriteAPI = () => {
               },
             ])
           }
-          setLoadingMessage(true)
+          setLoadingMessage("Success! Events Loaded")
         } else {
+          setLoadingMessage("No Upcoming Events")
         }
-      } catch (err) {}
+      } catch (err) {
+        setLoadingMessage("API Error! Please Try Again")
+      }
     }
     fetchEventApi()
   }, [])
@@ -192,15 +195,11 @@ const EventPageEventbriteAPI = () => {
               <option>Acoustic</option>
               <option>Other</option>
             </select>
+            <p className="loading-message">{loadingMessage}</p>
             <a href="https://www.eventbrite.co.uk/o/arclight-promotions-uk-28941769095">
               <h3>Past Events</h3>
             </a>
           </div>
-          <p className="loading-message">
-            {loadingMessage === true
-              ? `Events Loaded`
-              : "Loading Events - Please Wait..."}
-          </p>
         </div>
         <div className="eventpage-card-container">
           {eventBriteAPIData.map((data, key) => (

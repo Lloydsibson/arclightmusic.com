@@ -9,6 +9,7 @@ import "./eventbrite-api.scss"
 
 const EventbriteEvents = () => {
   const [eventBriteData, setEventBriteData] = useState([])
+  const [loadingMessage, setLoadingMessage] = useState("Loading events...")
 
   useEffect(() => {
     const fetchEventApi = async () => {
@@ -99,6 +100,7 @@ const EventbriteEvents = () => {
                 eventCity: `${eventCity}`,
               },
             ])
+            document.querySelector(".up-message").style.display = "none"
           }
         } else {
           // setEventBriteData(
@@ -106,15 +108,19 @@ const EventbriteEvents = () => {
           //     <p>No Events. More Coming Soon...</p>
           //   </div>
           // )
-          document.querySelector(
-            ".event-card-container"
-          ).innerHTML = `<div><p>No Events. More Coming Soon...</p></div>`
+          setLoadingMessage(
+            "No events. See our social media channels for up-to-date announcements"
+          )
+          //   document.querySelector(
+          //     ".event-card-container"
+          //   ).innerHTML = `<div class="up-message"><p>No events. See our social media channels for up-to-date announcements</p></div>`
         }
       } catch (err) {
         //console.log("API - Fetch Failed")
-        document.querySelector(
-          ".event-card-container"
-        ).innerHTML = `<div><p> <span style="font-size: 20px">⚠️</span> An Issue Has Occurred. Please Try again Later</p></div>`
+        setLoadingMessage("An issue has occurred. Please try again later")
+        //   document.querySelector(
+        //     ".event-card-container"
+        //   ).innerHTML = `<div class="up-message"><p> <span style="font-size: 20px">⚠️</span> An issue has occurred. Please try again later</p></div>`
       }
     }
     fetchEventApi()
@@ -122,6 +128,9 @@ const EventbriteEvents = () => {
 
   return (
     <div className="event-card-container">
+      <div class="up-message">
+        <p>{loadingMessage}</p>
+      </div>
       {eventBriteData
         ? eventBriteData.map((event, key) => (
             <a href={event.eventLink} target="_blank" key={key}>

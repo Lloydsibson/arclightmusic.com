@@ -96,6 +96,26 @@ const Header = () => {
             <div className="sub-nav__inner-container">
               <h4>Arclight Music</h4>
               <ul>
+                <Link to="/" activeClassName="active">
+                  <li>Home</li>
+                </Link>
+                <Link to="/events" activeClassName="active">
+                  <li>Events</li>
+                </Link>
+                <Link to="/rac-festival" activeClassName="active">
+                  <li>RAC Festival</li>
+                </Link>
+                <Link to="/arclight-promotions" activeClassName="active">
+                  <li>Arclight Promotions</li>
+                </Link>
+                <Link to="/arclight-apparel" activeClassName="active">
+                  <li>Arclight Apparel</li>
+                </Link>
+              </ul>
+            </div>
+            <div className="sub-nav__inner-container">
+              <h4>Information</h4>
+              <ul>
                 <Link to="/about" activeClassName="active">
                   <li>About</li>
                 </Link>
@@ -108,12 +128,6 @@ const Header = () => {
                 <Link to="/artists" activeClassName="active">
                   <li>Artists</li>
                 </Link>
-                <Link to="/arclight-promotions" activeClassName="active">
-                  <li>Arclight Promotions</li>
-                </Link>
-                <Link to="/arclight-apparel" activeClassName="active">
-                  <li>Arclight Apparel</li>
-                </Link>
               </ul>
             </div>
             <div className="sub-nav__inner-container">
@@ -125,8 +139,19 @@ const Header = () => {
                 <Link to="/privacy-policy" activeClassName="active">
                   <li>Privacy</li>
                 </Link>
-                <Link to="/returns-and-refunds" activeClassName="active">
-                  <li>Returns & Refunds</li>
+                <Link to="/refunds-and-returns" activeClassName="active">
+                  <li>Refunds & Returns</li>
+                </Link>
+              </ul>
+            </div>
+            <div className="sub-nav__inner-container">
+              <h4>Useful Links</h4>
+              <ul>
+                <Link to="/covid" activeClassName="active">
+                  <li>COVID</li>
+                </Link>
+                <Link to="/contact" activeClassName="active">
+                  <li>Contact</li>
                 </Link>
               </ul>
             </div>

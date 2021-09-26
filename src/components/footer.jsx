@@ -38,13 +38,19 @@ const Footer = () => {
               className="footer-column"
               onClick={e => toggleFooterAccordian(e)}
             >
-              <h3>Services</h3>
+              <h3>Arclight Music</h3>
               <div className="footer-column__list">
                 <Link to="/events" activeClassName="active">
                   <h4>Events</h4>
                 </Link>
                 <Link to="/rac-festival" activeClassName="active">
                   <h4>Rac Festival</h4>
+                </Link>
+                <Link to="/arclight-promotions" activeClassName="active">
+                  <h4>Arclight Promotions</h4>
+                </Link>
+                <Link to="/arclight-apparel" activeClassName="active">
+                  <h4>Arclight Apparel</h4>
                 </Link>
               </div>
             </div>

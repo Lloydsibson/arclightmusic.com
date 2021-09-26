@@ -55,6 +55,12 @@
             outline: unset;
             border-color: $hightlightColour;
           }
+          option {
+            &:checked {
+              background-color: $hightlightColour;
+              color: $primaryColour;
+            }
+          }
         }
         a {
           text-decoration: unset;
@@ -63,13 +69,24 @@
           h3 {
             margin: 0;
             font-weight: 500;
+            font-size: 1rem;
           }
         }
       }
       .loading-message {
-        font-weight: 500;
         margin-bottom: 0;
-        margin-top: 10px;
+        margin-top: 0;
+        margin-left: 20px;
+        padding: 7px 15px;
+        /* SUCCESS COLOR: #4BD665; */
+        // WARNING COLOR: #FEC120
+        border-left: 5px solid #666;
+        border-radius: 5px;
+        font-weight: 400;
+        display: inline-block;
+        font-size: 0.9rem;
+        box-shadow: rgb(60 64 67 / 30%) 0px 1px 2px 0px,
+          rgb(60 64 67 / 15%) 0px 1px 3px 1px;
       }
       // .loading-message.loaded {
       //   color: $altColour;
@@ -271,9 +288,7 @@
       padding-top: 0;
     }
   }
-}
 
-@media only screen and (max-width: 992px) {
   .events-page {
     .events-page__inner-container {
       padding: 40px 20px 40px 20px;
@@ -290,7 +305,11 @@
             margin-bottom: 10px;
           }
           select#CatSelect {
-            margin-bottom: 25px;
+            margin-bottom: 15px;
+          }
+          .loading-message {
+            margin-left: 0;
+            margin-bottom: 15px;
           }
           a {
             margin-left: 0;
@@ -312,18 +331,6 @@
         .events-title-container__filters {
           flex-direction: column;
           align-items: flex-start;
-          label {
-            margin-bottom: 10px;
-          }
-          select#CatSelect {
-            margin-bottom: 25px;
-          }
-          a {
-            margin-left: 0;
-            h3 {
-              font-size: 1rem;
-            }
-          }
         }
       }
     }
@@ -387,11 +394,6 @@
       .events-title-container {
         margin-bottom: 20px;
         padding-bottom: 20px;
-        .events-title-container__filters {
-          select#CatSelect {
-            margin-bottom: 20px;
-          }
-        }
       }
     }
   }
@@ -419,8 +421,6 @@
       }
     }
   }
-}
-@media only screen and (min-width: 830px) and (max-width: 992px) {
 }
 
 @media only screen and (max-width: 745px) {

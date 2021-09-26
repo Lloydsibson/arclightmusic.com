@@ -229,11 +229,11 @@ const ArclightPromotionsPage = () => {
             <h2>Privacy Policy</h2>
             <p>
               For more information about how we use information collected by
-              cookies and other tracking technologies, please refer to our
-              Privacy Policy <Link to="/privacy-policy">click here</Link> on the
-              Site. This Cookie Policy is part of and is incorporated into our
-              Privacy Policy. By using the Site, you agree to be bound by this
-              Cookie Policy and our Privacy Policy.
+              cookies and other tracking technologies, please refer to our&nbsp;
+              <Link to="/privacy-policy">Privacy Policy</Link>. This Cookie
+              Policy is part of and is incorporated into our Privacy Policy. By
+              using the Site, you agree to be bound by this Cookie Policy and
+              our Privacy Policy.
             </p>
             <h2>Contact Us</h2>
             <p>
