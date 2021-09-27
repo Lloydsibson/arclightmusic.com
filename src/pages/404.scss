@@ -56,12 +56,15 @@
           display: block;
           width: 100%;
           max-width: 200px;
+          color: $secondaryColour;
           button {
             border: 1px solid $altColour;
             padding: 15px 25px;
             width: 100%;
             border-radius: 70px;
             box-shadow: $boxshadow;
+            color: $secondaryColour;
+            background-color: transparent;
             &:hover {
               cursor: pointer;
               opacity: 0.85;
