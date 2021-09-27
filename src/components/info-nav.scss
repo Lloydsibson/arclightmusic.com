@@ -11,7 +11,7 @@
       padding-top: 50px;
       color: $secondaryColour;
       margin-bottom: 50px;
-      line-height: 30px;
+      line-height: 40px;
       span {
         display: block;
         // margin-bottom: 15px;
@@ -31,6 +31,7 @@
             display: block;
             text-decoration: unset;
             color: $hightlightColour;
+            line-height: 25px;
             h4 {
               font-weight: 600;
               text-transform: capitalize;

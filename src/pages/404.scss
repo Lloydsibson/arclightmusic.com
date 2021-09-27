@@ -1,0 +1,133 @@
+@import "../components/layout";
+
+.fourOfour-page {
+  background-color: $primaryColour;
+  .fourOfour-page__inner-container {
+    max-width: $pageWidth;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 20px 100px 20px;
+    .fourOfour-image {
+      margin-bottom: 70px;
+    }
+    .fourOfour-message {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      max-width: 500px;
+      h1 {
+        font-size: 4rem;
+        margin-top: 0;
+        margin-bottom: 20px;
+        width: 100%;
+      }
+      p {
+        font-weight: 500;
+        margin-bottom: 0;
+        width: 100%;
+        text-align: center;
+      }
+      .fourOfour-message__btns {
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        max-width: 470px;
+        button#goback {
+          border: unset;
+          background-color: $secondaryColour;
+          color: $primaryColour;
+          padding: 15px 25px;
+          width: 100%;
+          max-width: 200px;
+          border-radius: 70px;
+          box-shadow: $boxshadow;
+          &:hover {
+            cursor: pointer;
+            opacity: 0.85;
+          }
+        }
+        a {
+          display: block;
+          width: 100%;
+          max-width: 200px;
+          button {
+            border: 1px solid $altColour;
+            padding: 15px 25px;
+            width: 100%;
+            border-radius: 70px;
+            box-shadow: $boxshadow;
+            &:hover {
+              cursor: pointer;
+              opacity: 0.85;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .fourOfour-page {
+    .fourOfour-page__inner-container {
+      padding: 40px 20px 40px 20px;
+      .fourOfour-image {
+        margin-bottom: 40px;
+      }
+      .fourOfour-message {
+        h1 {
+          padding-top: 0;
+          font-size: 2.8rem;
+          margin-bottom: 20px;
+        }
+        p {
+          text-align: unset;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .fourOfour-page {
+    .fourOfour-page__inner-container {
+      .fourOfour-message {
+        .fourOfour-message__btns {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          button#goback {
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .fourOfour-page {
+    .fourOfour-page__inner-container {
+      .fourOfour-message {
+        .fourOfour-message__btns {
+          button#goback {
+            max-width: unset;
+            padding: 21px 25px;
+          }
+          a {
+            max-width: unset;
+            button {
+              padding: 21px 25px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

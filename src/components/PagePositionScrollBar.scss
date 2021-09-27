@@ -1,0 +1,39 @@
+@import "./layout";
+
+.bar-container {
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .bar-container {
+    display: block;
+    background-color: black;
+    width: 100%;
+    height: 2px;
+    overflow: hidden;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    .bar-container__bar {
+      background: rgb(0, 0, 0);
+      background: -moz-linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 1) 10%,
+        rgba(55, 170, 156, 1) 75%
+      );
+      background: -webkit-linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 1) 10%,
+        rgba(55, 170, 156, 1) 75%
+      );
+      background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 1) 10%,
+        rgba(55, 170, 156, 1) 75%
+      );
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#37aa9c",GradientType=1);
+      width: 0;
+      height: 5px;
+    }
+  }
+}

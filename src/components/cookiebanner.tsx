@@ -29,7 +29,7 @@ const CookieBanner = () => {
       <div className="cookie-container">
         <div className="cookie-container__cookies-left">
           <p>
-            We use cookies to personalize your use of our site. This includes
+            We use cookies to personalise your use of our site. This includes
             third-party cookies for that we use for advertising and site
             analytics.
           </p>

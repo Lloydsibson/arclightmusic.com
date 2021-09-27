@@ -53,6 +53,9 @@
             margin-right: 20px;
             text-decoration: unset;
             transition: all 0.3s ease-in-out;
+            width: 100%;
+            max-width: 200px;
+            text-align: center;
             .slide-btn {
               padding: 15px 50px;
               border-radius: 50px;
@@ -73,6 +76,9 @@
             }
             &:hover {
               opacity: 0.6;
+            }
+            &:last-child {
+              margin-right: 0;
             }
           }
         }
@@ -209,9 +215,7 @@
         .hp-slide__inner-container {
           .slide-btns {
             a {
-              .slide-btn {
-                max-width: unset;
-              }
+              max-width: unset;
             }
           }
         }
