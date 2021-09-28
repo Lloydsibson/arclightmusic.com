@@ -84,13 +84,19 @@ const EventsPage = () => {
                     <option>Acoustic</option>
                     <option>Other</option>
                   </select>
-                  <p className="loading-message">{value[2].loadingMessage}</p>
                   <a href="https://www.eventbrite.co.uk/o/arclight-promotions-uk-28941769095">
                     <h3>Past Events</h3>
                   </a>
                 </div>
               </div>
               <div className="eventpage-card-container">
+                <p
+                  className={`loading-message ${
+                    value[3].apiLoaded ? "loaded" : ""
+                  }`}
+                >
+                  {value[2].loadingMessage}
+                </p>
                 {value[0].eventBriteState.map((data, key) => (
                   <div
                     className="event-card"

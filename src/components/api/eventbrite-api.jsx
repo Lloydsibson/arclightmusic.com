@@ -1,11 +1,6 @@
 import React, { useEffect, useState } from "react"
 // SASS
 import "./eventbrite-api.scss"
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-// import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons"
-// import { faCalendarAlt } from "@fortawesome/free-solid-svg-icons"
-
-//import HomePageCarousel from "../carousels/homepage-carousel"
 
 import { APIData } from "/src/Context"
 
@@ -13,6 +8,7 @@ const EventBriteAPIData = ({ children }) => {
   const [numberOfCurrentEvents, setNumberOfCurrentEvents] = useState()
   const [loadingMessage, setLoadingMessage] = useState("Loading Events...")
   const [eventBriteState, setEventBriteState] = useState([])
+  const [apiLoaded, setapiLoaded] = useState(false)
 
   const fetchEventApi = async () => {
     try {
@@ -26,7 +22,6 @@ const EventBriteAPIData = ({ children }) => {
       setNumberOfCurrentEvents(eventsData.length)
       // // IF EVENT DATA EXISTS...
       if (eventsData.length > 0) {
-        console.log("API RAN")
         for (const loopedEventData of eventsData) {
           // console.log(loopedEventData)
           const eventID = await loopedEventData.id
@@ -121,12 +116,15 @@ const EventBriteAPIData = ({ children }) => {
             },
           ])
         }
-        setLoadingMessage("Upcoming Events Found")
+        setapiLoaded(true)
+        setLoadingMessage("Events Found")
       } else {
-        setLoadingMessage("No Upcoming Events")
+        setLoadingMessage("No events. Check back soon!")
       }
     } catch (err) {
-      setLoadingMessage("API Error! Please Try Again")
+      setLoadingMessage(
+        "API Error! Please refresh the page. If this persits please contact us about this issue."
+      )
       //console.log("API - Fetch Failed")
     }
   }
@@ -141,6 +139,7 @@ const EventBriteAPIData = ({ children }) => {
         { eventBriteState },
         { numberOfCurrentEvents },
         { loadingMessage },
+        { apiLoaded },
       ]}
     >
       {children}

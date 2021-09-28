@@ -96,11 +96,18 @@ const UpcomingEvents = () => {
         </div>
         <div className="upcoming-events__events">
           {/* <EventbriteEvents /> */}
-          <div className="event-card-container">
-            <APIData.Consumer>
-              {value =>
-                value[0].eventBriteState.map((event, key) => (
-                  <a href={event.eventLink} target="_blank" key={key}>
+          <APIData.Consumer>
+            {value => (
+              <div className="event-card-container">
+                <p
+                  className={`loading-message ${
+                    value[3].apiLoaded ? "loaded" : ""
+                  }`}
+                >
+                  {value[2].loadingMessage}
+                </p>
+                {value[0].eventBriteState.map((event, key) => (
+                  <a href={event.eventURL} target="_blank" key={key}>
                     <div
                       className="up-card"
                       style={{ backgroundImage: `url(${event.eventImage})` }}
@@ -133,10 +140,10 @@ const UpcomingEvents = () => {
                       </div>
                     </div>
                   </a>
-                ))
-              }
-            </APIData.Consumer>
-          </div>
+                ))}
+              </div>
+            )}
+          </APIData.Consumer>
         </div>
       </div>
     </div>
