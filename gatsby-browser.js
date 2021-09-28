@@ -16,9 +16,17 @@ const Header = require("./src/components/header").default
 const Footer = require("./src/components/footer").default
 const MobileSideBar = require("./src/components/mobile-sidebar").default
 
+const EventBriteAPIData = require("./src/components/api/eventbrite-api").default
+// import { ThemeProvider } from "./src/context/ThemeContext"
+
+exports.wrapRootElement = ({ element }) => (
+  <EventBriteAPIData>{element}</EventBriteAPIData>
+)
+
 exports.wrapPageElement = ({ element, props }) => {
   // props provide same data to Layout as Page element will get
   // including location, data, etc - you don't need to pass it
+  // console.log(element)
   // console.log(props)
   return (
     <>
@@ -36,7 +44,7 @@ exports.wrapPageElement = ({ element, props }) => {
 
 exports.onClientEntry = () => {
   window.addEventListener("load", () => {
-    console.log("Loaded")
+    //console.log("Loaded")
     const loaComp = document.querySelector(".loading-screen")
     loaComp.classList.add("-show_page")
   })

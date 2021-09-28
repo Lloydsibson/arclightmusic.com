@@ -15,6 +15,8 @@ import Seo from "../components/seo"
 
 import "normalize.css"
 
+// import { APIData } from "/src/Context"
+
 const IndexPage = () => {
   return (
     <Layout>
@@ -24,6 +26,9 @@ const IndexPage = () => {
       />
       <div className="hp-group">
         <UpcomingEvents />
+        {/* <APIData.Consumer>
+          {value => value.map(data => <p>{data.eventDay}</p>)}
+        </APIData.Consumer> */}
         <HomePageCarousel />
       </div>
       <PartnersCarousel />

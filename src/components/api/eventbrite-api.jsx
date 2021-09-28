@@ -7,156 +7,145 @@ import "./eventbrite-api.scss"
 
 //import HomePageCarousel from "../carousels/homepage-carousel"
 
-const EventbriteEvents = () => {
-  const [eventBriteData, setEventBriteData] = useState([])
-  const [loadingMessage, setLoadingMessage] = useState("Loading events...")
+import { APIData } from "/src/Context"
+
+const EventBriteAPIData = ({ children }) => {
+  const [numberOfCurrentEvents, setNumberOfCurrentEvents] = useState()
+  const [loadingMessage, setLoadingMessage] = useState("Loading Events...")
+  const [eventBriteState, setEventBriteState] = useState([])
+
+  const fetchEventApi = async () => {
+    try {
+      // FETCH ALL LIVE EVENTS - NEWEST FIRST
+      const eventFetch = await fetch(
+        `https://www.eventbriteapi.com/v3/organizers/28941769095/events/?status=live&order_by=start_asc&token=M3QX3EGISISAIVAZQEGL`
+      )
+      const events = await eventFetch.json()
+      //console.log(events)
+      const eventsData = await events.events
+      setNumberOfCurrentEvents(eventsData.length)
+      // // IF EVENT DATA EXISTS...
+      if (eventsData.length > 0) {
+        console.log("API RAN")
+        for (const loopedEventData of eventsData) {
+          // console.log(loopedEventData)
+          const eventID = await loopedEventData.id
+          // FETCH VENUE INFO
+          const venueResponse = await fetch(
+            `https://www.eventbriteapi.com/v3/events/${eventID}/?expand=venue&token=M3QX3EGISISAIVAZQEGL`
+          )
+          // FETCH TICKET INFO
+          const ticketResponse = await fetch(
+            `https://www.eventbriteapi.com/v3/events/${eventID}/?expand=ticket_availability&token=M3QX3EGISISAIVAZQEGL`
+          )
+          const ticketInfo = await ticketResponse.json()
+          // FETCH CATEGORY INFO
+          const categoryResponse = await fetch(
+            `https://www.eventbriteapi.com/v3/events/${eventID}/?expand=subcategory&token=M3QX3EGISISAIVAZQEGL`
+          )
+          const venueInfo = await venueResponse.json()
+          const eventCity = venueInfo.venue.address.city
+          const CategoryInfo = await categoryResponse.json()
+          const eventTimeRaw = loopedEventData.start.local
+          const eventFullTime = eventTimeRaw.split("T")[1]
+          const eventDateString = eventTimeRaw.split("T")[0]
+          const monthRaw = eventDateString.split("-")[1]
+          let eventMonth = ""
+          const eventURL = loopedEventData.url
+          const eventImage = loopedEventData.logo.original.url
+          const eventTitle = loopedEventData.name.text
+          const eventVenueName = venueInfo.venue.name
+          const eventSubCategory = CategoryInfo.subcategory.name
+          const eventSummary = loopedEventData.description.text
+          const eventDay = eventDateString.split("-")[2]
+          let eventTime = eventFullTime.slice(0, 5)
+          const eventTicketPrice =
+            ticketInfo.ticket_availability.maximum_ticket_price.major_value
+
+          // CONVERTS MONTH NUMBER TO MONTH NAME
+          switch (monthRaw) {
+            case "01":
+              eventMonth = "Jan"
+              break
+            case "02":
+              eventMonth = "Feb"
+              break
+            case "03":
+              eventMonth = "Mar"
+              break
+            case "04":
+              eventMonth = "Apr"
+              break
+            case "05":
+              eventMonth = "May"
+              break
+            case "06":
+              eventMonth = "Jun"
+              break
+            case "07":
+              eventMonth = "Jul"
+              break
+            case "08":
+              eventMonth = "Aug"
+              break
+            case "09":
+              eventMonth = "Sep"
+              break
+            case "10":
+              eventMonth = "Oct"
+              break
+            case "11":
+              eventMonth = "Nov"
+              break
+            case "12":
+              eventMonth = "Dec"
+              break
+            default:
+              eventMonth = "N/A"
+          }
+          // UPDATE STATE WITH DATA
+          setEventBriteState(result => [
+            ...result,
+            {
+              eventURL: `${eventURL}`,
+              eventImage: `${eventImage}`,
+              eventTitle: `${eventTitle}`,
+              eventVenueName: `${eventVenueName}`,
+              eventCity: `${eventCity}`,
+              eventSubCategory: `${eventSubCategory}`,
+              eventSummary: `${eventSummary}`,
+              eventDay: `${eventDay}`,
+              eventMonth: `${eventMonth}`,
+              eventTime: `${eventTime}`,
+              eventTicketPrice: `£${eventTicketPrice}`,
+            },
+          ])
+        }
+        setLoadingMessage("Upcoming Events Found")
+      } else {
+        setLoadingMessage("No Upcoming Events")
+      }
+    } catch (err) {
+      setLoadingMessage("API Error! Please Try Again")
+      //console.log("API - Fetch Failed")
+    }
+  }
 
   useEffect(() => {
-    const fetchEventApi = async () => {
-      try {
-        // FETCH ALL LIVE EVENTS - NEWEST FIRST
-        const eventFetch = await fetch(
-          `https://www.eventbriteapi.com/v3/organizers/28941769095/events/?status=live&order_by=start_asc&token=M3QX3EGISISAIVAZQEGL`
-        )
-        const events = await eventFetch.json()
-        //console.log(events)
-        const eventsData = await events.events
-        // // IF EVENT DATA EXISTS...
-        if (eventsData.length > 0) {
-          for (const loopedEventData of eventsData) {
-            // console.log(loopedEventData)
-            const eventID = await loopedEventData.id
-            // FETCH VENUE INFO
-            const venueResponse = await fetch(
-              `https://www.eventbriteapi.com/v3/events/${eventID}/?expand=venue&token=M3QX3EGISISAIVAZQEGL`
-            )
-            const venueInfo = await venueResponse.json()
-            //console.log(venueInfo)
-            const eventCity = venueInfo.venue.address.city
-
-            const eventTime = loopedEventData.start.local
-            const eventURL = loopedEventData.url
-            const eventImage = loopedEventData.logo.original.url
-            //setEventSummary(loopedEventData.summary)
-            const eventVenue_AllInfo = venueInfo.venue
-            const EventVenueName = eventVenue_AllInfo.name
-            const eventDateString = eventTime.split("T")[0]
-            //const Year = eventDateString.split("-")[0];
-            const monthRaw = eventDateString.split("-")[1]
-            let month = ""
-            const day = eventDateString.split("-")[2]
-
-            // CONVERTS MONTH NUMBER TO MONTH NAME
-            switch (monthRaw) {
-              case "01":
-                month = "Jan"
-                break
-              case "02":
-                month = "Feb"
-                break
-              case "03":
-                month = "Mar"
-                break
-              case "04":
-                month = "Apr"
-                break
-              case "05":
-                month = "May"
-                break
-              case "06":
-                month = "Jun"
-                break
-              case "07":
-                month = "Jul"
-                break
-              case "08":
-                month = "Aug"
-                break
-              case "09":
-                month = "Sep"
-                break
-              case "10":
-                month = "Oct"
-                break
-              case "11":
-                month = "Nov"
-                break
-              case "12":
-                month = "Dec"
-                break
-              default:
-                month = "N/A"
-            }
-            // UPDATE STATE WITH DATA
-            setEventBriteData(result => [
-              ...result,
-              {
-                eventLink: `${eventURL}`,
-                eventImage: `${eventImage}`,
-                eventDay: `${day}`,
-                eventMonth: `${month}`,
-                eventName: `${loopedEventData.name.text}`,
-                eventVenueName: `${EventVenueName}`,
-                eventCity: `${eventCity}`,
-              },
-            ])
-            document.querySelector(".up-message").style.display = "none"
-          }
-        } else {
-          setLoadingMessage(
-            "No events. See our social media channels for up-to-date announcements"
-          )
-        }
-      } catch (err) {
-        //console.log("API - Fetch Failed")
-        setLoadingMessage("An issue has occurred. Please try again later")
-      }
-    }
     fetchEventApi()
   }, [])
 
   return (
-    <div className="event-card-container">
-      <div className="up-message">
-        <p>{loadingMessage}</p>
-      </div>
-      {eventBriteData
-        ? eventBriteData.map((event, key) => (
-            <a href={event.eventLink} target="_blank" key={key}>
-              <div
-                className="up-card"
-                style={{ backgroundImage: `url(${event.eventImage})` }}
-              >
-                <div className="up-card__overlay"></div>
-                <div className="up-card__info">
-                  <div className="up-date">
-                    <p className="up-date__day">{event.eventDay}</p>
-                    <p className="up-date__month">{event.eventMonth}</p>
-                  </div>
-                  <h3>{event.eventName}</h3>
-                </div>
-                <div className="up-card__location">
-                  <div className="up-card-location-icon">
-                    <svg
-                      viewBox="0 0 14 19"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M6.2806 18.29C0.983282 10.6105 0 9.82235 0 7C0 3.13399 3.13399 0 7 0C10.866 0 14 3.13399 14 7C14 9.82235 13.0167 10.6105 7.7194 18.29C7.37177 18.7922 6.6282 18.7922 6.2806 18.29ZM7 9.91666C8.61084 9.91666 9.91667 8.61084 9.91667 7C9.91667 5.38916 8.61084 4.08333 7 4.08333C5.38916 4.08333 4.08333 5.38916 4.08333 7C4.08333 8.61084 5.38916 9.91666 7 9.91666Z"
-                        fill="white"
-                      />
-                    </svg>
-                  </div>
-                  <h5 className="up-card-venue-name">{event.eventVenueName}</h5>
-                  ,<h5 className="up-card-location">{event.eventCity}</h5>
-                </div>
-              </div>
-            </a>
-          ))
-        : null}
-    </div>
+    <APIData.Provider
+      value={[
+        { eventBriteState },
+        { numberOfCurrentEvents },
+        { loadingMessage },
+      ]}
+    >
+      {children}
+    </APIData.Provider>
   )
 }
 
-export default EventbriteEvents
+export default EventBriteAPIData
