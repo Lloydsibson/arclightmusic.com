@@ -24,12 +24,7 @@ export default function HTML(props) {
       </head>
       <body {...props.bodyAttributes}>
         <div className="loading-screen">
-          <div className="lds-ring">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
+          <div className="loader loader-6"></div>
         </div>
         {props.preBodyComponents}
         <div

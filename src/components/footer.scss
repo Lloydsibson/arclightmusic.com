@@ -4,10 +4,31 @@
   border-top: 2px solid $tertiaryColor;
   background-color: $secondaryColour;
   // margin-top: 50px;
+  .footer-bk-to-top {
+    background-color: #333333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 20px;
+    .footer-bk-to-top__btn {
+      display: flex;
+      align-items: center;
+      margin-top: -1px;
+      svg {
+        fill: $altColour;
+        transform: rotate(-180deg);
+        height: 10px;
+        width: 15px;
+      }
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
   .footer-inner-container {
     max-width: $pageWidth;
     margin: 0 auto;
-    padding: 120px 20px 70px 20px;
+    padding: 97px 20px 50px 20px;
   }
 }
 
@@ -130,7 +151,7 @@
   }
   .footer-info__copyright {
     color: $altColour;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     line-height: 21px;
     a {
       color: $altColour;
@@ -158,7 +179,7 @@
     .footer-inner-container {
       max-width: $pageWidth;
       margin: 0 auto;
-      padding-top: 50px;
+      padding-top: 27px;
       padding-bottom: 25px;
     }
   }
