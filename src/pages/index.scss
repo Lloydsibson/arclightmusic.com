@@ -281,14 +281,16 @@
   .white-background {
     padding-bottom: 50px;
     .ep-02 {
-      .ep-02__cards {
-        .ep-card {
-          h5 {
-            font-size: 1.3rem;
-          }
-          &:last-child {
+      .ep-02__inner-container {
+        .ep-02__cards {
+          .ep-card {
             h5 {
               font-size: 1.3rem;
+            }
+            &:last-child {
+              h5 {
+                font-size: 1.3rem;
+              }
             }
           }
         }
@@ -334,7 +336,7 @@
           margin: 5px auto 20px auto;
           .ep-card {
             width: 100%;
-            max-width: 300px;
+            // max-width: 300px;
             margin: 0 auto 20px auto;
             padding: 30px;
             .ep-card__icon {

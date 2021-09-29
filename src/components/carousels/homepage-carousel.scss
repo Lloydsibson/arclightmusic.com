@@ -163,13 +163,14 @@
           .slide-btns {
             flex-direction: column;
             text-align: center;
+            align-items: flex-start;
             a {
               margin-bottom: 15px;
               margin-right: 0;
               width: 100%;
               .slide-btn {
                 padding: 19.75px 50px;
-                max-width: 335px;
+                max-width: 400px;
               }
             }
           }
@@ -217,6 +218,9 @@
           .slide-btns {
             a {
               max-width: unset;
+              .slide-btn {
+                max-width: unset;
+              }
             }
           }
         }
