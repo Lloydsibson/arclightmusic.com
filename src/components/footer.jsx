@@ -28,7 +28,7 @@ const Footer = () => {
       <div className="footer-bk-to-top" onClick={BackToTopBtn}>
         <div className="footer-bk-to-top__btn">
           <svg
-            class="arrow"
+            className="arrow"
             viewBox="0 0 12 8"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -56,40 +56,66 @@ const Footer = () => {
               onClick={e => toggleFooterAccordian(e)}
             >
               <h3>Arclight Music</h3>
-              <div className="footer-column__list">
-                <Link to="/events" activeClassName="active">
-                  <h4>Events</h4>
-                </Link>
-                <Link to="/rac-festival" activeClassName="active">
-                  <h4>Rac Festival</h4>
-                </Link>
-                <Link to="/arclight-promotions" activeClassName="active">
-                  <h4>Arclight Promotions</h4>
-                </Link>
-                <Link to="/arclight-apparel" activeClassName="active">
-                  <h4>Arclight Apparel</h4>
-                </Link>
-              </div>
+              <nav
+                className="footer-column__list"
+                aria-label="footer navigation"
+              >
+                <ul>
+                  <li>
+                    <Link to="/events" activeClassName="active">
+                      <h4>Events</h4>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/rac-festival" activeClassName="active">
+                      <h4>Rac Festival</h4>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/arclight-promotions" activeClassName="active">
+                      <h4>Arclight Promotions</h4>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/arclight-apparel" activeClassName="active">
+                      <h4>Arclight Apparel</h4>
+                    </Link>
+                  </li>
+                </ul>
+              </nav>
             </div>
             <div
               className="footer-column"
               onClick={e => toggleFooterAccordian(e)}
             >
               <h3>Information</h3>
-              <div className="footer-column__list">
-                <Link to="/about" activeClassName="active">
-                  <h4>About</h4>
-                </Link>
-                <Link to="/team" activeClassName="active">
-                  <h4>Team</h4>
-                </Link>
-                <Link to="/partners" activeClassName="active">
-                  <h4>Partners</h4>
-                </Link>
-                <Link to="/artists" activeClassName="active">
-                  <h4>Artists</h4>
-                </Link>
-              </div>
+              <nav
+                className="footer-column__list"
+                aria-label="footer navigation"
+              >
+                <ul>
+                  <li>
+                    <Link to="/about" activeClassName="active">
+                      <h4>About</h4>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/team" activeClassName="active">
+                      <h4>Team</h4>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/partners" activeClassName="active">
+                      <h4>Partners</h4>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/artists" activeClassName="active">
+                      <h4>Artists</h4>
+                    </Link>
+                  </li>
+                </ul>
+              </nav>
             </div>
 
             <div
@@ -97,14 +123,23 @@ const Footer = () => {
               onClick={e => toggleFooterAccordian(e)}
             >
               <h3>Useful Links</h3>
-              <div className="footer-column__list">
-                <Link to="/covid" activeClassName="active">
-                  <h4>COVID</h4>
-                </Link>
-                <Link to="/contact" activeClassName="active">
-                  <h4>Contact</h4>
-                </Link>
-              </div>
+              <nav
+                className="footer-column__list"
+                aria-label="footer navigation"
+              >
+                <ul>
+                  <li>
+                    <Link to="/covid" activeClassName="active">
+                      <h4>COVID</h4>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/contact" activeClassName="active">
+                      <h4>Contact</h4>
+                    </Link>
+                  </li>
+                </ul>
+              </nav>
             </div>
           </div>
           <div className="footer-links__social">

@@ -33,7 +33,7 @@ $boxshadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
     margin: -80px auto 0 auto;
   }
   .loader-6 {
-    border-top: 7px solid $tertiaryColor;
+    border-top: 7px solid $hightlightColour;
     border-right: 7px solid transparent;
     animation: loader6 800ms linear infinite;
   }
@@ -84,12 +84,12 @@ html {
   font: 112.5%/1.45em georgia, serif, sans-serif;
   box-sizing: border-box;
   overflow-y: scroll;
+  // scroll-behavior: smooth;
 }
 body {
   font-family: "Poppins", serif, Arial, Helvetica, sans-serif;
   background-color: $secondaryColour;
   overflow-x: hidden;
-  scroll-behavior: smooth;
 }
 
 // ADJUST FOR FIXED HEADER

@@ -108,7 +108,7 @@ const UpcomingEvents = () => {
                 </p>
                 {value[0].eventBriteState.map((event, key) => (
                   <a href={event.eventURL} target="_blank" key={key}>
-                    <div
+                    <article
                       className="up-card"
                       style={{ backgroundImage: `url(${event.eventImage})` }}
                     >
@@ -138,7 +138,7 @@ const UpcomingEvents = () => {
                         </h5>
                         ,<h5 className="up-card-location">{event.eventCity}</h5>
                       </div>
-                    </div>
+                    </article>
                   </a>
                 ))}
               </div>

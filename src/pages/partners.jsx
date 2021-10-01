@@ -16,7 +16,7 @@ const PartnersPage = () => {
       <div className="information-page">
         <div className="information-page__inner-container">
           <InfoNav />
-          <div className="information">
+          <article className="information">
             <h1>Partners</h1>
             <h2>Become a Partner</h2>
             <p>
@@ -31,7 +31,7 @@ const PartnersPage = () => {
               <Link to="/contact-us">click here</Link> and someone will be in
               touch!
             </p>
-          </div>
+          </article>
         </div>
       </div>
     </Layout>

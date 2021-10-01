@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 
 const InfoNav = () => {
   return (
-    <div className="info-nav">
+    <aside className="info-nav">
       <div className="info-nav__inner-container">
         <h2>
           <span>Hey.</span> More Info?
@@ -86,7 +86,7 @@ const InfoNav = () => {
           </ul>
         </div>
       </div>
-    </div>
+    </aside>
   )
 }
 

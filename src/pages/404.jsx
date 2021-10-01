@@ -35,7 +35,7 @@ const NotFoundPage = () => {
             <p>...Oops! Something went wrong</p>
             <div className="fourOfour-message__btns">
               <button id="goback" onClick={() => goBackHandler()}>
-                Go Back
+                Back
               </button>
               <Link to="/">
                 <button>Home</button>

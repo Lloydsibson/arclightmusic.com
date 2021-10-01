@@ -15,7 +15,7 @@ const CovidPage = () => {
       <div className="information-page">
         <div className="information-page__inner-container">
           <InfoNav />
-          <div className="information">
+          <article className="information">
             <h1>COVID Policy</h1>
             <p>
               With the recent announcement from the Government regarding the
@@ -121,7 +121,7 @@ const CovidPage = () => {
             </p>
             <p>Stay safe and we can’t wait to welcome you all back!</p>
             <p>The Arclight Music Team</p>
-          </div>
+          </article>
         </div>
       </div>
     </Layout>

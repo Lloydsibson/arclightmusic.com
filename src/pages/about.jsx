@@ -15,7 +15,7 @@ const AboutPage = () => {
       <div className="information-page">
         <div className="information-page__inner-container">
           <InfoNav />
-          <div className="information">
+          <article className="information">
             <h1>About</h1>
             <h2>Arclight Music was founded in 2019 with 2 main aims:</h2>
             <p>
@@ -83,7 +83,7 @@ const AboutPage = () => {
               exception of your instrument however some arrangements can be made
               if needed (please contact the APUK team for information).
             </p>
-          </div>
+          </article>
         </div>
       </div>
     </Layout>

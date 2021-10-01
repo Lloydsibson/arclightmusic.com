@@ -38,7 +38,7 @@ const MobileSideBar = () => {
 
   return (
     <>
-      <nav className="mobile-sidebar" aria-label="Mobile navigation">
+      <div className="mobile-sidebar" aria-label="mobile navigation">
         <div className="mobile-sidebar__logo">
           <Link to="/" onClick={e => NavItemToggle(e)}>
             <StaticImage
@@ -205,7 +205,7 @@ const MobileSideBar = () => {
           Members
         </Link>
       </div> */}
-      </nav>
+      </div>
       <div
         className="mobile-sidebar-overlay"
         onClick={e => NavOverlayToggle(e)}

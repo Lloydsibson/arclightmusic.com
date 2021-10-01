@@ -16,7 +16,7 @@ const PrivacyPolicyPage = () => {
       <div className="information-page">
         <div className="information-page__inner-container">
           <InfoNav />
-          <div className="information">
+          <article className="information">
             <h1>Privacy Policy</h1>
             <h2>Introduction</h2>
             <p>
@@ -413,10 +413,12 @@ const PrivacyPolicyPage = () => {
               contacting the third party directly.
             </p>
             <h2>Contact Us</h2>
-            If you have questions or comments about this Privacy Policy,
-            please&nbsp;
-            <Link to="/contact">Contact</Link> us.
-          </div>
+            <p>
+              If you have questions or comments about this Privacy Policy,
+              please&nbsp;
+              <Link to="/contact">Contact</Link> us.
+            </p>
+          </article>
         </div>
       </div>
     </Layout>

@@ -15,11 +15,11 @@ const ArclightPromotionsPage = () => {
       <div className="information-page">
         <div className="information-page__inner-container">
           <InfoNav />
-          <div className="information">
+          <article className="information">
             <h1>Arclight Promotions</h1>
             <h2>Our Events Division</h2>
             <p>Text here...</p>
-          </div>
+          </article>
         </div>
       </div>
     </Layout>

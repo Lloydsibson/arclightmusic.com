@@ -15,7 +15,7 @@ const RACPage = () => {
       <div className="information-page">
         <div className="information-page__inner-container">
           <InfoNav />
-          <div className="information">
+          <article className="information">
             <h1>Rage Against Cancer Festival</h1>
             <p>
               Arclight Music are proud to welcome, along with our new team, Rage
@@ -45,7 +45,7 @@ const RACPage = () => {
               the bottom of this page with discounts available for tickets
               spanning multiple days!
             </p>
-          </div>
+          </article>
         </div>
       </div>
     </Layout>

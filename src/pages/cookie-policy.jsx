@@ -16,7 +16,7 @@ const ArclightPromotionsPage = () => {
       <div className="information-page">
         <div className="information-page__inner-container">
           <InfoNav />
-          <div className="information">
+          <article className="information">
             <h1>Cookie Policy</h1>
             <h2>Introduction</h2>
             <p>
@@ -201,7 +201,7 @@ const ArclightPromotionsPage = () => {
             </div>
             <p>
               In addition, you may opt-out of some third-party cookies through
-              the &nbsp;
+              the&nbsp;
               <a
                 href="http://optout.networkadvertising.org/?c=1"
                 target="_blank"
@@ -240,7 +240,7 @@ const ArclightPromotionsPage = () => {
               If you have questions or comments about this Cookie Policy, please
               contact us.
             </p>
-          </div>
+          </article>
         </div>
       </div>
     </Layout>

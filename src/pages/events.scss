@@ -51,6 +51,7 @@
           height: 31px;
           border: 1px solid $altColour;
           background-color: $primaryColour;
+          color: $secondaryColour;
           &:focus {
             outline: unset;
             border-color: $hightlightColour;
@@ -66,10 +67,14 @@
           text-decoration: unset;
           color: $altColour;
           margin-left: 50px;
+          transition: all 0.3s ease-in-out 0s;
           h3 {
             margin: 0;
             font-weight: 500;
             font-size: 1rem;
+          }
+          &:hover {
+            color: $secondaryColour;
           }
         }
       }
@@ -178,6 +183,7 @@
           h4 {
             margin: 0 6px;
             font-size: 0.77rem;
+            font-weight: 600;
           }
         }
         .event-tag-container__category {
@@ -188,6 +194,7 @@
           h4 {
             margin: 0;
             font-size: 0.77rem;
+            font-weight: 600;
           }
         }
       }

@@ -98,7 +98,7 @@ const EventsPage = () => {
                   {value[2].loadingMessage}
                 </p>
                 {value[0].eventBriteState.map((data, key) => (
-                  <div
+                  <article
                     className="event-card"
                     key={key}
                     data-category={data.eventSubCategory}
@@ -173,7 +173,7 @@ const EventsPage = () => {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </article>
                 ))}
               </div>
             </div>

@@ -15,7 +15,7 @@ const TeamPage = () => {
       <div className="information-page">
         <div className="information-page__inner-container">
           <InfoNav />
-          <div className="information">
+          <article className="information">
             <h1>Team</h1>
             <h2>Cameron Hamilton</h2>
             <p>Founder</p>
@@ -79,7 +79,7 @@ const TeamPage = () => {
                 arclightpromotionsuk@gmail.com
               </a>
             </p>
-          </div>
+          </article>
         </div>
       </div>
     </Layout>

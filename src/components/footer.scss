@@ -1,7 +1,7 @@
 @import "./layout";
 
 .footer-background {
-  border-top: 2px solid $tertiaryColor;
+  // border-top: 2px solid $tertiaryColor;
   background-color: $secondaryColour;
   // margin-top: 50px;
   .footer-bk-to-top {
@@ -49,37 +49,44 @@
         font-weight: 500;
         margin-bottom: 45px;
       }
-      a {
-        color: $primaryColour;
-        text-decoration: unset;
-        display: block;
-        margin-bottom: 20px;
-        &:hover {
-          //text-decoration: underline;
-          h4 {
-            border-bottom: 2px solid $hightlightColour;
+      ul {
+        margin: 0;
+        li {
+          display: block;
+          margin: 0;
+          a {
+            color: $primaryColour;
+            text-decoration: unset;
+            display: block;
+            margin-bottom: 20px;
+            &:hover {
+              //text-decoration: underline;
+              h4 {
+                border-bottom: 2px solid $hightlightColour;
+              }
+            }
+            h4 {
+              display: inline;
+              font-weight: 400;
+              padding-bottom: 1px;
+              border-bottom: 2px solid $secondaryColour;
+              transition: all 0.2s ease-in-out;
+              line-height: 24px;
+            }
           }
-        }
-        h4 {
-          display: inline;
-          font-weight: 400;
-          padding-bottom: 1px;
-          border-bottom: 2px solid $secondaryColour;
-          transition: all 0.2s ease-in-out;
-          line-height: 28px;
-        }
-      }
-      a.active {
-        &:hover {
-          cursor: default;
-          h4 {
-            cursor: default;
+          a.active {
+            &:hover {
+              cursor: default;
+              h4 {
+                cursor: default;
+              }
+            }
+            h4 {
+              //font-weight: 600;
+              opacity: 0.2;
+              border-color: $primaryColour;
+            }
           }
-        }
-        h4 {
-          //font-weight: 600;
-          opacity: 0.2;
-          border-color: $primaryColour;
         }
       }
     }

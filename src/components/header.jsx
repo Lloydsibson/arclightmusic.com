@@ -48,18 +48,20 @@ const Header = () => {
           <div className="logo-container">
             <h1>
               <Link to="/">
-                {/* {props.siteTitle} */}
                 <StaticImage
                   src="../images/website-logo.png"
                   width={178}
                   quality={95}
                   formats={["AUTO", "WEBP", "AVIF"]}
-                  alt="Arclight Music Logo"
+                  alt="Arclight Music"
                 />
               </Link>
             </h1>
           </div>
-          <div className="links-container desktop">
+          <nav
+            className="links-container desktop"
+            aria-label="header navigation"
+          >
             <ul>
               <Link to="/events" activeClassName="active">
                 <li>Events</li>
@@ -93,69 +95,77 @@ const Header = () => {
                 <li>Contact</li>
               </Link>
             </ul>
-          </div>
+          </nav>
           <div className="sub-nav more">
             <div className="sub-nav__inner-container">
               <h4>Arclight Music</h4>
-              <ul>
-                <Link to="/" activeClassName="active">
-                  <li>Home</li>
-                </Link>
-                <Link to="/events" activeClassName="active">
-                  <li>Events</li>
-                </Link>
-                <Link to="/rac-festival" activeClassName="active">
-                  <li>RAC Festival</li>
-                </Link>
-                <Link to="/arclight-promotions" activeClassName="active">
-                  <li>Arclight Promotions</li>
-                </Link>
-                <Link to="/arclight-apparel" activeClassName="active">
-                  <li>Arclight Apparel</li>
-                </Link>
-              </ul>
+              <nav aria-label="sub navigation">
+                <ul>
+                  <Link to="/" activeClassName="active">
+                    <li>Home</li>
+                  </Link>
+                  <Link to="/events" activeClassName="active">
+                    <li>Events</li>
+                  </Link>
+                  <Link to="/rac-festival" activeClassName="active">
+                    <li>RAC Festival</li>
+                  </Link>
+                  <Link to="/arclight-promotions" activeClassName="active">
+                    <li>Arclight Promotions</li>
+                  </Link>
+                  <Link to="/arclight-apparel" activeClassName="active">
+                    <li>Arclight Apparel</li>
+                  </Link>
+                </ul>
+              </nav>
             </div>
             <div className="sub-nav__inner-container">
               <h4>Information</h4>
-              <ul>
-                <Link to="/about" activeClassName="active">
-                  <li>About</li>
-                </Link>
-                <Link to="/team" activeClassName="active">
-                  <li>Team</li>
-                </Link>
-                <Link to="/partners" activeClassName="active">
-                  <li>Partners</li>
-                </Link>
-                <Link to="/artists" activeClassName="active">
-                  <li>Artists</li>
-                </Link>
-              </ul>
+              <nav aria-label="sub navigation">
+                <ul>
+                  <Link to="/about" activeClassName="active">
+                    <li>About</li>
+                  </Link>
+                  <Link to="/team" activeClassName="active">
+                    <li>Team</li>
+                  </Link>
+                  <Link to="/partners" activeClassName="active">
+                    <li>Partners</li>
+                  </Link>
+                  <Link to="/artists" activeClassName="active">
+                    <li>Artists</li>
+                  </Link>
+                </ul>
+              </nav>
             </div>
             <div className="sub-nav__inner-container">
               <h4>Policies</h4>
-              <ul>
-                <Link to="/cookie-policy" activeClassName="active">
-                  <li>Cookies</li>
-                </Link>
-                <Link to="/privacy-policy" activeClassName="active">
-                  <li>Privacy</li>
-                </Link>
-                <Link to="/refunds-and-returns" activeClassName="active">
-                  <li>Refunds & Returns</li>
-                </Link>
-              </ul>
+              <nav aria-label="sub navigation">
+                <ul>
+                  <Link to="/cookie-policy" activeClassName="active">
+                    <li>Cookies</li>
+                  </Link>
+                  <Link to="/privacy-policy" activeClassName="active">
+                    <li>Privacy</li>
+                  </Link>
+                  <Link to="/refunds-and-returns" activeClassName="active">
+                    <li>Refunds & Returns</li>
+                  </Link>
+                </ul>
+              </nav>
             </div>
             <div className="sub-nav__inner-container">
               <h4>Useful Links</h4>
-              <ul>
-                <Link to="/covid" activeClassName="active">
-                  <li>COVID</li>
-                </Link>
-                <Link to="/contact" activeClassName="active">
-                  <li>Contact</li>
-                </Link>
-              </ul>
+              <nav aria-label="sub navigation">
+                <ul>
+                  <Link to="/covid" activeClassName="active">
+                    <li>COVID</li>
+                  </Link>
+                  <Link to="/contact" activeClassName="active">
+                    <li>Contact</li>
+                  </Link>
+                </ul>
+              </nav>
             </div>
           </div>
         </header>
