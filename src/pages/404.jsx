@@ -5,10 +5,31 @@ import Seo from "../components/seo"
 
 import "./404.scss"
 
+import { useStaticQuery, graphql } from "gatsby"
+import { renderRichText } from "gatsby-source-contentful/rich-text"
+
 import { StaticImage } from "gatsby-plugin-image"
 import { Link, navigate } from "gatsby"
 
 const NotFoundPage = () => {
+  const data = useStaticQuery(graphql`
+    query PageNotFound {
+      allContentfulRichContent(
+        filter: { id: { eq: "3e9574e7-2dd8-503e-8148-e1c788d0abc8" } }
+      ) {
+        edges {
+          node {
+            pageText {
+              raw
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  const contentfulCMSPost = data.allContentfulRichContent.edges[0].node.pageText
+
   const goBackHandler = () => {
     navigate(-1)
   }
@@ -32,7 +53,9 @@ const NotFoundPage = () => {
           </div>
           <div className="fourOfour-message">
             <h1>Page not found</h1>
-            <p>...Oops! Something went wrong</p>
+            {/* *** CONTENTFUL CMS *** */}
+            {renderRichText(contentfulCMSPost)}
+            {/* *** END *** */}
             <div className="fourOfour-message__btns">
               <button id="goback" onClick={() => goBackHandler()}>
                 Back

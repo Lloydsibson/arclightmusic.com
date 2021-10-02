@@ -256,8 +256,7 @@ abbr[title] {
 }
 b,
 strong {
-  font-weight: inherit;
-  font-weight: bolder;
+  font-weight: 600;
 }
 dfn {
   font-style: italic;
@@ -670,11 +669,17 @@ address {
   padding-top: 0;
   margin-bottom: 1.45rem;
 }
+b,
+strong {
+  font-weight: 600 !important;
+}
 b {
-  font-weight: bold;
+  font-weight: 600;
+  font-weight: inherit;
 }
 strong {
-  font-weight: bold;
+  font-weight: 600;
+  font-weight: inherit;
 }
 dt {
   font-weight: bold;
