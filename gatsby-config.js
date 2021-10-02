@@ -6,6 +6,13 @@ module.exports = {
     siteUrl: `https://www.arclightmusic.co.uk/`,
   },
   plugins: [
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `njx2pnki4vb1`,
+        accessToken: `xkbOUQBtxrUcQ9mU4WSZnfE4x7T9S0bW-7gKzbaWQM4`,
+      },
+    },
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
