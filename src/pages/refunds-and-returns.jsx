@@ -5,7 +5,26 @@ import Seo from "../components/seo"
 
 import InfoNav from "../components/info-nav"
 
+import { useStaticQuery, graphql } from "gatsby"
+import { renderRichText } from "gatsby-source-contentful/rich-text"
+
 const RefundAndReturnsPage = () => {
+  const data = useStaticQuery(graphql`
+    query RRPage {
+      allContentfulRichContent(
+        filter: { id: { eq: "a6876718-14b4-5b1f-8724-d55ff3ff51cd" } }
+      ) {
+        edges {
+          node {
+            pageText {
+              raw
+            }
+          }
+        }
+      }
+    }
+  `)
+  const contentfulCMSPost = data.allContentfulRichContent.edges[0].node.pageText
   return (
     <Layout>
       <Seo
@@ -17,7 +36,9 @@ const RefundAndReturnsPage = () => {
           <InfoNav />
           <article className="information">
             <h1>Refunds & Return</h1>
-            <p>Text here...</p>
+            {/* *** CONTENTFUL CMS *** */}
+            {renderRichText(contentfulCMSPost)}
+            {/* *** END *** */}
           </article>
         </div>
       </div>

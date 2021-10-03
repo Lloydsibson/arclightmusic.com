@@ -10,8 +10,28 @@ import Seo from "../components/seo"
 // SITE-KEY = 6LepgIMcAAAAADZ5mL8-ganvF1-rVwQhvSzQy2VK
 // SECRET KEY = 6LepgIMcAAAAABL2L8liWh_hSLYe9wm0Yqn-fTbj
 
+import { useStaticQuery, graphql } from "gatsby"
+import { renderRichText } from "gatsby-source-contentful/rich-text"
+
 const ContactPage = () => {
   // const [buttonDisabled, setButtonDisabled] = useState(true)
+  const data = useStaticQuery(graphql`
+    query ContactPage {
+      allContentfulRichContent(
+        filter: { id: { eq: "4a9215e6-e5e0-5fcd-a21f-6b61e484d0cc" } }
+      ) {
+        edges {
+          node {
+            pageText {
+              raw
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  const contentfulCMSPost = data.allContentfulRichContent.edges[0].node.pageText
   return (
     <Layout>
       <Seo
@@ -22,17 +42,9 @@ const ContactPage = () => {
         <div className="contact-page__text">
           <div className="contact-text">
             <h1>Contact Us</h1>
-            <h2>
-              We welcome enquiries from all involved in music or education.
-            </h2>
-            <p>
-              We aim to respond to all enquiries within 3 working days however
-              this may be longer on some occasions due to high demand.
-            </p>
-            <p>
-              Please know that you have not been forgotten and we will be in
-              touch as soon as physically possible
-            </p>
+            {/* *** CONTENTFUL CMS *** */}
+            {renderRichText(contentfulCMSPost)}
+            {/* *** END *** */}
           </div>
           <div className="contact-image">
             <StaticImage

@@ -7,25 +7,28 @@ import Seo from "../components/seo"
 import InfoNav from "../components/info-nav"
 
 // import { BLOCKS, MARKS } from "@contentful/rich-text-types"
-// import { renderRichText } from "gatsby-source-contentful/rich-text"
+
+import { useStaticQuery, graphql } from "gatsby"
+import { renderRichText } from "gatsby-source-contentful/rich-text"
 
 const ArtistsPage = () => {
-  // const data = useStaticQuery(graphql`
-  //   query ArtistPage {
-  //     allContentfulInformationPages(
-  //       filter: { id: { eq: "991b48a3-4b95-55d0-afd9-93ec3f73ac07" } }
-  //     ) {
-  //       edges {
-  //         node {
-  //           pageText {
-  //             raw
-  //           }
-  //           id
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
+  const data = useStaticQuery(graphql`
+    query ArtistsPage {
+      allContentfulRichContent(
+        filter: { id: { eq: "36938fd2-1124-5a92-9730-91a9de2cd12f" } }
+      ) {
+        edges {
+          node {
+            pageText {
+              raw
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  const contentfulCMSPost = data.allContentfulRichContent.edges[0].node.pageText
 
   // const Bold = ({ children }) => <span className="bold">{children}</span>
   // const Text = ({ children }) => <p className="align-center">{children}</p>
@@ -49,14 +52,6 @@ const ArtistsPage = () => {
   //   },
   // }
 
-  // const post = data.allContentfulInformationPages.edges[0].node.pageText
-  //console.log(data.allContentfulInformationPages.edges[0].node.pageText.raw)
-  //console.log(post)
-  //console.log(data.allContentfulBand.nodes)
-
-  // const output = renderRichText(post)
-  // console.log(output)
-
   return (
     <Layout>
       <Seo
@@ -68,11 +63,9 @@ const ArtistsPage = () => {
           <InfoNav />
           <article className="information">
             <h1>Artists</h1>
-            {/* {bands.map((x, key) => (
-              <p key={key}>{x.name}</p>
-            ))}
-             */}
-            {/* {output} */}
+            {/* *** CONTENTFUL CMS *** */}
+            {renderRichText(contentfulCMSPost)}
+            {/* *** END *** */}
           </article>
         </div>
       </div>
@@ -81,9 +74,3 @@ const ArtistsPage = () => {
 }
 
 export default ArtistsPage
-
-// function BlogPostTemplate({ data }) {
-//   const { bodyRichText } = data.contentfulBlogPost
-
-//   return <div>{bodyRichText && renderRichText(richTextField, options)}</div>
-// }

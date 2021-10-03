@@ -5,7 +5,27 @@ import Seo from "../components/seo"
 
 import InfoNav from "../components/info-nav"
 
+import { useStaticQuery, graphql } from "gatsby"
+import { renderRichText } from "gatsby-source-contentful/rich-text"
+
 const RACPage = () => {
+  const data = useStaticQuery(graphql`
+    query RACPage {
+      allContentfulRichContent(
+        filter: { id: { eq: "fa096131-7a79-5075-b382-9bc4c5cade4a" } }
+      ) {
+        edges {
+          node {
+            pageText {
+              raw
+            }
+          }
+        }
+      }
+    }
+  `)
+  const contentfulCMSPost = data.allContentfulRichContent.edges[0].node.pageText
+
   return (
     <Layout>
       <Seo
@@ -17,34 +37,9 @@ const RACPage = () => {
           <InfoNav />
           <article className="information">
             <h1>Rage Against Cancer Festival</h1>
-            <p>
-              Arclight Music are proud to welcome, along with our new team, Rage
-              Against Cancer Festival to the family.
-            </p>
-            <p>
-              For 2 years now, founders Victoria May & Jamie Bee, have
-              successfully ran RAC Festival with help from friends and fellow
-              musicians Owen Trott & David Dyson allowing them to make a
-              substantial donation to the Teenage Cancer Trust each year.
-            </p>
-            <p>
-              With the support of Arclight Music and our family of partners, RAC
-              Festival is set to have it’s biggest year yet with more bands than
-              ever before jumping on board to be a part of this great cause.
-            </p>
-            <p>
-              All profits from the festival will go directly to Teenage Cancer
-              Trust as always and we couldn’t be more proud to be a part of this
-              incredible annual festival. We will of course be bring the
-              Arclight ethos with it and be having some younger, newer artists
-              on the lineup as well to help bring them into the spotlight.
-            </p>
-            <p>
-              For live updates on RAC Festival and Teenage Cancer Trust, head to
-              their official pages and tickets can be purchased in advance at
-              the bottom of this page with discounts available for tickets
-              spanning multiple days!
-            </p>
+            {/* *** CONTENTFUL CMS *** */}
+            {renderRichText(contentfulCMSPost)}
+            {/* *** END *** */}
           </article>
         </div>
       </div>

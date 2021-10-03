@@ -2,11 +2,31 @@ import * as React from "react"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import { Link } from "gatsby"
+//import { Link } from "gatsby"
 
 import InfoNav from "../components/info-nav"
 
+import { useStaticQuery, graphql } from "gatsby"
+import { renderRichText } from "gatsby-source-contentful/rich-text"
+
 const PartnersPage = () => {
+  const data = useStaticQuery(graphql`
+    query PartnersPage {
+      allContentfulRichContent(
+        filter: { id: { eq: "7db430cb-ef0d-5135-9972-42eb6a6e4448" } }
+      ) {
+        edges {
+          node {
+            pageText {
+              raw
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  const contentfulCMSPost = data.allContentfulRichContent.edges[0].node.pageText
   return (
     <Layout>
       <Seo
@@ -18,19 +38,9 @@ const PartnersPage = () => {
           <InfoNav />
           <article className="information">
             <h1>Partners</h1>
-            <h2>Become a Partner</h2>
-            <p>
-              We work very closely with our partners to make sure we can offer
-              the best to new, young musicians and to the community as a whole.
-              All of our partners are commited to the same cause and we are very
-              proud to have each of their names next to ours.
-            </p>
-            <p>
-              If you are interested in becoming a partner, please contact us via
-              the Contact button in the website navigation, or{" "}
-              <Link to="/contact-us">click here</Link> and someone will be in
-              touch!
-            </p>
+            {/* *** CONTENTFUL CMS *** */}
+            {renderRichText(contentfulCMSPost)}
+            {/* *** END *** */}
           </article>
         </div>
       </div>
