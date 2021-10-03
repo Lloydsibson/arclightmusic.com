@@ -59,7 +59,7 @@ const TeamPage = () => {
             <div className="information__container">
               <div className="team-photo">
                 <StaticImage
-                  src="../images/team-photo-stock.jpg"
+                  src="../images/team-photo-cam.jpg"
                   width={180}
                   quality={95}
                   formats={["AUTO", "WEBP", "AVIF"]}
@@ -105,11 +105,11 @@ const TeamPage = () => {
             <div className="information__container">
               <div className="team-photo">
                 <StaticImage
-                  src="../images/team-photo-stock.jpg"
+                  src="../images/team-photo-dodd.jpg"
                   width={180}
                   quality={95}
                   formats={["AUTO", "WEBP", "AVIF"]}
-                  alt="Kai Dodds"
+                  alt="Kai Dodds at home"
                 />
               </div>
               <div className="team-info">
@@ -128,11 +128,11 @@ const TeamPage = () => {
             <div className="information__container">
               <div className="team-photo">
                 <StaticImage
-                  src="../images/team-photo-stock.jpg"
+                  src="../images/team-photo-vic.jpg"
                   width={180}
                   quality={95}
                   formats={["AUTO", "WEBP", "AVIF"]}
-                  alt="Kai Dodds"
+                  alt="Victoria on stage"
                 />
               </div>
               <div className="team-info">
@@ -152,11 +152,11 @@ const TeamPage = () => {
             <div className="information__container">
               <div className="team-photo">
                 <StaticImage
-                  src="../images/team-photo-stock.jpg"
+                  src="../images/team-photo-owen.jpg"
                   width={180}
                   quality={95}
                   formats={["AUTO", "WEBP", "AVIF"]}
-                  alt="Kai Dodds"
+                  alt="Owen outside in street"
                 />
               </div>
               <div className="team-info">
@@ -180,7 +180,7 @@ const TeamPage = () => {
                   width={180}
                   quality={95}
                   formats={["AUTO", "WEBP", "AVIF"]}
-                  alt="Kai Dodds"
+                  alt="Arclight music logo"
                 />
               </div>
               <div className="team-info">

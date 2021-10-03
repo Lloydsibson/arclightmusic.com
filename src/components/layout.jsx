@@ -10,8 +10,6 @@ import React from "react"
 
 import "./layout.scss"
 
-const test = "Lloyd"
-
 const Layout = ({ children }) => {
   // const data = useStaticQuery(graphql`
   //   query SiteTitleQuery {

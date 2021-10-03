@@ -237,11 +237,19 @@ body {
             img {
               filter: grayscale(1);
               width: 100%;
+              transition: all 0.3s ease-in-out 0s;
+              border-radius: 100%;
+              &:hover {
+                filter: unset;
+              }
             }
           }
         }
         .team-info {
           width: 82%;
+          p {
+            word-break: break-word;
+          }
         }
       }
     }
@@ -255,7 +263,7 @@ body {
       .information {
         .information__container {
           flex-direction: column;
-          margin-bottom: 20px;
+          margin-bottom: 15px;
           .team-photo {
             width: 100%;
             margin-right: 0;
