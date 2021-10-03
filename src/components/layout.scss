@@ -184,6 +184,106 @@ body {
   }
 }
 
+.information-page.rac {
+  background-color: #6b0000;
+  .information-page__inner-container {
+    .information {
+      .rac-logo {
+        padding-top: 40px;
+        text-align: center;
+      }
+      h1 {
+        padding-top: 25px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .information-page.rac {
+    .information-page__inner-container {
+      .information {
+        .rac-logo {
+          padding-top: 30px;
+        }
+        h1 {
+          text-align: unset;
+        }
+      }
+    }
+  }
+}
+
+.information-page.team {
+  .information-page__inner-container {
+    .information {
+      h1 {
+        margin-bottom: 50px;
+      }
+      .information__container {
+        display: flex;
+        margin-bottom: 50px;
+        .team-photo {
+          width: 15%;
+          margin-right: 3%;
+          display: flex;
+          align-items: flex-start;
+          .gatsby-image-wrapper {
+            overflow: hidden;
+            border: 2px solid $hightlightColour;
+            border-radius: 100%;
+            box-shadow: $boxshadow;
+            img {
+              filter: grayscale(1);
+              width: 100%;
+            }
+          }
+        }
+        .team-info {
+          width: 82%;
+        }
+      }
+    }
+  }
+}
+
+// PHONES/TABLETS
+@media only screen and (max-width: 992px) {
+  .information-page.team {
+    .information-page__inner-container {
+      .information {
+        .information__container {
+          flex-direction: column;
+          margin-bottom: 20px;
+          .team-photo {
+            width: 100%;
+            margin-right: 0;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            .gatsby-image-wrapper {
+              overflow: hidden;
+              border: 2px solid $hightlightColour;
+              border-radius: 100%;
+              box-shadow: $boxshadow;
+              img {
+                filter: grayscale(1);
+                width: 100%;
+              }
+            }
+          }
+          .team-info {
+            width: 100%;
+          }
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
 // PHONES/TABLETS
 @media only screen and (max-width: 992px) {
   .information-page {

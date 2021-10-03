@@ -49,13 +49,56 @@
             color: $altColour;
             &:hover {
               h4 {
-                border-color: $altColour;
+                border-color: transparent;
               }
             }
           }
         }
       }
     }
+  }
+}
+
+.information-page.rac {
+  .info-nav {
+    .info-nav__inner-container {
+      h2 {
+        color: $primaryColour;
+      }
+      .info-nav-links {
+        h3 {
+          color: #ff8888;
+        }
+        ul {
+          li {
+            a {
+              h4 {
+                color: #ffc0c0;
+              }
+              &:hover {
+                h4 {
+                  border-color: #ffc0c0;
+                }
+              }
+            }
+            a.active {
+              h4 {
+                color: $primaryColour;
+              }
+              &:hover {
+                h4 {
+                  border-color: transparent;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  h1,
+  p {
+    color: $primaryColour;
   }
 }
 
