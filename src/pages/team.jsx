@@ -173,7 +173,7 @@ const TeamPage = () => {
                 </p>
               </div>
             </div>
-            <div className="information__container">
+            {/* <div className="information__container">
               <div className="team-photo">
                 <StaticImage
                   src="../images/team-photo-stock.jpg"
@@ -196,7 +196,7 @@ const TeamPage = () => {
                   </a>
                 </p>
               </div>
-            </div>
+            </div> */}
             {/* *** CONTENTFUL CMS *** */}
             {/* {renderRichText(contentfulCMSPost, renderOptions)} */}
             {/* *** END *** */}

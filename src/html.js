@@ -33,6 +33,7 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
+        {/* Apzi Feedback code */}
         <script async src="https://w.appzi.io/w.js?token=e4JWH"></script>
       </body>
     </html>
