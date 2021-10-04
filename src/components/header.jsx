@@ -33,12 +33,12 @@ const Header = () => {
   const onMouseLeaveHandler = e => {
     e.currentTarget.classList.remove("-open")
   }
-  const onMouseEnterHandler = e => {
+  const onClickHandler = e => {
     e.currentTarget.parentNode.parentNode.parentNode.classList.toggle("-open")
   }
-  const onKeyPressHandler = e => {
-    e.currentTarget.parentNode.parentNode.parentNode.classList.toggle("-open")
-  }
+  // const onKeyPressHandler = e => {
+  //   e.currentTarget.parentNode.parentNode.parentNode.classList.toggle("-open")
+  // }
 
   return (
     <>
@@ -75,8 +75,8 @@ const Header = () => {
               <a
                 href="#0"
                 className="dropdown more"
-                onMouseEnter={e => onMouseEnterHandler(e)}
-                onKeyDown={e => onKeyPressHandler(e)}
+                onClick={e => onClickHandler(e)}
+                // onKeyDown={e => onKeyPressHandler(e)}
                 role="button"
               >
                 <li>More</li>

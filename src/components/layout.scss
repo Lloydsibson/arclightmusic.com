@@ -295,6 +295,122 @@ body {
   }
 }
 
+.information-page.partners {
+  .information-page__inner-container {
+    .information {
+      h1 {
+        margin-bottom: 50px;
+      }
+      .partner-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-bottom: 30px;
+        a {
+          display: flex;
+          width: calc(33.333% - 20px);
+          background-color: #fff;
+          box-shadow: rgb(0 0 0 / 7%) 0px 1px 2px, rgb(0 0 0 / 7%) 0px 2px 4px,
+            rgb(0 0 0 / 7%) 0px 4px 8px, rgb(0 0 0 / 7%) 0px 8px 16px,
+            rgb(0 0 0 / 7%) 0px 16px 32px, rgb(0 0 0 / 7%) 0px 32px 64px;
+          border-radius: 20px;
+          text-decoration: unset;
+          // height: 125px;
+          // position: relative;
+          transition: 0.2s all ease-out;
+          margin-bottom: 20px;
+          // border: 2px solid #ccc;
+          .partner-container__card {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+            padding: 20px;
+            .partner-logo {
+              width: 30%;
+            }
+            .partner-info {
+              width: calc(70% - 20px);
+              text-align: left;
+              h2 {
+                margin: 0;
+                font-weight: 600;
+                line-height: 36px;
+                max-height: 72px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+              }
+            }
+          }
+          &:hover {
+            transform: scale(0.975);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1250px) {
+  .information-page.partners {
+    .information-page__inner-container {
+      .information {
+        .partner-container {
+          h2 {
+            font-size: 1.1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// @media only screen and (max-width: 992px) {
+//   .information-page.partners {
+//     .information-page__inner-container {
+//       .information {
+//         .partner-container {
+//           a {
+//             margin-bottom: 20px;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+@media only screen and (min-width: 550px) and (max-width: 767px) {
+  .information-page.partners {
+    .information-page__inner-container {
+      .information {
+        .partner-container {
+          a {
+            width: calc(50% - 10px);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .information-page.partners {
+    .information-page__inner-container {
+      .information {
+        .partner-container {
+          a {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
 // PHONES/TABLETS
 @media only screen and (max-width: 992px) {
   .information-page {
