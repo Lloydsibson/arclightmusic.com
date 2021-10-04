@@ -65,10 +65,12 @@ const TeamPage = () => {
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="Cameron Hamilton on stage"
                 />
+                <div className="mobile-photo-text">
+                  <h2 className="mobile-photo-text__name">Cameron Hamilton</h2>
+                  <p className="mobile-photo-text__role">Founder</p>
+                </div>
               </div>
               <div className="team-info">
-                <h2>Cameron Hamilton</h2>
-                <p>Founder</p>
                 <p>
                   Having been performing from the young age of 13 and working
                   within education since 21, Cameron founded Arclight to make a
@@ -88,10 +90,14 @@ const TeamPage = () => {
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="Lloyd Sibson on stage"
                 />
+                <div className="mobile-photo-text">
+                  <h2 className="mobile-photo-text__name">Lloyd Sibson</h2>
+                  <p className="mobile-photo-text__role">
+                    Developer & Designer
+                  </p>
+                </div>
               </div>
               <div className="team-info">
-                <h2>Lloyd Sibson</h2>
-                <p>Digital Agency</p>
                 <p>
                   Founder of Monocode and an experienced musician in his own
                   right. Creative is an understatement. He’s worked with Google,
@@ -111,10 +117,12 @@ const TeamPage = () => {
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="Kai Dodds at home"
                 />
+                <div className="mobile-photo-text">
+                  <h2 className="mobile-photo-text__name">Kai Dodds</h2>
+                  <p className="mobile-photo-text__role">Event Manager</p>
+                </div>
               </div>
               <div className="team-info">
-                <h2>Kai Dodds</h2>
-                <p>Event Manager</p>
                 <p>
                   Being a musician himself and seeing the difficulties trying to
                   get onto the live music scene, Kai wanted to be involved from
@@ -134,10 +142,12 @@ const TeamPage = () => {
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="Victoria on stage"
                 />
+                <div className="mobile-photo-text">
+                  <h2 className="mobile-photo-text__name">Victoria May</h2>
+                  <p className="mobile-photo-text__role">Event Manager</p>
+                </div>
               </div>
               <div className="team-info">
-                <h2>Victoria May</h2>
-                <p>Event Manager</p>
                 <p>
                   Vocalist to One Still Standing and founder of Rage Against
                   Cancer Festival. After a long discussion following Vic
@@ -158,10 +168,12 @@ const TeamPage = () => {
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="Owen outside in street"
                 />
+                <div className="mobile-photo-text">
+                  <h2 className="mobile-photo-text__name">Owen Trott</h2>
+                  <p className="mobile-photo-text__role">Event Manager</p>
+                </div>
               </div>
               <div className="team-info">
-                <h2>Owen Trott</h2>
-                <p>Event Manager</p>
                 <p>
                   Guitarist to One Still Standing and Event Manager of Rage
                   Against Cancer Festival. Owen joined along with Vic having

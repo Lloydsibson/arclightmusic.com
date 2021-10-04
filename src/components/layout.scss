@@ -184,6 +184,33 @@ body {
   }
 }
 
+// PHONES/TABLETS
+@media only screen and (max-width: 992px) {
+  .information-page {
+    .information-page__inner-container {
+      flex-direction: column;
+      .info-nav {
+        order: 2;
+      }
+      .information {
+        order: 1;
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 20px;
+        h1 {
+          padding-top: 40px;
+          margin-bottom: 35px;
+          font-size: 2.8rem;
+        }
+        h2 {
+          font-size: 1.2rem;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+}
+
 .information-page.rac {
   background-color: #6b0000;
   .information-page__inner-container {
@@ -222,18 +249,22 @@ body {
         margin-bottom: 50px;
       }
       .information__container {
-        display: flex;
-        margin-bottom: 50px;
+        // display: flex;
+        // margin-bottom: 50px;
         .team-photo {
-          width: 15%;
-          margin-right: 3%;
           display: flex;
-          align-items: flex-start;
+          align-items: center;
+          background-color: $secondaryColour;
+          border-radius: 10px 10px 0 0;
+          margin-bottom: 0px;
+          padding: 20px;
           .gatsby-image-wrapper {
             overflow: hidden;
             border: 2px solid $hightlightColour;
             border-radius: 100%;
             box-shadow: $boxshadow;
+            max-width: 120px;
+            border: unset;
             img {
               filter: grayscale(1);
               width: 100%;
@@ -244,11 +275,40 @@ body {
               }
             }
           }
+          .mobile-photo-text {
+            margin-left: 20px;
+            h2 {
+              margin-bottom: 0px;
+            }
+            p {
+              margin-bottom: 2px;
+              font-size: 1.2rem;
+              line-height: 23px;
+              font-weight: 500;
+            }
+            .mobile-photo-text__name {
+              color: $primaryColour;
+            }
+            .mobile-photo-text__role {
+              color: $hightlightColour;
+              font-size: 1.6rem;
+            }
+          }
         }
         .team-info {
-          width: 82%;
+          background-color: $tertiaryColor;
+          padding: 20px 20px 25px 20px;
+          border-radius: 0 0 10px 10px;
+          margin-bottom: 20px;
           p {
+            color: $primaryColour;
             word-break: break-word;
+            &:nth-child(2) {
+              display: none;
+            }
+            &:last-child {
+              margin: 0;
+            }
           }
         }
         &:last-child {
@@ -259,35 +319,23 @@ body {
   }
 }
 
-// PHONES/TABLETS
 @media only screen and (max-width: 992px) {
   .information-page.team {
     .information-page__inner-container {
       .information {
+        h1 {
+          margin-bottom: 35px;
+        }
         .information__container {
-          flex-direction: column;
-          margin-bottom: 15px;
           .team-photo {
-            width: 100%;
-            margin-right: 0;
-            align-items: flex-start;
-            margin-bottom: 30px;
-            .gatsby-image-wrapper {
-              overflow: hidden;
-              border: 2px solid $hightlightColour;
-              border-radius: 100%;
-              box-shadow: $boxshadow;
-              img {
-                filter: grayscale(1);
-                width: 100%;
+            .mobile-photo-text {
+              h2 {
+                line-height: 25px;
+              }
+              .mobile-photo-text__role {
+                font-size: 1.2rem;
               }
             }
-          }
-          .team-info {
-            width: 100%;
-          }
-          &:last-child {
-            margin-bottom: 0;
           }
         }
       }
@@ -369,19 +417,17 @@ body {
   }
 }
 
-// @media only screen and (max-width: 992px) {
-//   .information-page.partners {
-//     .information-page__inner-container {
-//       .information {
-//         .partner-container {
-//           a {
-//             margin-bottom: 20px;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
+@media only screen and (max-width: 992px) {
+  .information-page.partners {
+    .information-page__inner-container {
+      .information {
+        h1 {
+          margin-bottom: 35px;
+        }
+      }
+    }
+  }
+}
 
 @media only screen and (min-width: 550px) and (max-width: 767px) {
   .information-page.partners {
@@ -405,33 +451,6 @@ body {
           a {
             width: 100%;
           }
-        }
-      }
-    }
-  }
-}
-
-// PHONES/TABLETS
-@media only screen and (max-width: 992px) {
-  .information-page {
-    .information-page__inner-container {
-      flex-direction: column;
-      .info-nav {
-        order: 2;
-      }
-      .information {
-        order: 1;
-        width: 100%;
-        margin-left: 0;
-        margin-bottom: 20px;
-        h1 {
-          padding-top: 40px;
-          margin-bottom: 35px;
-          font-size: 2.8rem;
-        }
-        h2 {
-          font-size: 1.2rem;
-          line-height: 30px;
         }
       }
     }
