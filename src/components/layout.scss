@@ -222,6 +222,42 @@ body {
       h1 {
         padding-top: 25px;
         text-align: center;
+        max-width: 955px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      p {
+        max-width: 950px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      a {
+        max-width: 200px;
+        width: 100%;
+        display: block;
+        margin: 50px auto 0 auto;
+        button {
+          margin: 0;
+          border: unset;
+          padding: 15px 25px;
+          color: $primaryColour;
+          background-color: $secondaryColour;
+          box-shadow: rgb(0 0 0 / 40%) 0px 2px 4px,
+            rgb(0 0 0 / 30%) 0px 7px 13px -3px,
+            rgb(0 0 0 / 20%) 0px -3px 0px inset;
+          border-radius: 50px;
+          font-size: 0.88rem;
+          font-weight: 500;
+          width: 100%;
+          margin-top: 10px;
+          transition: all 0.3s ease-in-out;
+          text-transform: uppercase;
+          &:hover {
+            cursor: pointer;
+            // opacity: 0.85;
+            background-color: #c40101;
+          }
+        }
       }
     }
   }
@@ -236,6 +272,33 @@ body {
         }
         h1 {
           text-align: unset;
+        }
+        a {
+          margin-top: 20px;
+          margin-bottom: 20px;
+          button {
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .information-page.rac {
+    .information-page__inner-container {
+      .information {
+        .rac-logo {
+          padding-top: 30px;
+        }
+        h1 {
+          text-align: unset;
+        }
+        a {
+          max-width: unset;
+          button {
+            padding: 21px 25px;
+          }
         }
       }
     }
@@ -256,7 +319,7 @@ body {
           align-items: center;
           background-color: $secondaryColour;
           border-radius: 10px 10px 0 0;
-          margin-bottom: 0px;
+          margin-bottom: -2px;
           padding: 20px;
           .gatsby-image-wrapper {
             overflow: hidden;

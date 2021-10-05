@@ -111,31 +111,6 @@ const TeamPage = () => {
             <div className="information__container">
               <div className="team-photo">
                 <StaticImage
-                  src="../images/team-photo-dodd.jpg"
-                  width={180}
-                  quality={95}
-                  formats={["AUTO", "WEBP", "AVIF"]}
-                  alt="Kai Dodds at home"
-                />
-                <div className="mobile-photo-text">
-                  <h2 className="mobile-photo-text__name">Kai Dodds</h2>
-                  <p className="mobile-photo-text__role">Event Manager</p>
-                </div>
-              </div>
-              <div className="team-info">
-                <p>
-                  Being a musician himself and seeing the difficulties trying to
-                  get onto the live music scene, Kai wanted to be involved from
-                  the start to the point of helping promote events before
-                  becoming an official member of the team. Kai has been
-                  instrumental in APUK’s early days success and the general
-                  running of each event on the day.
-                </p>
-              </div>
-            </div>
-            <div className="information__container">
-              <div className="team-photo">
-                <StaticImage
                   src="../images/team-photo-vic.jpg"
                   width={180}
                   quality={95}
@@ -162,6 +137,31 @@ const TeamPage = () => {
             <div className="information__container">
               <div className="team-photo">
                 <StaticImage
+                  src="../images/team-photo-dodd.jpg"
+                  width={180}
+                  quality={95}
+                  formats={["AUTO", "WEBP", "AVIF"]}
+                  alt="Kai Dodds at home"
+                />
+                <div className="mobile-photo-text">
+                  <h2 className="mobile-photo-text__name">Kai Dodds</h2>
+                  <p className="mobile-photo-text__role">Event Manager</p>
+                </div>
+              </div>
+              <div className="team-info">
+                <p>
+                  Being a musician himself and seeing the difficulties trying to
+                  get onto the live music scene, Kai wanted to be involved from
+                  the start to the point of helping promote events before
+                  becoming an official member of the team. Kai has been
+                  instrumental in APUK’s early days success and the general
+                  running of each event on the day.
+                </p>
+              </div>
+            </div>
+            <div className="information__container">
+              <div className="team-photo">
+                <StaticImage
                   src="../images/team-photo-owen.jpg"
                   width={180}
                   quality={95}
@@ -170,7 +170,9 @@ const TeamPage = () => {
                 />
                 <div className="mobile-photo-text">
                   <h2 className="mobile-photo-text__name">Owen Trott</h2>
-                  <p className="mobile-photo-text__role">Event Manager</p>
+                  <p className="mobile-photo-text__role">
+                    Social Media Promoter
+                  </p>
                 </div>
               </div>
               <div className="team-info">

@@ -63,16 +63,20 @@ const IndexPage = () => {
             <p className="ep-number">EP.01</p>
             <h2 className="ep-title">Our Misson</h2>
             <h3 className="ep-sub-title">
-              Arclight was founded in 2019 with <span>2 main Goals:</span>
+              Arclight Music (Originally Arclight Promotions) was founded in
+              2019 with <span>2 Goals:</span>
             </h3>
             <h4 className="ep-text">
-              <span>1.</span> To give younger musicians more opportunity to get
-              experience performing and the chance to showcase themselves.
+              <span>1.</span> To give young musicians the opportunities that are
+              lacking in a modern, money hungry music scene to gain experience
+              on stage and the chance to showcase themselves in a way they have
+              not been able to for years.
             </h4>
             <h4 className="ep-text">
-              <span>2.</span> To improve funding in music education to provide a
-              better chance for underprivileged children whos families can’t
-              afford the cost of learning to play an instrument
+              <span>2.</span> To do our part to keep live music alive by
+              promoting young musicians and encouraging the next generation to
+              follow a career in music whether it be performing, studio
+              management, etc.
             </h4>
             <Link to="about" className="learn-more-btn">
               <button>Learn More</button>
@@ -84,10 +88,10 @@ const IndexPage = () => {
             <p className="ep-number">EP.02</p>
             <h2 className="ep-title">What We Offer</h2>
             <h4 className="ep-text">
-              Currently we only offer Events however our dedicated Arclight
-              Apparel store will be opening in the near future. Keep an eye out
-              as we will be launching our Musician Finder forum at a later date
-              - think of 'Join My Band' but better.
+              Currently we are only offering live shows however we have some big
+              projects coming soon to expand what we can do. Keep your eyes
+              peeled for <span>Arclight Apparel</span> and the{" "}
+              <span>Arclight Musician Finder</span>.
             </h4>
             <div className="ep-02__cards">
               <Link to="events" className="ep-card">
@@ -153,13 +157,14 @@ const IndexPage = () => {
             <p className="ep-number">EP.03</p>
             <h2 className="ep-title">Rage Against Cancer</h2>
             <h4 className="ep-text">
-              Arclight Music are proud to welcome, along with our new team, Rage
-              Against Cancer Festival to the family.
+              In early 2020, Arclight welcomed new members to the family. With
+              them came Rage Against Cancer Festival.
             </h4>
             <h4 className="ep-text">
-              All profits from the festival will go directly to Teenage Cancer
-              Trust as always and we couldn’t be more proud to be a part of this
-              incredible annual festival.
+              A small festival dedicated to raising funds towards cancer
+              research where ALL profits are donated directly to charity. We are
+              incredibly proud to be a part of this amazing festival and we
+              can’t wait to help make this bigger and better than ever before.
             </h4>
             <div className="ep-03-buttons">
               <div to="rac" className="learn-more-btn donate">

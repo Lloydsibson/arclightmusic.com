@@ -50,6 +50,9 @@ const RACPage = () => {
             {/* *** CONTENTFUL CMS *** */}
             {renderRichText(contentfulCMSPost)}
             {/* *** END *** */}
+            <a href="https://www.facebook.com/RACFestival/">
+              <button>RAC Facebook Page</button>
+            </a>
           </article>
         </div>
       </div>
