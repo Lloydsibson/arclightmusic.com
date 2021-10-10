@@ -77,7 +77,7 @@ const Footer = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link to="/arclight-apparel" activeClassName="active">
+                    <Link to="/arclight-apparel-info" activeClassName="active">
                       <h3>Arclight Apparel</h3>
                     </Link>
                   </li>

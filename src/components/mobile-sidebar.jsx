@@ -89,7 +89,7 @@ const MobileSideBar = () => {
           </li>
           <li>
             <Link
-              to="/arclight-apparel"
+              to="/arclight-apparel-info"
               activeClassName="active"
               onClick={e => NavItemToggle(e)}
             >

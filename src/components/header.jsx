@@ -136,7 +136,7 @@ const Header = () => {
                   <Link to="/arclight-promotions" activeClassName="active">
                     <li>Arclight Promotions</li>
                   </Link>
-                  <Link to="/arclight-apparel" activeClassName="active">
+                  <Link to="/arclight-apparel-info" activeClassName="active">
                     <li>Arclight Apparel</li>
                   </Link>
                 </ul>
