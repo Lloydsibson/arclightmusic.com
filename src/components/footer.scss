@@ -42,7 +42,7 @@
     .footer-column {
       width: 33.333%;
       padding-right: 3%;
-      h3 {
+      h2 {
         color: $altColour;
         text-transform: uppercase;
         font-size: 1rem;
@@ -59,29 +59,31 @@
             text-decoration: unset;
             display: block;
             margin-bottom: 20px;
+
             &:hover {
               //text-decoration: underline;
-              h4 {
+              h3 {
                 border-bottom: 2px solid $hightlightColour;
               }
             }
-            h4 {
+            h3 {
               display: inline;
               font-weight: 400;
               padding-bottom: 1px;
               border-bottom: 2px solid $secondaryColour;
               transition: all 0.2s ease-in-out;
               line-height: 24px;
+              font-size: 1rem;
             }
           }
           a.active {
             &:hover {
               cursor: default;
-              h4 {
+              h3 {
                 cursor: default;
               }
             }
-            h4 {
+            h3 {
               //font-weight: 600;
               opacity: 0.2;
               border-color: $primaryColour;
@@ -107,6 +109,7 @@
       margin-bottom: 25px;
       a {
         margin-right: 30px;
+        font-size: 0;
         .footer-social-icons {
           background-color: #333;
           padding: 14px;
@@ -148,7 +151,7 @@
         &:hover {
           color: $primaryColour;
         }
-        h4 {
+        h3 {
           font-weight: 400;
           margin-bottom: 0;
           font-size: 0.9rem;
@@ -228,7 +231,7 @@
         a {
           margin-bottom: 15px;
         }
-        h3 {
+        h2 {
           font-size: 1.1rem;
           margin-bottom: 0;
         }

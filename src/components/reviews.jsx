@@ -51,7 +51,7 @@ const Reviews = () => {
             <div className="reviewer" key={key}>
               <img src={info.photo} alt="reviewer" />
               <div className="review__name">
-                <h5>{info.name}</h5>
+                <h3>{info.name}</h3>
                 <a href={info.rating} target="_blank" rel="noreferrer">
                   {info.rating}
                 </a>
@@ -61,7 +61,7 @@ const Reviews = () => {
         </div>
         <div className="review-container">
           <div className="review">
-            <h5>Facebook Review</h5>
+            <h3>Facebook Review</h3>
             <p>"Sick team to work with. 5/5"</p>
           </div>
         </div>

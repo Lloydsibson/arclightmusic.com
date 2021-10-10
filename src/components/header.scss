@@ -22,9 +22,11 @@
   }
   .links-container {
     ul {
-      a {
+      li {
         &:last-child {
-          height: 35px;
+          a {
+            height: 35px;
+          }
         }
       }
     }
@@ -42,6 +44,10 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 0 20px;
+}
+
+.dropdown {
+  position: relative;
 }
 
 .logo-container {
@@ -67,57 +73,61 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    a {
-      position: relative;
-      text-decoration: unset;
-      color: $altColour;
-      height: 100%;
+    li {
       display: flex;
       align-items: center;
-      transition: all 0.3s ease-in-out;
-      &:last-child {
-        background-color: $hightlightColour;
-        color: $primaryColour;
-        height: 40px;
-        padding: 10px 30px;
-        border-radius: 70px;
-        box-shadow: $boxshadow;
+      margin-bottom: 0;
+      font-size: 0.88rem;
+      height: 100%;
+      .nav-link {
+        position: relative;
+        text-decoration: unset;
+        color: $altColour;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        transition: all 0.3s ease-in-out;
+        .arrow {
+          margin-left: 10px;
+          fill: $altColour;
+          transition: all 0.3s ease-in-out;
+        }
         &:hover {
-          background-color: $hightlightColourHover;
+          color: $primaryColour;
+          cursor: pointer;
         }
       }
-      li {
-        display: block;
-        margin-bottom: 0;
-        font-size: 0.88rem;
-      }
-      .arrow {
-        margin-left: 10px;
-        fill: $altColour;
-        transition: all 0.3s ease-in-out;
-      }
-      &:hover {
+      .nav-link.active {
         color: $primaryColour;
-        cursor: pointer;
-      }
-    }
-    a.active {
-      color: $primaryColour;
-      &:before {
-        content: "";
-        width: 140%;
-        margin-left: -18%;
-        height: 8px;
-        background-color: $hightlightColour;
-        display: block;
-        position: absolute;
-        left: 0;
-        top: 0;
-      }
-      &:last-child {
-        background-color: #26746c;
         &:before {
-          content: unset;
+          content: "";
+          width: 140%;
+          margin-left: -18%;
+          height: 8px;
+          background-color: $hightlightColour;
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+      }
+
+      &:last-child {
+        .nav-link {
+          background-color: $hightlightColour;
+          color: $primaryColour;
+          height: 40px;
+          padding: 10px 30px;
+          border-radius: 70px;
+          box-shadow: $boxshadow;
+          &:hover {
+            background-color: $hightlightColourHover;
+          }
+        }
+        .nav-link.active {
+          &:before {
+            content: unset;
+          }
         }
       }
     }

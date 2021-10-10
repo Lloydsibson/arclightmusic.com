@@ -55,7 +55,7 @@ const Footer = () => {
               className="footer-column"
               onClick={e => toggleFooterAccordian(e)}
             >
-              <h3>Arclight Music</h3>
+              <h2>Arclight Music</h2>
               <nav
                 className="footer-column__list"
                 aria-label="footer navigation"
@@ -63,22 +63,22 @@ const Footer = () => {
                 <ul>
                   <li>
                     <Link to="/events" activeClassName="active">
-                      <h4>Events</h4>
+                      <h3>Events</h3>
                     </Link>
                   </li>
                   <li>
                     <Link to="/rac-festival" activeClassName="active">
-                      <h4>Rac Festival</h4>
+                      <h3>Rac Festival</h3>
                     </Link>
                   </li>
                   <li>
                     <Link to="/arclight-promotions" activeClassName="active">
-                      <h4>Arclight Promotions</h4>
+                      <h3>Arclight Promotions</h3>
                     </Link>
                   </li>
                   <li>
                     <Link to="/arclight-apparel" activeClassName="active">
-                      <h4>Arclight Apparel</h4>
+                      <h3>Arclight Apparel</h3>
                     </Link>
                   </li>
                 </ul>
@@ -88,7 +88,7 @@ const Footer = () => {
               className="footer-column"
               onClick={e => toggleFooterAccordian(e)}
             >
-              <h3>Information</h3>
+              <h2>Information</h2>
               <nav
                 className="footer-column__list"
                 aria-label="footer navigation"
@@ -96,22 +96,22 @@ const Footer = () => {
                 <ul>
                   <li>
                     <Link to="/about" activeClassName="active">
-                      <h4>About</h4>
+                      <h3>About</h3>
                     </Link>
                   </li>
                   <li>
                     <Link to="/team" activeClassName="active">
-                      <h4>Team</h4>
+                      <h3>Team</h3>
                     </Link>
                   </li>
                   <li>
                     <Link to="/partners" activeClassName="active">
-                      <h4>Partners</h4>
+                      <h3>Partners</h3>
                     </Link>
                   </li>
                   <li>
                     <Link to="/artists" activeClassName="active">
-                      <h4>Artists</h4>
+                      <h3>Artists</h3>
                     </Link>
                   </li>
                 </ul>
@@ -122,7 +122,7 @@ const Footer = () => {
               className="footer-column"
               onClick={e => toggleFooterAccordian(e)}
             >
-              <h3>Useful Links</h3>
+              <h2>Useful Links</h2>
               <nav
                 className="footer-column__list"
                 aria-label="footer navigation"
@@ -130,12 +130,12 @@ const Footer = () => {
                 <ul>
                   <li>
                     <Link to="/covid" activeClassName="active">
-                      <h4>COVID</h4>
+                      <h3>COVID</h3>
                     </Link>
                   </li>
                   <li>
                     <Link to="/contact" activeClassName="active">
-                      <h4>Contact</h4>
+                      <h3>Contact</h3>
                     </Link>
                   </li>
                 </ul>
@@ -149,6 +149,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noreferrer"
               >
+                contact us by facebook messenger
                 <div className="footer-social-icons">
                   <FontAwesomeIcon icon={faFacebookMessenger} />
                 </div>
@@ -158,11 +159,13 @@ const Footer = () => {
                 target="_blank"
                 rel="noreferrer"
               >
+                contact us by whatsapp
                 <div className="footer-social-icons">
                   <FontAwesomeIcon icon={faWhatsapp} />
                 </div>
               </a>
               <a href="mailto:Arclightpromotionsuk@gmail.com">
+                contact us by email
                 <div className="footer-social-icons">
                   <FontAwesomeIcon icon={faEnvelope} />
                 </div>
@@ -174,6 +177,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noreferrer"
               >
+                Follow us on instagram
                 <div className="footer-social-icons">
                   <FontAwesomeIcon icon={faInstagram} />
                 </div>
@@ -183,6 +187,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noreferrer"
               >
+                Follow us on facebook
                 <div className="footer-social-icons">
                   <FontAwesomeIcon icon={faFacebookF} />
                 </div>
@@ -194,10 +199,10 @@ const Footer = () => {
           <div className="footer-info__policies-links">
             <div className="policy-row">
               <Link to="/privacy-policy" activeClassName="active">
-                <h4>Privacy Policy</h4>
+                <h3>Privacy Policy</h3>
               </Link>
               <Link to="/cookie-policy" activeClassName="active">
-                <h4>Cookie Policy</h4>
+                <h3>Cookie Policy</h3>
               </Link>
             </div>
           </div>

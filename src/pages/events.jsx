@@ -85,7 +85,7 @@ const EventsPage = () => {
                     <option>Other</option>
                   </select>
                   <a href="https://www.eventbrite.co.uk/o/arclight-promotions-uk-28941769095">
-                    <h3>Past Events</h3>
+                    <h2>Past Events</h2>
                   </a>
                 </div>
               </div>
@@ -120,19 +120,19 @@ const EventsPage = () => {
                               <FontAwesomeIcon icon={faMapMarkerAlt} />
                             </div>
                           </div>
-                          <h4>{data.eventVenueName}</h4>
+                          <h3>{data.eventVenueName}</h3>
                         </div>
                         <div className="event-tag-container__category">
-                          <h4>{data.eventSubCategory}</h4>
+                          <h3>{data.eventSubCategory}</h3>
                         </div>
                       </div>
 
                       <p className="event-summary">{data.eventSummary}</p>
                       <div className="event-time-container">
                         <p>Start Time</p>
-                        <h5>
+                        <h4>
                           {data.eventDay} {data.eventMonth}, {data.eventTime}
-                        </h5>
+                        </h4>
                       </div>
 
                       <div className="event-card-footer-container">
@@ -163,7 +163,7 @@ const EventsPage = () => {
                             <p>Share</p>
                           </div>
                           <div className="event-card-footer-container__price">
-                            <h5>{data.eventTicketPrice}</h5>
+                            <h4>{data.eventTicketPrice}</h4>
                           </div>
                         </div>
                         <div className="event-card-footer-container__btn">

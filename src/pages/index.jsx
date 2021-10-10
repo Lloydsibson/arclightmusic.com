@@ -79,6 +79,7 @@ const IndexPage = () => {
               management, etc.
             </h4>
             <Link to="about" className="learn-more-btn">
+              Learn More
               <button>Learn More</button>
             </Link>
           </div>
@@ -87,14 +88,15 @@ const IndexPage = () => {
           <div className="ep-02__inner-container">
             <p className="ep-number">EP.02</p>
             <h2 className="ep-title">What We Offer</h2>
-            <h4 className="ep-text">
+            <h3 className="ep-text">
               Currently we are only offering live shows however we have some big
               projects coming soon to expand what we can do. Keep your eyes
               peeled for <span>Arclight Apparel</span> and the{" "}
               <span>Arclight Musician Finder</span>.
-            </h4>
+            </h3>
             <div className="ep-02__cards">
               <Link to="events" className="ep-card">
+                events
                 <div className="ep-card__icon">
                   <svg
                     className="events-icon"
@@ -109,7 +111,7 @@ const IndexPage = () => {
                   </svg>
                   <p>{new Date().getDate()}</p>
                 </div>
-                <h5>Events</h5>
+                <h4>Events</h4>
               </Link>
               <div className="ep-card">
                 <div className="coming-soon-overlay">
@@ -127,7 +129,7 @@ const IndexPage = () => {
                     />
                   </svg>
                 </div>
-                <h5>Store</h5>
+                <h4>Store</h4>
               </div>
               <div className="ep-card">
                 <div className="coming-soon-overlay">
@@ -147,7 +149,7 @@ const IndexPage = () => {
                     />
                   </svg>
                 </div>
-                <h5>Musician Finder</h5>
+                <h4>Musician Finder</h4>
               </div>
             </div>
           </div>
@@ -156,21 +158,22 @@ const IndexPage = () => {
           <div className="ep-03__information">
             <p className="ep-number">EP.03</p>
             <h2 className="ep-title">Rage Against Cancer</h2>
-            <h4 className="ep-text">
+            <h3 className="ep-text">
               In early 2020, Arclight welcomed new members to the family. With
               them came Rage Against Cancer Festival.
-            </h4>
-            <h4 className="ep-text">
+            </h3>
+            <h3 className="ep-text">
               A small festival dedicated to raising funds towards cancer
               research where ALL profits are donated directly to charity. We are
               incredibly proud to be a part of this amazing festival and we
               can’t wait to help make this bigger and better than ever before.
-            </h4>
+            </h3>
             <div className="ep-03-buttons">
               <div to="rac" className="learn-more-btn donate">
                 <button>Donate</button>
               </div>
               <Link to="rac-festival" className="learn-more-btn alt">
+                Learn More
                 <button>Learn More</button>
               </Link>
             </div>

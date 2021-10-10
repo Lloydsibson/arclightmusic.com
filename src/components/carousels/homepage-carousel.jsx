@@ -67,11 +67,13 @@ const HomePageCarousel = () => {
                 </div>
                 <div className="slide-btns">
                   <Link to={data.btnOneLink}>
+                    {data.btnOneText}
                     <div className="slide-btn cta" role="button">
                       {data.btnOneText}
                     </div>
                   </Link>
                   <Link to={data.btnTwoLink}>
+                    {data.btnTwoText}
                     <div className="slide-btn more" role="button">
                       {data.btnTwoText}
                     </div>

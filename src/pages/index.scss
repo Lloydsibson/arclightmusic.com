@@ -76,6 +76,7 @@
           transition: all 0.3s ease-in-out;
           position: relative;
           box-shadow: $boxshadow;
+          font-size: 0;
           &:last-child {
             margin-right: 0;
           }
@@ -102,14 +103,14 @@
               line-height: 45px;
             }
           }
-          h5 {
+          h4 {
             font-size: 2rem;
             color: #fff;
             font-weight: 500;
             margin-bottom: 0px;
           }
           &:last-child {
-            h5 {
+            h4 {
               font-size: 1.8rem;
             }
           }
@@ -161,6 +162,7 @@
           display: block;
           width: 47.5%;
           margin-right: 3%;
+
           button {
             background-color: $hightlightColour;
             max-width: 214px;
@@ -250,6 +252,7 @@
 }
 
 .learn-more-btn {
+  font-size: 0;
   button {
     border: unset;
     padding: 15px 25px;
@@ -284,11 +287,11 @@
       .ep-02__inner-container {
         .ep-02__cards {
           .ep-card {
-            h5 {
+            h4 {
               font-size: 1.3rem;
             }
             &:last-child {
-              h5 {
+              h4 {
                 font-size: 1.3rem;
               }
             }
@@ -349,11 +352,11 @@
             &:last-child {
               margin-right: auto;
               margin-bottom: 0;
-              h5 {
+              h4 {
                 font-size: 1.2rem;
               }
             }
-            h5 {
+            h4 {
               font-size: 1.3rem;
             }
           }

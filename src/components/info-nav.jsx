@@ -11,76 +11,76 @@ const InfoNav = () => {
         </h2>
 
         <div className="info-nav-links">
-          <h3>Arclight Music</h3>
+          <h2>Arclight Music</h2>
           <ul>
             <li>
               <Link to="/about" activeClassName="active">
-                <h4>About</h4>
+                <h3>About</h3>
               </Link>
             </li>
             <li>
               <Link to="/team" activeClassName="active">
-                <h4>Team</h4>
+                <h3>Team</h3>
               </Link>
             </li>
             <li>
               <Link to="/partners" activeClassName="active">
-                <h4>Partners</h4>
+                <h3>Partners</h3>
               </Link>
             </li>
             <li>
               <Link to="/artists" activeClassName="active">
-                <h4>Artists</h4>
+                <h3>Artists</h3>
               </Link>
             </li>
             <li>
               <Link to="/arclight-promotions" activeClassName="active">
-                <h4>Arclight Promotions</h4>
+                <h3>Arclight Promotions</h3>
               </Link>
             </li>
             <li>
               <Link to="/arclight-apparel" activeClassName="active">
-                <h4>Arclight Apparel</h4>
+                <h3>Arclight Apparel</h3>
               </Link>
             </li>
           </ul>
         </div>
         <div className="info-nav-links">
-          <h3>RAC Festival</h3>
+          <h2>RAC Festival</h2>
           <ul>
             <li>
               <Link to="/rac-festival" activeClassName="active">
-                <h4>Events</h4>
+                <h3>Events</h3>
               </Link>
             </li>
           </ul>
         </div>
         <div className="info-nav-links">
-          <h3>COVID</h3>
+          <h2>COVID</h2>
           <ul>
             <li>
               <Link to="/covid" activeClassName="active">
-                <h4>Latest Information</h4>
+                <h3>Latest Information</h3>
               </Link>
             </li>
           </ul>
         </div>
         <div className="info-nav-links">
-          <h3>Policies</h3>
+          <h2>Policies</h2>
           <ul>
             <li>
               <Link to="/cookie-policy" activeClassName="active">
-                <h4>Cookies</h4>
+                <h3>Cookies</h3>
               </Link>
             </li>
             <li>
               <Link to="/privacy-policy" activeClassName="active">
-                <h4>Privacy</h4>
+                <h3>Privacy</h3>
               </Link>
             </li>
             <li>
               <Link to="/refunds-and-returns" activeClassName="active">
-                <h4>Refunds & Returns</h4>
+                <h3>Refunds & Returns</h3>
               </Link>
             </li>
           </ul>
