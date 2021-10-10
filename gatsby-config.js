@@ -1,3 +1,15 @@
+// FIX FOR APACHE SERVERS - MOVES FAVICON ICON TO ITS OWN FOLDER RATHER THEN THE 'ICON' DIRECTORY
+// FUNCTION FOR 'gatsby-plugin-manifest'
+const generateFavicons = sizes => {
+  return sizes.map(size => {
+    return {
+      src: `favicons/icon-${size}x${size}.png`,
+      sizes: `${size}x${size}`,
+      type: "image/png",
+    }
+  })
+}
+
 module.exports = {
   siteMetadata: {
     title: `Arclight Music`,
@@ -70,10 +82,11 @@ module.exports = {
         name: `arclight-music-default`,
         short_name: `arclight-music`,
         start_url: `/`,
-        background_color: `#1a1a1b`,
+        background_color: `#1a1a1a`,
         theme_color: `#37aa9c`,
         display: `minimal-ui`,
-        icon: `src/images/arclight-music-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/arclight-music-icon.png`,
+        icons: generateFavicons([48, 72, 96, 144, 192, 256, 384, 512]), // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-gatsby-cloud`,
