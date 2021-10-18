@@ -95,6 +95,9 @@ header {
         &:hover {
           color: $primaryColour;
           cursor: pointer;
+          svg {
+            fill: #ffffff;
+          }
         }
       }
       .nav-link.active {

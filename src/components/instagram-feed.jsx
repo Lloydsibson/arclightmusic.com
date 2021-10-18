@@ -38,6 +38,15 @@ const InstagramFeed = () => {
           data-feed-id="arclight-music-insta-feed"
         ></ul>
         {/* ///////////////// */}
+        {/* INSTAGRAM IFRAME - FIXES BUG - IMAGES COMING BACK WITH MISSING URL */}
+        <iframe
+          src="https://www.juicer.io/api/feeds/arclight-music-insta-feed/iframe"
+          frameBorder="0"
+          width="100%"
+          height="500px"
+          style={{ display: "none", margin: "0 auto" }}
+        ></iframe>
+        {/* ///////////////// */}
       </div>
     </div>
   )

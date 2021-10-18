@@ -8,6 +8,8 @@ import InfoNav from "../components/info-nav"
 import { useStaticQuery, graphql } from "gatsby"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 
+import ArclightApparelSocialShareThumbnail from "../images/social-share-thumnail-apparel.jpg"
+
 const ArclightApparelPage = () => {
   const data = useStaticQuery(graphql`
     query AAPage {
@@ -31,6 +33,7 @@ const ArclightApparelPage = () => {
       <Seo
         title="Arclight Apparel"
         description="Information on our merchandise division"
+        socialImage={ArclightApparelSocialShareThumbnail}
       />
       <div className="information-page">
         <div className="information-page__inner-container">

@@ -89,9 +89,9 @@ const IndexPage = () => {
             <p className="ep-number">EP.02</p>
             <h2 className="ep-title">What We Offer</h2>
             <h3 className="ep-text">
-              Currently we are only offering live shows however we have some big
-              projects coming soon to expand what we can do. Keep your eyes
-              peeled for <span>Arclight Apparel</span> and the{" "}
+              Currently we offer live events and our store{" "}
+              <span>Arclight Apparel</span> however we have a big project coming
+              soon to further expand our offerings. Keep your eyes peeled for{" "}
               <span>Arclight Musician Finder</span>.
             </h3>
             <div className="ep-02__cards">
@@ -113,10 +113,11 @@ const IndexPage = () => {
                 </div>
                 <h4>Events</h4>
               </Link>
-              <div className="ep-card">
-                <div className="coming-soon-overlay">
+              <a className="ep-card" href="/arclight-apparel">
+                store
+                {/* <div className="coming-soon-overlay">
                   <p>Coming Soon</p>
-                </div>
+                </div> */}
                 <div className="ep-card__icon">
                   <svg
                     viewBox="0 0 120 100"
@@ -130,7 +131,7 @@ const IndexPage = () => {
                   </svg>
                 </div>
                 <h4>Store</h4>
-              </div>
+              </a>
               <div className="ep-card">
                 <div className="coming-soon-overlay">
                   <p>Coming Soon</p>

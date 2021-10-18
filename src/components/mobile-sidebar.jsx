@@ -7,7 +7,7 @@ import "./mobile-sidebar.scss"
 
 // FONT AWESOME ICON
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faStore } from "@fortawesome/free-solid-svg-icons"
+import { faComment } from "@fortawesome/free-solid-svg-icons"
 
 const MobileSideBar = () => {
   // useEffect(() => {
@@ -88,13 +88,7 @@ const MobileSideBar = () => {
             </Link>
           </li>
           <li>
-            <Link
-              to="/arclight-apparel-info"
-              activeClassName="active"
-              onClick={e => NavItemToggle(e)}
-            >
-              Arclight Apparel
-            </Link>
+            <a href="/arclight-apparel">Arclight Apparel</a>
           </li>
         </ul>
         <div className="nav-divider" role="presentation"></div>
@@ -191,12 +185,13 @@ const MobileSideBar = () => {
         <div className="mobile-nav-cta">
           <div className="mobile-nav-cta__inner-container">
             <div className="mobile-nav-cta-icon">
-              <FontAwesomeIcon icon={faStore} alt="mobile nav store icon" />
+              <FontAwesomeIcon icon={faComment} alt="mobile nav store icon" />
             </div>
-            <p className="mobile-nav-cta-title">Store Coming Soon</p>
+            <p className="mobile-nav-cta-title">
+              Arclight Musician<span>Coming Soon</span>
+            </p>
             <p className="mobile-nav-cta-text">
-              Limited Editions runs and collaboration merchandise you won’t find
-              anywhere else
+              Find fellow musicians and join a growing community.
             </p>
           </div>
         </div>

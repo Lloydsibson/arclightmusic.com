@@ -136,9 +136,9 @@ const Header = () => {
                   <Link to="/arclight-promotions" activeClassName="active">
                     <li>Arclight Promotions</li>
                   </Link>
-                  <Link to="/arclight-apparel-info" activeClassName="active">
+                  <a href="/arclight-apparel">
                     <li>Arclight Apparel</li>
-                  </Link>
+                  </a>
                 </ul>
               </nav>
             </div>
