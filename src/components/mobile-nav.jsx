@@ -59,10 +59,7 @@ const MobileNav = () => {
         </Link>
 
         <a href="/arclight-apparel">
-          <div
-            className="mobile-nav-icon store"
-            onClick={e => NavItemToggle(e)}
-          >
+          <div className="mobile-nav-icon store">
             <FontAwesomeIcon icon={faStore} alt="store icon" />
             {/* <p>Store</p> */}
           </div>

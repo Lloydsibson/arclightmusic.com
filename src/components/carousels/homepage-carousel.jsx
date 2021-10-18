@@ -15,7 +15,7 @@ const HomePageCarousel = () => {
   const carouselData = [
     {
       image: HalloweenBanner,
-      title: "Arclight Promotions",
+      title: "Arclight Music",
       subtitle: "Funding Music with Music",
       info: "Check out the latest events near you",
       btnOneText: "All Events",
