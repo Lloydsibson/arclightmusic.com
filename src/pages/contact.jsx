@@ -58,7 +58,7 @@ const ContactPage = () => {
         </div>
 
         <div className="contact-page__form">
-          <form action="https://formspree.io/f/xbjqwqaw" method="POST">
+          <form action="https://formspree.io/f/mgerbzwy" method="POST">
             <div className="form-input-container">
               <label htmlFor="formName">Your Name *</label>
               <input required type="text" name="name" id="formName" />
