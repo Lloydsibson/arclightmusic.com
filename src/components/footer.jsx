@@ -1,4 +1,4 @@
-import * as React from "react"
+import React, {useEffect} from "react"
 import { Link } from "gatsby"
 
 import "./footer.scss"
