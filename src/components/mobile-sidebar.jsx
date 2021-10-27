@@ -5,6 +5,8 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import "./mobile-sidebar.scss"
 
+import { TrustPilotReviewCollector } from "./trust-pilot"
+
 // FONT AWESOME ICON
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faComment } from "@fortawesome/free-solid-svg-icons"
@@ -195,6 +197,7 @@ const MobileSideBar = () => {
             </p>
           </div>
         </div>
+        <TrustPilotReviewCollector />
         {/* <div className="mobile-sidebar__footer">
         <Link to="/members" activeClassName="active">
           Members

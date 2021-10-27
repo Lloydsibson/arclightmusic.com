@@ -4,6 +4,13 @@
   max-width: 1600px;
   margin: 0 auto 75px auto;
   padding: 0 20px;
+  .review-message {
+    text-align: center;
+    width: 100%;
+    p {
+      line-height: 25px;
+    }
+  }
   .reviews__inner-container {
     display: flex;
     justify-content: space-between;
