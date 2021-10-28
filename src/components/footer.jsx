@@ -1,4 +1,4 @@
-import React, {useEffect} from "react"
+import React, { useEffect } from "react"
 import { Link } from "gatsby"
 
 import "./footer.scss"
@@ -147,7 +147,7 @@ const Footer = () => {
           <div className="footer-links__social">
             <div className="social-row">
               <a
-                href="https://m.me/ArclightPromotionsUK"
+                href="https://m.me/ArclightMusicUK"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -166,7 +166,7 @@ const Footer = () => {
                   <FontAwesomeIcon icon={faWhatsapp} />
                 </div>
               </a>
-              <a href="mailto:Arclightpromotionsuk@gmail.com">
+              <a href="mailto:info@arclightmusic.co.uk">
                 contact us by email
                 <div className="footer-social-icons">
                   <FontAwesomeIcon icon={faEnvelope} />
@@ -175,7 +175,7 @@ const Footer = () => {
             </div>
             <div className="social-row">
               <a
-                href="https://www.instagram.com/arclightpromotionsuk/"
+                href="https://www.instagram.com/ArclightMusicUK/"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -185,7 +185,7 @@ const Footer = () => {
                 </div>
               </a>
               <a
-                href="https://www.facebook.com/ArclightPromotionsUK"
+                href="https://www.facebook.com/ArclightMusicUK/"
                 target="_blank"
                 rel="noreferrer"
               >
