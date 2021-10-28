@@ -1,16 +1,17 @@
-@import "./layout"; 
+@import "./layout";
 
 .trustpilot-widget.micro-review-counter {
-    padding: 25px 0;
-    border-bottom: 1px solid #333;
-    iframe {
-        margin-bottom: 0;
-    }
+  padding: 25px 0;
+  border-bottom: 1px solid #333;
+  border-top: 1px solid #333;
+  iframe {
+    margin-bottom: 0;
+  }
 }
 
 .trustpilot-widget.review-collector {
-    width: 100%;
-    iframe {
-        margin-bottom: 0; 
-    }
+  width: 100%;
+  iframe {
+    margin-bottom: 0;
+  }
 }
