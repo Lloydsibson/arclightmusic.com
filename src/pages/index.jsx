@@ -21,8 +21,8 @@ const IndexPage = () => {
   return (
     <Layout>
       <Seo
-        title="Funding Music with Music"
-        description="Welcome to Arclight Music! See our latest events and what we offer"
+        title="Home"
+        description="Arclight Music was set up to help struggling schools fund music with music and give young musicians the chance to play shows with bigger names where other promoters..."
       />
       <div className="hp-group">
         <UpcomingEvents />

@@ -57,7 +57,7 @@ const EventsPage = () => {
     <Layout>
       <Seo
         title="Events"
-        description="Buy tickets for upcoming APUK events, see the latest event information and 
+        description="Buy tickets for upcoming events, see the latest event information and 
         find out more about your favourite bands and venues..."
       />
       <APIData.Consumer>
