@@ -18,7 +18,7 @@ const EventBriteAPIData = ({ children }) => {
       )
       const events = await eventFetch.json()
       //console.log(events)
-      const eventsData = 0
+      const eventsData = await events.events
       // await events.events
       setNumberOfCurrentEvents(eventsData.length)
       // // IF EVENT DATA EXISTS...
@@ -120,7 +120,9 @@ const EventBriteAPIData = ({ children }) => {
         setapiLoaded(true)
         setLoadingMessage("Events Found")
       } else {
-        setLoadingMessage(<p>OMG! No Events - Help Us Change That! &#128521;</p>)
+        setLoadingMessage(
+          <p>OMG! No Events - Help Us Change That! &#128521;</p>
+        )
       }
     } catch (err) {
       setLoadingMessage(
