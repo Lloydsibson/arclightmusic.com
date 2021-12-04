@@ -11,6 +11,8 @@ import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons"
 
 import { APIData } from "/src/Context"
 
+import { trackCustomEvent } from "gatsby-plugin-google-analytics"
+
 const EventsPage = () => {
   // CATEGORY FILTER
   const catFilterHandler = e => {
@@ -53,6 +55,19 @@ const EventsPage = () => {
       )
     }
   }
+
+  const eventButtonHandler = (e, eventURL) => {
+    trackCustomEvent({
+      // string - required - The object that was interacted with (e.g.video)
+      category: "Event Buy Button",
+      // string - required - Type of interaction (e.g. 'play')
+      action: "Click",
+      // string - optional - Useful for categorizing events (e.g. 'Spring Campaign')
+      label: "Eventbrite Event",
+    })
+    window.location.href = eventURL
+  }
+
   return (
     <Layout>
       <Seo
@@ -167,9 +182,14 @@ const EventsPage = () => {
                           </div>
                         </div>
                         <div className="event-card-footer-container__btn">
-                          <a href={data.eventURL}>
-                            <button>Buy Tickets</button>
-                          </a>
+                          <button
+                            onClick={e => eventButtonHandler(e, data.eventURL)}
+                          >
+                            Buy Tickets
+                          </button>
+                          {/* <a href={data.eventURL}>
+                            <button onClick={}>Buy Tickets</button>
+                          </a> */}
                         </div>
                       </div>
                     </div>

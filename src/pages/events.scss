@@ -155,6 +155,7 @@
         color: $altColourTwo;
         margin-bottom: 15px;
         max-height: 72px;
+        min-height: 42px;
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
@@ -251,25 +252,23 @@
           align-items: center;
           justify-content: flex-end;
           width: 35%;
-          a {
-            button {
-              text-transform: uppercase;
-              border: unset;
-              color: $primaryColour;
-              background-color: $hightlightColour;
-              padding: 10px 25px;
-              border-radius: 50px;
-              font-size: 0.88rem;
-              font-weight: 500;
-              transition: all 0.3s ease-in-out 0s;
-              box-shadow: rgb(0 0 0 / 40%) 0px 2px 4px,
-                rgb(0 0 0 / 30%) 0px 7px 13px -3px,
-                rgb(0 0 0 / 20%) 0px -3px 0px inset;
+          button {
+            text-transform: uppercase;
+            border: unset;
+            color: $primaryColour;
+            background-color: $hightlightColour;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-size: 0.88rem;
+            font-weight: 500;
+            transition: all 0.3s ease-in-out 0s;
+            box-shadow: rgb(0 0 0 / 40%) 0px 2px 4px,
+              rgb(0 0 0 / 30%) 0px 7px 13px -3px,
+              rgb(0 0 0 / 20%) 0px -3px 0px inset;
 
-              &:hover {
-                background-color: $hightlightColourHover;
-                cursor: pointer;
-              }
+            &:hover {
+              background-color: $hightlightColourHover;
+              cursor: pointer;
             }
           }
         }
@@ -502,21 +501,17 @@
             flex-direction: column;
             width: 100%;
             display: block;
-            a {
-              display: block;
+            button {
               width: 100%;
-              button {
-                width: 100%;
-                padding: 10px;
-                font-size: 0.77rem;
-                text-transform: uppercase;
-                border-radius: 2px;
-                border: unset;
-                background-color: #37aa9c;
-                color: #fff;
-                font-weight: 500;
-                box-shadow: $boxshadow;
-              }
+              padding: 10px;
+              font-size: 0.77rem;
+              text-transform: uppercase;
+              border-radius: 2px;
+              border: unset;
+              background-color: #37aa9c;
+              color: #fff;
+              font-weight: 500;
+              box-shadow: $boxshadow;
             }
           }
         }
