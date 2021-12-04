@@ -66,7 +66,7 @@ const UpcomingEvents = () => {
     case 10:
       month = "November"
       break
-    case 12:
+    case 11:
       month = "December"
       break
     default:
