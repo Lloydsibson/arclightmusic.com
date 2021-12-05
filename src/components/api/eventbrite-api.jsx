@@ -100,6 +100,7 @@ const EventBriteAPIData = ({ children }) => {
               eventMonth = "N/A"
           }
           // UPDATE STATE WITH DATA
+          setapiLoaded(true)
           setEventBriteState(result => [
             ...result,
             {
@@ -117,7 +118,6 @@ const EventBriteAPIData = ({ children }) => {
             },
           ])
         }
-        setapiLoaded(true)
         setLoadingMessage("Events Found")
       } else {
         setLoadingMessage(
