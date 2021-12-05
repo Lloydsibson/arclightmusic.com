@@ -7,6 +7,8 @@ import "./upcoming-events.scss"
 // IMPORTS REACT CONTEXT
 import { APIData } from "/src/Context"
 
+import { trackCustomEvent } from "gatsby-plugin-google-analytics"
+
 const UpcomingEvents = () => {
   const day = new Date().getDate()
   const monthRaw = new Date().getMonth()
@@ -75,6 +77,19 @@ const UpcomingEvents = () => {
 
   const currentFullDate = `${ordinalSuffix(day)} ${month} ${year}`
 
+  const eventLinkHandler = (e, eventURL, eventTitle) => {
+    e.preventDefault()
+    trackCustomEvent({
+      // string - required - The object that was interacted with (e.g.video)
+      category: `HomePage | Buy (Card) | ${eventTitle}`,
+      // string - required - Type of interaction (e.g. 'play')
+      action: "Click",
+      // string - optional - Useful for categorizing events (e.g. 'Spring Campaign')
+      label: "Eventbrite Event",
+    })
+    window.location.href = eventURL
+  }
+
   return (
     <div className="upcoming-events">
       <div className="upcoming-events__inner-container">
@@ -109,9 +124,10 @@ const UpcomingEvents = () => {
                 {value[0].eventBriteState.map((event, key) => (
                   <a
                     href={event.eventURL}
-                    target="_blank"
                     key={key}
-                    rel="noreferrer"
+                    onClick={e =>
+                      eventLinkHandler(e, event.eventURL, event.eventTitle)
+                    }
                   >
                     <article
                       className="up-card"

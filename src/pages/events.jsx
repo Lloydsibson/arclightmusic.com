@@ -59,7 +59,7 @@ const EventsPage = () => {
   const eventButtonHandler = (e, eventURL, eventTitle) => {
     trackCustomEvent({
       // string - required - The object that was interacted with (e.g.video)
-      category: `Buy Button - ${eventTitle}`,
+      category: `EventsPage | Buy Button | ${eventTitle}`,
       // string - required - Type of interaction (e.g. 'play')
       action: "Click",
       // string - optional - Useful for categorizing events (e.g. 'Spring Campaign')
