@@ -10,8 +10,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  //margin-bottom: 20px;
   position: relative;
+  overflow: hidden;
+  border-radius: 5px;
 }
 
 .s-banner .s-banner__text {
@@ -37,10 +39,25 @@
   }
 }
 
+.s-banner__logo {
+  z-index: 1;
+  max-width: 250px;
+  position: absolute;
+  top: 5px;
+  right: 13%;
+  opacity: 0.1;
+  img {
+    width: 100%;
+    margin: 0;
+  }
+}
+
 .s-banner__cta {
   width: 30%;
   text-align: right;
   button {
+    position: relative;
+    z-index: 2;
     width: 100%;
     max-width: 165px;
     border: unset;
@@ -57,14 +74,18 @@
       transform: scale(1.03);
     }
   }
-  p.ad-reminder {
-    margin: 0;
-    position: absolute;
-    bottom: -20px;
-    right: 0;
-    font-size: 0.66rem;
-    display: none;
-  }
+}
+
+p.ad-reminder {
+  margin: 0;
+  font-size: 0.66rem;
+}
+
+p.ad-reminder.desktop {
+  width: 100%;
+  text-align: right;
+  margin-bottom: 20px;
+  display: block;
 }
 
 // ARCLIGHT BANNER STYLING
@@ -138,8 +159,24 @@
   }
 }
 
+@media only screen and (max-width: 767px) {
+  p.ad-reminder.desktop {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 767px) {
+  p.ad-reminder.mobile {
+    display: none;
+  }
+}
+
 // PHONES/TABLETS
 @media only screen and (max-width: 767px) {
+  .s-link {
+    margin-bottom: 20px;
+  }
+
   .s-banner {
     flex-direction: column;
     padding: 15px;
@@ -162,6 +199,19 @@
       font-size: 0.875rem;
     }
   }
+
+  .s-banner__logo {
+    z-index: 1;
+    max-width: 250px;
+    position: absolute;
+    top: 5px;
+    right: 0;
+    img {
+      width: 100%;
+      margin: 0;
+    }
+  }
+
   .s-banner__cta {
     width: 100%;
     button {

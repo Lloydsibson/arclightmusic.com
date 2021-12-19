@@ -9,6 +9,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons"
 // import { faCalendarAlt } from "@fortawesome/free-solid-svg-icons"
 
+import s_banner_amuk from "../images/s-banner-amuk.png"
+
 import { APIData } from "/src/Context"
 
 import { trackCustomEvent } from "gatsby-plugin-google-analytics"
@@ -93,6 +95,8 @@ const EventsPage = () => {
                 }
                 sponsor_cta="Shop Now"
                 sponsors_name="Arclight Music"
+                sponsor_logo={s_banner_amuk}
+                sponsor_logo_alt="Arclight Music Logo"
               />
               <div className="events-title-container">
                 <div className="events-title-container__title">

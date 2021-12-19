@@ -11,6 +11,8 @@ const SponsorBanner = ({
   sponsor_cta,
   sponsor_class,
   sponsorsName,
+  sponsor_logo,
+  sponsor_logo_alt,
 }) => {
   const eventButtonHandler = () => {
     trackCustomEvent({
@@ -24,21 +26,21 @@ const SponsorBanner = ({
   }
 
   return (
-    <a
-      href={sponsor_link}
-      className="s-link"
-      onClick={() => eventButtonHandler}
-    >
+    <a href={sponsor_link} className="s-link" onClick={eventButtonHandler}>
       <article className={`s-banner ${sponsor_class}`}>
         <section className="s-banner__text">
           <h3>{sponsor_title}</h3>
           <p>{sponsor_text}</p>
         </section>
+        <div className="s-banner__logo">
+          <img src={sponsor_logo} alt={sponsor_logo_alt} />
+        </div>
         <div className="s-banner__cta">
           <button>{sponsor_cta}</button>
-          <p className="ad-reminder">Sponsor Ad</p>
+          <p className="ad-reminder mobile">Promoted</p>
         </div>
       </article>
+      <p className="ad-reminder desktop">Promoted</p>
     </a>
   )
 }
