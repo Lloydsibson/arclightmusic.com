@@ -10,14 +10,13 @@ const SponsorBanner = ({
   sponsor_text,
   sponsor_cta,
   sponsor_class,
-  sponsorsName,
   sponsor_logo,
   sponsor_logo_alt,
 }) => {
   const eventButtonHandler = () => {
     trackCustomEvent({
       // string - required - The object that was interacted with (e.g.video)
-      category: `EventsPage | Sponsor Banner | ${sponsorsName}`,
+      category: `EventsPage | Sponsor Banner | ${sponsor_title}`,
       // string - required - Type of interaction (e.g. 'play')
       action: "Click",
       // string - optional - Useful for categorizing events (e.g. 'Spring Campaign')

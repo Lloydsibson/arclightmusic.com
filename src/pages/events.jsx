@@ -94,7 +94,6 @@ const EventsPage = () => {
                   </>
                 }
                 sponsor_cta="Shop Now"
-                sponsors_name="Arclight Music"
                 sponsor_logo={s_banner_amuk}
                 sponsor_logo_alt="Arclight Music Logo"
               />

@@ -3,6 +3,9 @@
 .s-link {
   text-decoration: unset;
   display: block !important;
+  &:active {
+    color: inherit;
+  }
 }
 
 .s-banner {
