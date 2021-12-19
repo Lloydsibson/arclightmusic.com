@@ -13,6 +13,8 @@ import { APIData } from "/src/Context"
 
 import { trackCustomEvent } from "gatsby-plugin-google-analytics"
 
+import SponsorBanner from "../components/sponsor-banner"
+
 const EventsPage = () => {
   // CATEGORY FILTER
   const catFilterHandler = e => {
@@ -79,6 +81,19 @@ const EventsPage = () => {
         {value => (
           <div className="events-page">
             <div className="events-page__inner-container">
+              <SponsorBanner
+                sponsor_link="/arclight-apparel"
+                sponsor_class="stock"
+                sponsor_title="Arclight Apparel"
+                sponsor_text={
+                  <>
+                    Band merchandise you wont find anywhere else.&nbsp;
+                    <span>Support your local scene today!</span>
+                  </>
+                }
+                sponsor_cta="Shop Now"
+                sponsors_name="Arclight Music"
+              />
               <div className="events-title-container">
                 <div className="events-title-container__title">
                   <h1>Events</h1>

@@ -1,0 +1,206 @@
+@import "./layout";
+
+.s-link {
+  text-decoration: unset;
+  display: block !important;
+}
+
+.s-banner {
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.s-banner .s-banner__text {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  h3 {
+    margin: 0;
+    padding-right: 20px;
+    font-size: 18px;
+    font-weight: 400;
+    border-right: 3px solid;
+    line-height: 21px;
+  }
+  p {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 1rem;
+    line-height: 21px;
+    span {
+      font-weight: 500;
+    }
+  }
+}
+
+.s-banner__cta {
+  width: 30%;
+  text-align: right;
+  button {
+    width: 100%;
+    max-width: 165px;
+    border: unset;
+    background-color: unset;
+    line-height: 35px;
+    padding: 0 45px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    box-shadow: $boxshadow;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.03);
+    }
+  }
+  p.ad-reminder {
+    margin: 0;
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    font-size: 0.66rem;
+    display: none;
+  }
+}
+
+// ARCLIGHT BANNER STYLING
+
+.s-banner.stock {
+  background: rgb(26, 26, 26);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(26, 26, 26, 1) 0%,
+    rgba(0, 121, 106, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(26, 26, 26, 1) 0%,
+    rgba(0, 121, 106, 1) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(26, 26, 26, 1) 0%,
+    rgba(0, 121, 106, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1a1a1a",endColorstr="#00796a",GradientType=1);
+}
+
+.s-banner.stock .s-banner__text {
+  color: $primaryColour;
+  h3 {
+    border-color: $primaryColour;
+  }
+}
+
+.s-banner.stock .s-banner__cta {
+  button {
+    color: $primaryColour;
+    background: rgb(26, 26, 26);
+    background: -moz-linear-gradient(
+      90deg,
+      rgba(26, 26, 26, 1) 0%,
+      rgba(81, 238, 219, 1) 100%
+    );
+    background: -webkit-linear-gradient(
+      90deg,
+      rgba(26, 26, 26, 1) 0%,
+      rgba(81, 238, 219, 1) 100%
+    );
+    background: linear-gradient(
+      90deg,
+      rgba(26, 26, 26, 1) 0%,
+      rgba(81, 238, 219, 1) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1a1a1a",endColorstr="#51eedb",GradientType=1);
+  }
+}
+
+// TABLETS
+@media only screen and (min-width: 767px) and (max-width: 992px) {
+  .s-banner .s-banner__text {
+    h3 {
+      font-size: 0.875rem;
+      line-height: 18px;
+      margin-bottom: 5px;
+    }
+    p {
+      font-size: 0.875rem;
+    }
+  }
+  .s-banner__cta {
+    button {
+      font-size: 0.77rem;
+    }
+  }
+}
+
+// PHONES/TABLETS
+@media only screen and (max-width: 767px) {
+  .s-banner {
+    flex-direction: column;
+    padding: 15px;
+    align-items: unset;
+  }
+  .s-banner .s-banner__text {
+    flex-direction: column;
+    align-items: unset;
+    margin-bottom: 20px;
+    width: 100%;
+    h3 {
+      font-size: 0.75rem;
+      line-height: 18px;
+      padding-right: 0;
+      border: unset;
+      margin-bottom: 5px;
+    }
+    p {
+      padding-left: unset;
+      font-size: 0.875rem;
+    }
+  }
+  .s-banner__cta {
+    width: 100%;
+    button {
+      font-size: 0.77rem;
+    }
+  }
+
+  // ARCLIGHT BANNER STYLING
+
+  .s-banner.stock .s-banner__cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    button {
+      background: rgb(0, 98, 86);
+      background: -moz-linear-gradient(
+        -90deg,
+        rgba(0, 98, 86, 1) 0%,
+        rgba(81, 238, 219, 1) 100%
+      );
+      background: -webkit-linear-gradient(
+        -90deg,
+        rgba(0, 98, 86, 1) 0%,
+        rgba(81, 238, 219, 1) 100%
+      );
+      background: linear-gradient(
+        -90deg,
+        rgba(0, 98, 86, 1) 0%,
+        rgba(81, 238, 219, 1) 100%
+      );
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#006256",endColorstr="#51eedb",GradientType=1);
+    }
+    p.ad-reminder {
+      position: unset;
+      color: $primaryColour;
+    }
+  }
+}
+
+// SMALL IPHONE
+@media only screen and (max-width: 320px) {
+}
