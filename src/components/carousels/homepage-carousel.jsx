@@ -12,6 +12,7 @@ import { APIData } from "/src/Context"
 
 // IMPORTS IMAGES
 //import HalloweenBanner from "/src/images/Halloween-eventbrite-banner.jpg"
+import NoEventsBanner from "/src/images/no-events-banner.jpg"
 //import ContactBanner from "/src/images/mission-image.jpg"
 
 const HomePageCarousel = () => {
@@ -21,7 +22,7 @@ const HomePageCarousel = () => {
 
   const carouselData = [
     {
-      image: eventBriteBanner ? eventBriteBanner.eventImage : "",
+      image: eventBriteBanner ? eventBriteBanner.eventImage : NoEventsBanner,
       title: "Arclight Music",
       subtitle: "Funding Music with Music",
       info: "Check out the latest events near you",
