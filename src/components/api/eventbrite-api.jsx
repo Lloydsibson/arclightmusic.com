@@ -54,7 +54,7 @@ const EventBriteAPIData = ({ children }) => {
           const eventSubCategory = CategoryInfo.subcategory.name
           const eventSummary = loopedEventData.description.text
           const eventDay = eventDateString.split("-")[2]
-          let eventTime = eventFullTime.slice(0, 5)
+          const eventTime24HR = eventFullTime.slice(0, 5)
           const eventTicketPrice =
             ticketInfo.ticket_availability.maximum_ticket_price.major_value
 
@@ -99,6 +99,18 @@ const EventBriteAPIData = ({ children }) => {
             default:
               eventMonth = "N/A"
           }
+
+          const time_part_array = eventTime24HR.split(":")
+          let ampm = "AM"
+          if (time_part_array[0] >= 12) {
+            ampm = "PM"
+          }
+          if (time_part_array[0] > 12) {
+            time_part_array[0] = time_part_array[0] - 12
+          }
+          const eventTime12HR =
+            time_part_array[0] + ":" + time_part_array[1] + ampm
+
           // UPDATE STATE WITH DATA
           setapiLoaded(true)
           setEventBriteState(result => [
@@ -113,7 +125,7 @@ const EventBriteAPIData = ({ children }) => {
               eventSummary: `${eventSummary}`,
               eventDay: `${eventDay}`,
               eventMonth: `${eventMonth}`,
-              eventTime: `${eventTime}`,
+              eventTime: `${eventTime12HR}`,
               eventTicketPrice: `£${eventTicketPrice}`,
             },
           ])
