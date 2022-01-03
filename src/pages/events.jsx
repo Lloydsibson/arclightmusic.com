@@ -39,10 +39,11 @@ const EventsPage = () => {
   }
 
   // SHARE BUTTON FUNCTIONALITY
-  const shareButtonHandler = e => {
+  const shareButtonHandler = (e, eventURL) => {
     const cardURL =
-      e.currentTarget.parentNode.nextSibling.lastChild.getAttribute("href")
-    if (navigator.share) {
+      eventURL
+    console.log(cardURL);
+      if (navigator.share) {
       navigator
         .share({
           title: "Arclight Music - Upcoming Event",
@@ -172,7 +173,7 @@ const EventsPage = () => {
                         <div className="event-card-footer-container__inner-container">
                           <div
                             className="event-card-footer-container__share"
-                            onClick={e => shareButtonHandler(e)}
+                            onClick={e => shareButtonHandler(e, data.eventURL)}
                           >
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
