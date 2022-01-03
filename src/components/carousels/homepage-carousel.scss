@@ -213,15 +213,49 @@
 @media only screen and (max-width: 450px) {
   .hp-carousel {
     .slick-list {
-      .hp-slide {
-        .hp-slide__inner-container {
-          .slide-btns {
-            a {
-              max-width: unset;
-              .slide-btn {
+      .slick-slide {
+        .hp-slide {
+          margin-top: -25px;
+          margin-bottom: -5px;
+          .hp-slide__inner-container {
+            .slide-title {
+              display: none;
+            }
+            .slide-btns {
+              position: absolute;
+              left: 0;
+              top: 0;
+              height: 100%;
+              a {
                 max-width: unset;
+                .slide-btn {
+                  max-width: unset;
+                }
+                &:nth-child(1) {
+                  position: absolute;
+                  left: 0;
+                  top: 0;
+                  height: 100%;
+                  z-index: 9;
+                  margin-bottom: unset;
+                  .slide-btn {
+                    border-radius: unset;
+                    height: 100%;
+                    font-size: 0;
+                    border: unset;
+                    background-color: transparent;
+                    box-shadow: unset;
+                  }
+                }
+                &:nth-child(2) {
+                  display: none;
+                }
               }
             }
+          }
+          .slide-overlay {
+            background: unset;
+            backdrop-filter: unset;
           }
         }
       }

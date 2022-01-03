@@ -2,19 +2,26 @@ import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import { Link } from "gatsby"
 
-import React from "react"
+import React, { useState } from "react"
 import Slider from "react-slick"
 
 import "./homepage-carousel.scss"
 
+// IMPORTS REACT CONTEXT
+import { APIData } from "/src/Context"
+
 // IMPORTS IMAGES
-import HalloweenBanner from "/src/images/Halloween-eventbrite-banner.jpg"
-import ContactBanner from "/src/images/mission-image.jpg"
+//import HalloweenBanner from "/src/images/Halloween-eventbrite-banner.jpg"
+//import ContactBanner from "/src/images/mission-image.jpg"
 
 const HomePageCarousel = () => {
+  const [eventBriteBanner, setEventBriteBanner] = useState("")
+
+  //console.log(eventBriteBanner)
+
   const carouselData = [
     {
-      image: HalloweenBanner,
+      image: eventBriteBanner ? eventBriteBanner.eventImage : "",
       title: "Arclight Music",
       subtitle: "Funding Music with Music",
       info: "Check out the latest events near you",
@@ -23,35 +30,48 @@ const HomePageCarousel = () => {
       btnTwoText: "Learn More",
       btnTwoLink: "/arclight-promotions",
     },
-    {
-      image: ContactBanner,
-      title: "You There!",
-      subtitle:
-        "Want to be a Partner or interested in playing at the next event?",
-      info: "Just fill in the form on the contact page",
-      btnOneText: "Contact",
-      btnOneLink: "/contact",
-      btnTwoText: "More Info",
-      btnTwoLink: "/partners",
-    },
+    // {
+    //   image: ContactBanner,
+    //   title: "You There!",
+    //   subtitle:
+    //     "Want to be a Partner or interested in playing at the next event?",
+    //   info: "Just fill in the form on the contact page",
+    //   btnOneText: "Contact",
+    //   btnOneLink: "/contact",
+    //   btnTwoText: "More Info",
+    //   btnTwoLink: "/partners",
+    // },
   ]
 
   var settings = {
     dots: true,
     arrows: false,
     infinite: true,
-    speed: 2500,
+    speed: 1500,
     slidesToShow: 1,
     slidesToScroll: 1,
     accessibility: true,
-    autoplay: true,
-    autoplaySpeed: 8500,
+    autoplay: false,
+    autoplaySpeed: 11500,
     lazyLoad: true,
-    fade: 2500,
+    // fade: 2500,
+    responsive: [
+      {
+        breakpoint: 450,
+        settings: {
+          dots: false,
+        },
+      },
+    ],
   }
 
   return (
     <div className="hp-carousel">
+      <APIData.Consumer>
+        {value => {
+          setEventBriteBanner(value[0].eventBriteState[0])
+        }}
+      </APIData.Consumer>
       <Slider {...settings}>
         {carouselData.map((data, key) => (
           <div key={key}>

@@ -42,7 +42,7 @@ const EventsPage = () => {
   const shareButtonHandler = (e, eventURL) => {
     const cardURL =
       eventURL
-    console.log(cardURL);
+    //console.log(cardURL);
       if (navigator.share) {
       navigator
         .share({
