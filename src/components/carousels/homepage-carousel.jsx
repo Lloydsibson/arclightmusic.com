@@ -13,6 +13,8 @@ import { APIData } from "/src/Context"
 // IMPORTS IMAGES
 //import HalloweenBanner from "/src/images/Halloween-eventbrite-banner.jpg"
 import NoEventsBanner from "/src/images/no-events-banner.jpg"
+import AMLogo from "/src/images/website-logo.png"
+import VideoPoster from "/src/images/video-background.jpg"
 //import ContactBanner from "/src/images/mission-image.jpg"
 
 const HomePageCarousel = () => {
@@ -52,7 +54,7 @@ const HomePageCarousel = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     accessibility: true,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 11500,
     lazyLoad: true,
     // fade: 2500,
@@ -60,7 +62,7 @@ const HomePageCarousel = () => {
       {
         breakpoint: 450,
         settings: {
-          dots: false,
+          dots: true,
         },
       },
     ],
@@ -70,10 +72,40 @@ const HomePageCarousel = () => {
     <div className="hp-carousel">
       <APIData.Consumer>
         {value => {
-          setEventBriteBanner(value[0].eventBriteState[0])
+          setEventBriteBanner(
+            value[0].eventBriteState[0] ? value[0].eventBriteState[0] : ""
+          )
         }}
       </APIData.Consumer>
       <Slider {...settings}>
+        <div>
+          <div className="html-video-container">
+            <div className="html-video-container__logo">
+              <img src={AMLogo} alt="Logo" />
+            </div>
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              // ref="video"
+              className="videoplayer"
+              id="video"
+              controlsList="nodownload"
+              poster={VideoPoster}
+            >
+              <source
+                src="https://res.cloudinary.com/arclight-music/video/upload/v1643157288/Website-Intro-Video-No-Logo-720-hb.mp4"
+                type="video/mp4"
+              />
+              <source
+                src="https://res.cloudinary.com/arclight-music/video/upload/v1643157288/Website-Intro-Video-No-Logo-720-hb.ogg"
+                type="video/ogg"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
         {carouselData.map((data, key) => (
           <div key={key}>
             <div

@@ -17,7 +17,7 @@ const EventBriteAPIData = ({ children }) => {
         `https://www.eventbriteapi.com/v3/organizers/28941769095/events/?status=live&order_by=start_asc&token=M3QX3EGISISAIVAZQEGL`
       )
       const events = await eventFetch.json()
-      //console.log(events)
+      console.log(events)
       const eventsData = await events.events
       // await events.events
       setNumberOfCurrentEvents(eventsData.length)
@@ -35,6 +35,7 @@ const EventBriteAPIData = ({ children }) => {
             `https://www.eventbriteapi.com/v3/events/${eventID}/?expand=ticket_availability&token=M3QX3EGISISAIVAZQEGL`
           )
           const ticketInfo = await ticketResponse.json()
+          console.log(ticketInfo)
           // FETCH CATEGORY INFO
           const categoryResponse = await fetch(
             `https://www.eventbriteapi.com/v3/events/${eventID}/?expand=subcategory&token=M3QX3EGISISAIVAZQEGL`
@@ -140,7 +141,7 @@ const EventBriteAPIData = ({ children }) => {
       setLoadingMessage(
         "API Error! Please refresh the page. If this persits please contact us about this issue."
       )
-      //console.log("API - Fetch Failed")
+      console.log(err)
     }
   }
 
