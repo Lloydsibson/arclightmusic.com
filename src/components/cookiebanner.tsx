@@ -13,9 +13,10 @@ const CookieBanner = () => {
       // DO NOTHING
     } else {
       //SETS FADE IN DELAY WITH OPACITY CSS
-      setTimeout(() => {
-        setCookieMessage(false)
-      }, 1500)
+      setCookieMessage(false)
+      // setTimeout(() => {
+      //   setCookieMessage(false)
+      // }, 1500)
     }
   }, [])
 
