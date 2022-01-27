@@ -103,8 +103,8 @@ const TeamPage = () => {
                   right. Creative is an understatement. He’s worked with Google,
                   Rolex, Gucci and other prestigious brands and brings with him
                   several years of design, editing and web development
-                  experience. Everything you see on the APUK site and media he’s
-                  created, or help develop.
+                  experience. Everything you see on the Arclight websites and
+                  media he’s created, or help develop.
                 </p>
               </div>
             </div>

@@ -54,7 +54,7 @@ const HomePageCarousel = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     accessibility: true,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 11500,
     lazyLoad: true,
     // fade: 2500,
