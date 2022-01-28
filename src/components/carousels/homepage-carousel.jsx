@@ -95,11 +95,11 @@ const HomePageCarousel = () => {
               poster={VideoPoster}
             >
               <source
-                src="https://res.cloudinary.com/arclight-music/video/upload/q_auto/v1643157288/Website-Intro-Video-No-Logo-720-hb.mp4"
+                src="https://res.cloudinary.com/arclight-music/video/upload/q_auto:best/v1643157288/Website-Intro-Video-No-Logo-720-hb.mp4"
                 type="video/mp4"
               />
               <source
-                src="https://res.cloudinary.com/arclight-music/video/upload/q_auto/v1643157288/Website-Intro-Video-No-Logo-720-hb.ogg"
+                src="https://res.cloudinary.com/arclight-music/video/upload/q_auto:best/v1643157288/Website-Intro-Video-No-Logo-720-hb.ogg"
                 type="video/ogg"
               />
               Your browser does not support the video tag.
