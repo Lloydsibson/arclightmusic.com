@@ -15,6 +15,7 @@ import { APIData } from "/src/Context"
 import NoEventsBanner from "/src/images/no-events-banner.jpg"
 import AMLogo from "/src/images/website-logo.png"
 import VideoPoster from "/src/images/video-background.jpg"
+import IntroVideoMP4 from "/src/videos/intro-video-720-hb.mp4"
 //import ContactBanner from "/src/images/mission-image.jpg"
 
 const HomePageCarousel = () => {
@@ -94,14 +95,9 @@ const HomePageCarousel = () => {
               controlsList="nodownload"
               poster={VideoPoster}
             >
-              <source
-                src="https://res.cloudinary.com/arclight-music/video/upload/q_auto:best/v1643157288/Website-Intro-Video-No-Logo-720-hb.mp4"
-                type="video/mp4"
-              />
-              <source
-                src="https://res.cloudinary.com/arclight-music/video/upload/q_auto:best/v1643157288/Website-Intro-Video-No-Logo-720-hb.ogg"
-                type="video/ogg"
-              />
+              {/* <source src={} type="video/webm" /> */}
+              <source src={IntroVideoMP4} type="video/mp4" />
+              {/* <source src={} type="video/ogg" /> */}
               Your browser does not support the video tag.
             </video>
           </div>
