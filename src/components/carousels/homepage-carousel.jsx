@@ -15,7 +15,7 @@ import { APIData } from "/src/Context"
 import NoEventsBanner from "/src/images/no-events-banner.jpg"
 import AMLogo from "/src/images/website-logo.png"
 import VideoPoster from "/src/images/video-background.jpg"
-import IntroVideoMP4 from "/src/videos/intro-video-720-hb.mp4"
+import IntroVideoMP4 from "/src/videos/intro-video-720-hb-1mb.mp4"
 //import ContactBanner from "/src/images/mission-image.jpg"
 
 const HomePageCarousel = () => {
@@ -84,6 +84,7 @@ const HomePageCarousel = () => {
             <div className="html-video-container__logo">
               <img src={AMLogo} alt="Logo" />
             </div>
+            <div className="html-video-container__overlay"></div>
             <video
               autoPlay
               loop
