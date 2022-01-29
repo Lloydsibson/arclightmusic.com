@@ -6,7 +6,7 @@ export const TrustPilotMRC = () => {
     const script = document.createElement("script")
     script.src =
       "//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
-    script.async = true
+    script.defer = true
     document.body.appendChild(script)
     return () => {
       document.body.removeChild(script)
