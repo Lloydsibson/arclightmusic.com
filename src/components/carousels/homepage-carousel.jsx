@@ -2,7 +2,7 @@ import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import { Link } from "gatsby"
 
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import Slider from "react-slick"
 
 import "./homepage-carousel.scss"
@@ -20,8 +20,11 @@ import IntroVideoMP4 from "/src/videos/intro-video-720-hb-1mb.mp4"
 
 const HomePageCarousel = () => {
   const [eventBriteBanner, setEventBriteBanner] = useState("")
+  const [introVideoState, setIntroVideoState] = useState("")
 
-  //console.log(eventBriteBanner)
+  useEffect(() => {
+    setIntroVideoState(IntroVideoMP4)
+  }, [])
 
   const carouselData = [
     {
@@ -87,6 +90,7 @@ const HomePageCarousel = () => {
             <div className="html-video-container__overlay"></div>
             <video
               autoPlay
+              // preload="none"
               loop
               muted
               playsInline
@@ -97,7 +101,7 @@ const HomePageCarousel = () => {
               poster={VideoPoster}
             >
               {/* <source src={} type="video/webm" /> */}
-              <source src={IntroVideoMP4} type="video/mp4" />
+              <source src={introVideoState} type="video/mp4" />
               {/* <source src={} type="video/ogg" /> */}
               Your browser does not support the video tag.
             </video>
