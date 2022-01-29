@@ -10,7 +10,7 @@ const InstagramFeed = () => {
     )
     const script = document.createElement("script")
     script.src = "https://assets.juicer.io/embed.js"
-    script.async = true
+    script.defer = true
     document.body.appendChild(script)
     return () => {
       document.body.removeChild(script)
