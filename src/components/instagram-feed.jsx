@@ -1,9 +1,13 @@
 import * as React from "react"
-import { useEffect } from "react"
+import { useState, useEffect } from "react"
 import "./instagram-feed.scss"
 
 const InstagramFeed = () => {
+  const [instaIframe, setInstaIframe] = useState("")
   useEffect(() => {
+    setInstaIframe(
+      "https://www.juicer.io/api/feeds/arclight-music-insta-feed/iframe"
+    )
     const script = document.createElement("script")
     script.src = "https://assets.juicer.io/embed.js"
     script.async = true
@@ -40,7 +44,7 @@ const InstagramFeed = () => {
         {/* ///////////////// */}
         {/* INSTAGRAM IFRAME - FIXES BUG - IMAGES COMING BACK WITH MISSING URL */}
         <iframe
-          src="https://www.juicer.io/api/feeds/arclight-music-insta-feed/iframe"
+          src={instaIframe}
           frameBorder="0"
           width="100%"
           height="500px"

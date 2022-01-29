@@ -100,6 +100,7 @@ const HomePageCarousel = () => {
               controlsList="nodownload"
               poster={VideoPoster}
             >
+              {/* KEEP VIDEOS TO 10 SECONDS AND 1MB MAX */}
               {/* <source src={} type="video/webm" /> */}
               <source src={introVideoState} type="video/mp4" />
               {/* <source src={} type="video/ogg" /> */}
