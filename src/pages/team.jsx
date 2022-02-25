@@ -91,7 +91,7 @@ const TeamPage = () => {
                   alt="Lloyd Sibson on stage"
                 />
                 <div className="mobile-photo-text">
-                  <h2 className="mobile-photo-text__name">Lloyd Sibson</h2>
+                  <h2 className="mobile-photo-text__name">Lloyd Sibson BA</h2>
                   <p className="mobile-photo-text__role">
                     Developer & Designer
                   </p>
@@ -99,12 +99,12 @@ const TeamPage = () => {
               </div>
               <div className="team-info">
                 <p>
-                  Founder of Monocode and an experienced musician in his own
-                  right. Creative is an understatement. He’s worked with Google,
-                  Rolex, Gucci and other prestigious brands and brings with him
-                  several years of design, editing and web development
-                  experience. Everything you see on the Arclight websites and
-                  media he’s created, or help develop.
+                  Developer at Next, Founder of Monocode and an experienced
+                  musician in his own right. Creative is an understatement. He’s
+                  worked with over 200+ brands such as Rolex, Nike, Gucci and
+                  brings with him several years of design, editing and web
+                  development experience. Everything you see on the Arclight
+                  websites and media he’s created, or helped develop.
                 </p>
               </div>
             </div>
@@ -194,19 +194,21 @@ const TeamPage = () => {
                   width={180}
                   quality={95}
                   formats={["AUTO", "WEBP", "AVIF"]}
-                  alt="Arclight music logo"
+                  alt="Owen outside in street"
                 />
+                <div className="mobile-photo-text">
+                  <h2 className="mobile-photo-text__name">Vacancies</h2>
+                  <p className="mobile-photo-text__role">Join us!</p>
+                </div>
               </div>
               <div className="team-info">
-                <h2>Position Vacancy</h2>
-                <p>Photographer</p>
                 <p>
-                  Due to the recent departures, we have space available on the
-                  team. If interested in joining us to become a part of
-                  something greater, please reach out to us on the contact page,
-                  facebook or via&nbsp;
-                  <a href="mailto:arclightpromotionsuk@gmail.com">
-                    arclightpromotionsuk@gmail.com
+                  If interested in joining us to become a part of something
+                  greater, please reach out stating what you feel you could
+                  bring to the Arclight team. You can do this via the contact
+                  page, facebook or email at&nbsp;
+                  <a href="mailto:info@arclightmusic.co.uk">
+                    info@arclightmusic.co.uk
                   </a>
                 </p>
               </div>

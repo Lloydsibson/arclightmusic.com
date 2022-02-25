@@ -42,25 +42,40 @@
           margin-right: 15px;
           font-weight: 500;
         }
-        select#CatSelect {
+        .CatSelect-container {
+          position: relative;
           width: 100%;
-          max-width: 178px;
-          border-radius: 5px;
-          font-weight: 500;
-          padding: 0 10px;
-          height: 31px;
-          border: 1px solid $altColour;
-          background-color: $primaryColour;
-          color: $secondaryColour;
-          &:focus {
-            outline: unset;
-            border-color: $hightlightColour;
-          }
-          option {
-            &:checked {
-              background-color: $hightlightColour;
-              color: $primaryColour;
+          max-width: 200px;
+          select#CatSelect {
+            width: 100%;
+            max-width: 200px;
+            border-radius: 5px;
+            font-weight: 500;
+            padding: 0 30px 0 10px;
+            height: 31px;
+            border: 1px solid $altColour;
+            background-color: $primaryColour;
+            color: $secondaryColour;
+            -webkit-appearance: none;
+            appearance: none;
+            &:focus {
+              outline: unset;
+              border-color: $hightlightColour;
             }
+            option {
+              &:checked {
+                background-color: $hightlightColour;
+                color: $primaryColour;
+              }
+            }
+          }
+          svg {
+            position: absolute;
+            font-size: 14px;
+            top: 9px;
+            right: 10px;
+            z-index: 9;
+            color: $secondaryColour;
           }
         }
         a {

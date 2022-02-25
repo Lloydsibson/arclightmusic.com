@@ -3,6 +3,7 @@
 .s-link {
   text-decoration: unset;
   display: block !important;
+  color: $secondaryColour;
   &:active {
     color: inherit;
   }

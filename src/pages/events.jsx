@@ -40,10 +40,9 @@ const EventsPage = () => {
 
   // SHARE BUTTON FUNCTIONALITY
   const shareButtonHandler = (e, eventURL) => {
-    const cardURL =
-      eventURL
+    const cardURL = eventURL
     //console.log(cardURL);
-      if (navigator.share) {
+    if (navigator.share) {
       navigator
         .share({
           title: "Arclight Music - Upcoming Event",
@@ -108,16 +107,59 @@ const EventsPage = () => {
                   </div>
                 </div>
                 <div className="events-title-container__filters">
-                  <label htmlFor="CatSelect">Categories:</label>
-                  <select id="CatSelect" onChange={e => catFilterHandler(e)}>
-                    <option>All</option>
-                    <option>Rock</option>
-                    <option>Metal</option>
-                    <option>Pop Punk</option>
-                    <option>Alternative</option>
-                    <option>Acoustic</option>
-                    <option>Other</option>
-                  </select>
+                  <label htmlFor="CatSelect">Sub-Category:</label>
+                  <div className="CatSelect-container">
+                    <select id="CatSelect" onChange={e => catFilterHandler(e)}>
+                      <option>All</option>
+                      <option>Acoustic</option>
+                      <option>Alternative</option>
+                      <option>Americana</option>
+                      <option>Bluegrass</option>
+                      <option>Blues</option>
+                      <option>Blues & Jazz</option>
+                      <option>Classical</option>
+                      <option>Cultural</option>
+                      <option>DJ/Dance</option>
+                      <option>EDM</option>
+                      <option>EDM / Electronic</option>
+                      <option>Electronic</option>
+                      <option>Experimental</option>
+                      <option>Folk</option>
+                      <option>Hip Hop / Rap</option>
+                      <option>Indie</option>
+                      <option>Jazz</option>
+                      <option>Latin</option>
+                      <option>Metal</option>
+                      <option>Opera</option>
+                      <option>Other</option>
+                      <option>Pop</option>
+                      <option>Psychedelic</option>
+                      <option>Punk/Hardcore</option>
+                      <option>R&B</option>
+                      <option>Reggae</option>
+                      <option>Religious/Spiritual</option>
+                      <option>Rock</option>
+                      <option>Singer/Songwriter</option>
+                      <option>Top 40</option>
+                      <option>World</option>
+                    </select>
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      data-prefix="fas"
+                      data-icon="chevron-down"
+                      role="img"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 448 512"
+                      class="svg-inline--fa fa-chevron-down fa-w-14"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+                        class=""
+                      ></path>
+                    </svg>
+                  </div>
                   <a href="https://www.eventbrite.co.uk/o/arclight-promotions-uk-28941769095">
                     <h2>Past Events</h2>
                   </a>
