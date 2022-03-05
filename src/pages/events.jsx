@@ -107,7 +107,7 @@ const EventsPage = () => {
                   </div>
                 </div>
                 <div className="events-title-container__filters">
-                  <label htmlFor="CatSelect">Sub-Category:</label>
+                  <label htmlFor="CatSelect">Genre:</label>
                   <div className="CatSelect-container">
                     <select id="CatSelect" onChange={e => catFilterHandler(e)}>
                       <option>All</option>
