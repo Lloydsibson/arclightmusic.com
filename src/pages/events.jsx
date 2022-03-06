@@ -144,6 +144,8 @@ const EventsPage = () => {
                       <option>World</option>
                     </select>
                     <svg
+                      height="14px"
+                      width="12.25px"
                       aria-hidden="true"
                       focusable="false"
                       data-prefix="fas"
