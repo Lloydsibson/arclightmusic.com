@@ -34,7 +34,7 @@ const Reviews = () => {
 
   return (
     <div className="reviews">
-      <p className="ep-number">Ep.05</p>
+      <p className="ep-number">EP.05</p>
       <div className="review-title">
         <h2>Reviews</h2>
         <svg
