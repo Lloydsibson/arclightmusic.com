@@ -170,8 +170,8 @@ const IndexPage = () => {
               can’t wait to help make this bigger and better than ever before.
             </h3>
             <div className="ep-03-buttons">
-              <div to="rac" className="learn-more-btn donate">
-                <button>Donate</button>
+              <div to="events" className="learn-more-btn donate">
+                <button>Buy Tickets</button>
               </div>
               <Link to="rac-festival" className="learn-more-btn alt">
                 Learn More

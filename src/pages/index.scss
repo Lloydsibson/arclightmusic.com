@@ -168,11 +168,11 @@
             max-width: 214px;
             box-shadow: $boxshadow;
             border: 1px solid #37aa9c;
-            opacity: 0.3;
+            // opacity: 0.3;
             &:hover {
               background-color: $hightlightColourHover;
               // opacity: 1;
-              cursor: not-allowed;
+              // cursor: not-allowed;
             }
           }
         }

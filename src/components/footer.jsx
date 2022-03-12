@@ -13,6 +13,7 @@ import { faWhatsapp } from "@fortawesome/free-brands-svg-icons"
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons"
 import { faInstagram } from "@fortawesome/free-brands-svg-icons"
 import { faFacebookF } from "@fortawesome/free-brands-svg-icons"
+import { faYoutube } from "@fortawesome/free-brands-svg-icons"
 
 const Footer = () => {
   const toggleFooterAccordian = e => {
@@ -192,6 +193,16 @@ const Footer = () => {
                 Follow us on facebook
                 <div className="footer-social-icons">
                   <FontAwesomeIcon icon={faFacebookF} />
+                </div>
+              </a>
+              <a
+                href="https://www.youtube.com/channel/UC-xvfVCutOb2b44_7uxmisQ"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Follow us on youtube
+                <div className="footer-social-icons">
+                  <FontAwesomeIcon icon={faYoutube} />
                 </div>
               </a>
             </div>
