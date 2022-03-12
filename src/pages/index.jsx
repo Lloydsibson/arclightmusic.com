@@ -170,9 +170,9 @@ const IndexPage = () => {
               can’t wait to help make this bigger and better than ever before.
             </h3>
             <div className="ep-03-buttons">
-              <div to="events" className="learn-more-btn donate">
+              <Link to="/events" className="learn-more-btn donate">
                 <button>Buy Tickets</button>
-              </div>
+              </Link>
               <Link to="rac-festival" className="learn-more-btn alt">
                 Learn More
                 <button>Learn More</button>
@@ -180,13 +180,22 @@ const IndexPage = () => {
             </div>
           </div>
           <div className="ep-03__image">
-            <StaticImage
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/WY9NeZtXQcE"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            {/* <StaticImage
               src="../images/rac-image.jpg"
               width={715}
               quality={95}
               formats={["AUTO", "WEBP", "AVIF"]}
               alt="live band"
-            />
+            /> */}
           </div>
         </div>
         <InstagramFeed />

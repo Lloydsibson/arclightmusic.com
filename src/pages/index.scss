@@ -143,10 +143,19 @@
     align-items: center;
     justify-content: space-between;
     .ep-03__image {
-      width: 48%;
-      margin-left: 7%;
+      width: 52%;
+      margin-left: 3%;
       display: flex;
       justify-content: flex-end;
+      position: relative;
+      padding-bottom: 29.25%;
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
     }
     .ep-03__information {
       width: 45%;
@@ -375,6 +384,8 @@
       .ep-03__image {
         width: 100%;
         justify-content: center;
+        margin: 0;
+        padding-bottom: 56.25%;
         .gatsby-image-wrapper > div {
           max-width: 500px !important;
         }
