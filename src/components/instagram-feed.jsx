@@ -19,7 +19,7 @@ const InstagramFeed = () => {
   return (
     <div className="instagram-feed">
       <div className="instagram-feed__inner-container">
-        <p className="ep-number">Ep.04</p>
+        <p className="ep-number">EP.04</p>
         <div className="instagram__title">
           <h2>Insta Feed</h2>
           <svg
