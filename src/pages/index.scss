@@ -227,21 +227,21 @@
           }
         }
       }
-    }
-    .learn-more-btn.alt {
-      width: 100%;
-      display: block;
-      button {
-        background-color: unset;
-        // border: 1px solid $secondaryColour;
-        color: $secondaryColour;
+      .learn-more-btn.alt {
         width: 100%;
-        box-shadow: $boxshadow;
-        margin-top: 10px;
-        &:hover {
-          background-color: $secondaryColour;
-          color: $primaryColour;
-          opacity: 1;
+        display: block;
+        button {
+          background-color: unset;
+          // border: 1px solid $secondaryColour;
+          color: $secondaryColour;
+          width: 100%;
+          box-shadow: $boxshadow;
+          margin-top: 1rem;
+          &:hover {
+            background-color: $secondaryColour;
+            color: $primaryColour;
+            opacity: 1;
+          }
         }
       }
     }
@@ -372,7 +372,7 @@
   .white-background .ep-03 .ep-03-buttons.mobile .learn-more-btn {
     max-width: 214px;
   }
-  .white-background .ep-03 .learn-more-btn.alt button {
+  .white-background .ep-03 .ep-03-buttons.mobile .learn-more-btn.alt button {
     margin-top: 0;
     margin-left: 10px;
   }
