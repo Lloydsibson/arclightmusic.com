@@ -181,9 +181,9 @@ const IndexPage = () => {
           </div>
           <div className="ep-03__image">
             <iframe
-              width="100"
-              height="100"
-              src="https://www.youtube.com/embed/p-ZurA-cBiw"
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/0iwpzikOwZU"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
