@@ -24,7 +24,7 @@ const EventBriteAPIData = ({ children }) => {
       // // IF EVENT DATA EXISTS...
       if (eventsData.length > 0) {
         for (const loopedEventData of eventsData) {
-          // console.log(loopedEventData)
+          //console.log(loopedEventData)
           const eventID = await loopedEventData.id
           // FETCH VENUE INFO
           const venueResponse = await fetch(
@@ -35,7 +35,7 @@ const EventBriteAPIData = ({ children }) => {
             `https://www.eventbriteapi.com/v3/events/${eventID}/?expand=ticket_availability&token=M3QX3EGISISAIVAZQEGL`
           )
           const ticketInfo = await ticketResponse.json()
-          //console.log(ticketInfo)
+          console.log(ticketInfo)
           // FETCH CATEGORY INFO
           const categoryResponse = await fetch(
             `https://www.eventbriteapi.com/v3/events/${eventID}/?expand=subcategory&token=M3QX3EGISISAIVAZQEGL`
@@ -57,7 +57,7 @@ const EventBriteAPIData = ({ children }) => {
           const eventDay = eventDateString.split("-")[2]
           const eventTime24HR = eventFullTime.slice(0, 5)
           const eventTicketPrice =
-            ticketInfo.ticket_availability.maximum_ticket_price.major_value
+            ticketInfo.ticket_availability.minimum_ticket_price.major_value
 
           // CONVERTS MONTH NUMBER TO MONTH NAME
           switch (monthRaw) {
