@@ -143,10 +143,19 @@
     align-items: center;
     justify-content: space-between;
     .ep-03__image {
-      width: 48%;
-      margin-left: 7%;
+      width: 52%;
+      margin-left: 3%;
       display: flex;
       justify-content: flex-end;
+      position: relative;
+      padding-top: 52%;
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
     }
     .ep-03__information {
       width: 45%;
@@ -168,11 +177,11 @@
             max-width: 214px;
             box-shadow: $boxshadow;
             border: 1px solid #37aa9c;
-            opacity: 0.3;
+            // opacity: 0.3;
             &:hover {
               background-color: $hightlightColourHover;
               // opacity: 1;
-              cursor: not-allowed;
+              // cursor: not-allowed;
             }
           }
         }
@@ -186,6 +195,48 @@
           color: $secondaryColour;
           max-width: 214px;
           box-shadow: $boxshadow;
+          &:hover {
+            background-color: $secondaryColour;
+            color: $primaryColour;
+            opacity: 1;
+          }
+        }
+      }
+    }
+    .ep-03-buttons.mobile {
+      margin-top: 1.45rem;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      .learn-more-btn.donate {
+        display: block;
+        width: 100%;
+        margin-right: 0;
+        button {
+          background-color: $hightlightColour;
+          width: 100%;
+          box-shadow: $boxshadow;
+          border: 1px solid #37aa9c;
+          // opacity: 0.3;
+          margin: 0;
+          &:hover {
+            background-color: $hightlightColourHover;
+            // opacity: 1;
+            // cursor: not-allowed;
+          }
+        }
+      }
+      .learn-more-btn.alt {
+        width: 100%;
+        display: block;
+        button {
+          background-color: unset;
+          // border: 1px solid $secondaryColour;
+          color: $secondaryColour;
+          width: 100%;
+          box-shadow: $boxshadow;
+          margin-top: 1rem;
           &:hover {
             background-color: $secondaryColour;
             color: $primaryColour;
@@ -299,6 +350,34 @@
   }
 }
 
+@media only screen and (min-width: 850px) {
+  .white-background {
+    .ep-03 {
+      .ep-03-buttons.mobile {
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 472px) and (max-width: 850px) {
+  .white-background {
+    .ep-03 {
+      .ep-03-buttons.mobile {
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+  }
+  .white-background .ep-03 .ep-03-buttons.mobile .learn-more-btn {
+    max-width: 214px;
+  }
+  .white-background .ep-03 .ep-03-buttons.mobile .learn-more-btn.alt button {
+    margin-top: 0;
+    margin-left: 10px;
+  }
+}
+
 // PHONES/TABLETS
 @media only screen and (max-width: 850px) {
   .white-background {
@@ -333,7 +412,7 @@
         }
         .ep-02__cards {
           flex-direction: column;
-          margin: 5px auto 20px auto;
+          margin: 5px auto 0 auto;
           .ep-card {
             width: 100%;
             // max-width: 300px;
@@ -370,11 +449,16 @@
       .ep-03__information {
         width: 100%;
         max-width: unset;
-        margin-bottom: 50px;
+        margin-bottom: 0;
+        .ep-03-buttons.desktop {
+          display: none;
+        }
       }
       .ep-03__image {
         width: 100%;
         justify-content: center;
+        margin: 0;
+        padding-bottom: 48%;
         .gatsby-image-wrapper > div {
           max-width: 500px !important;
         }
