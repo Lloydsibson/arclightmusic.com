@@ -35,7 +35,7 @@ const EventBriteAPIData = ({ children }) => {
             `https://www.eventbriteapi.com/v3/events/${eventID}/?expand=ticket_availability&token=M3QX3EGISISAIVAZQEGL`
           )
           const ticketInfo = await ticketResponse.json()
-          console.log(ticketInfo)
+          //console.log(ticketInfo)
           // FETCH CATEGORY INFO
           const categoryResponse = await fetch(
             `https://www.eventbriteapi.com/v3/events/${eventID}/?expand=subcategory&token=M3QX3EGISISAIVAZQEGL`
