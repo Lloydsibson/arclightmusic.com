@@ -99,12 +99,12 @@ const EventsPage = () => {
               />
               <div className="events-title-container">
                 <div className="events-title-container__title">
-                  <h1>Events</h1>
                   <div id="events-counter">
                     {value[1].numberOfCurrentEvents > 0
                       ? value[1].numberOfCurrentEvents
                       : 0}
                   </div>
+                  <h1>Events</h1>
                 </div>
                 <div className="events-title-container__filters">
                   <label htmlFor="CatSelect">Genre:</label>

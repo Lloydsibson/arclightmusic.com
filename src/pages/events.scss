@@ -24,13 +24,20 @@
         }
         #events-counter {
           background-color: $hightlightColour;
-          padding: 5px 15px;
-          border-radius: 50px;
+          // padding: 5px 15px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 60px;
+          height: 60px;
+          border-radius: 100%;
           color: $primaryColour;
           font-weight: 600;
-          margin-left: 15px;
-          margin-top: 5px;
-          font-size: 0.88rem;
+          margin-right: 15px;
+          font-size: 2rem;
+          box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+            rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+            rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
         }
       }
       .events-title-container__filters {
@@ -353,6 +360,12 @@
         .events-title-container__title {
           h1 {
             font-size: 2.8rem;
+          }
+          #events-counter {
+            width: 50px;
+            height: 50px;
+            font-size: 1.5rem;
+            margin-right: 10px;
           }
         }
         .events-title-container__filters {
