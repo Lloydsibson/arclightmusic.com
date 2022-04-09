@@ -2,110 +2,118 @@
 
 .event-card-container {
   display: flex;
+  .loading-message {
+    position: absolute;
+  }
   .loading-message.loaded {
     display: none;
   }
-  a {
-    width: 20%;
-    margin-right: 2%;
-    color: $primaryColour;
-    text-decoration: unset;
-    transition: all 0.3s ease-in-out;
-    &:last-child {
-      margin-right: 0;
-    }
-    &:hover {
-      transform: scale(1.05);
+  .event-card-container__events {
+    width: 100%;
+    display: flex;
+    opacity: 0;
+    a {
+      width: 20%;
+      margin-right: 2%;
+      color: $primaryColour;
+      text-decoration: unset;
+      transition: all 0.3s ease-in-out;
+      &:last-child {
+        margin-right: 0;
+      }
+      &:hover {
+        transform: scale(1.05);
+        .up-card {
+          filter: unset;
+          .up-card__overlay {
+            background-color: rgba($secondaryColour, 0.75);
+          }
+        }
+      }
       .up-card {
-        filter: unset;
+        position: relative;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: rgb(0 0 0 / 9%) 0px 2px 1px, rgb(0 0 0 / 9%) 0px 4px 2px,
+          rgb(0 0 0 / 9%) 0px 8px 4px, rgb(0 0 0 / 9%) 0px 16px 8px,
+          rgb(0 0 0 / 9%) 0px 32px 16px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        filter: grayscale(1);
         .up-card__overlay {
-          background-color: rgba($secondaryColour, 0.75);
+          transition: all 0.3s ease-in-out;
+          background-color: rgba($secondaryColour, 0.85);
+          width: 100%;
+          height: 100%;
+          position: absolute;
         }
-      }
-    }
-    .up-card {
-      position: relative;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: rgb(0 0 0 / 9%) 0px 2px 1px, rgb(0 0 0 / 9%) 0px 4px 2px,
-        rgb(0 0 0 / 9%) 0px 8px 4px, rgb(0 0 0 / 9%) 0px 16px 8px,
-        rgb(0 0 0 / 9%) 0px 32px 16px;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      filter: grayscale(1);
-      .up-card__overlay {
-        transition: all 0.3s ease-in-out;
-        background-color: rgba($secondaryColour, 0.85);
-        width: 100%;
-        height: 100%;
-        position: absolute;
-      }
-      .up-card__info {
-        z-index: 9;
-        position: relative;
-        display: flex;
-        align-items: center;
-        padding: 0 30px;
-        margin-bottom: 25px;
-        .up-date {
-          background-color: $primaryColour;
-          padding: 18px 12px 12px 12px;
-          border-radius: 0 0 7px 7px;
+        .up-card__info {
+          z-index: 9;
+          position: relative;
           display: flex;
-          flex-direction: column;
           align-items: center;
-          justify-content: center;
-          .up-date__day {
-            color: $secondaryColour;
+          padding: 0 30px;
+          margin-bottom: 25px;
+          .up-date {
+            background-color: $primaryColour;
+            padding: 18px 12px 12px 12px;
+            border-radius: 0 0 7px 7px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .up-date__day {
+              color: $secondaryColour;
+              font-weight: 600;
+              font-size: 1.2rem;
+              line-height: 13px;
+            }
+            .up-date__month {
+              color: $secondaryColour;
+              font-weight: 500;
+              font-size: 0.7rem;
+              text-transform: uppercase;
+              margin-bottom: 0;
+            }
+          }
+          h3 {
+            font-size: 1rem;
+            line-height: 25px;
+            max-height: 72px;
             font-weight: 600;
-            font-size: 1.2rem;
-            line-height: 13px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            margin-bottom: -5px;
+            margin-left: 8%;
+            padding-top: 12px;
           }
-          .up-date__month {
-            color: $secondaryColour;
-            font-weight: 500;
-            font-size: 0.7rem;
-            text-transform: uppercase;
+        }
+        .up-card__location {
+          z-index: 9;
+          position: relative;
+          display: flex;
+          align-items: center;
+          padding: 20px 25px;
+          h4 {
             margin-bottom: 0;
+            font-weight: 300;
+            font-size: 0.85028rem;
           }
-        }
-        h3 {
-          font-size: 1rem;
-          line-height: 25px;
-          max-height: 72px;
-          font-weight: 600;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          display: -webkit-box;
-          -webkit-box-orient: vertical;
-          -webkit-line-clamp: 2;
-          margin-bottom: -5px;
-          margin-left: 8%;
-          padding-top: 12px;
-        }
-      }
-      .up-card__location {
-        z-index: 9;
-        position: relative;
-        display: flex;
-        align-items: center;
-        padding: 20px 25px;
-        h4 {
-          margin-bottom: 0;
-          font-weight: 300;
-          font-size: 0.85028rem;
-        }
-        .up-card-location {
-          margin-left: 3px;
-        }
-        .up-card-location-icon {
-          margin-right: 7px;
-          margin-bottom: -2px;
-          svg {
-            width: 100%;
-            max-width: 10px;
-            height: 100%;
+          .up-card-location {
+            margin-left: 3px;
+          }
+          .up-card-location-icon {
+            margin-right: 7px;
+            margin-bottom: -2px;
+            svg {
+              width: 100%;
+              max-width: 10px;
+              height: 100%;
+            }
           }
         }
       }
@@ -115,11 +123,20 @@
 
 //  HIDES ANY MORE EVENT CARDS BEYOND 5
 .event-card-container {
-  a {
-    &:nth-child(n + 6) {
-      display: none;
+  .event-card-container__events {
+    a {
+      &:nth-child(n + 6) {
+        display: none;
+      }
     }
   }
+}
+
+.event-card-container__events.loaded {
+  opacity: 1;
+  -webkit-transition: opacity 2s ease-in;
+  -moz-transition: opacity 2s ease-in;
+  -o-transition: opacity 2s ease-in;
 }
 
 // TABLETS
@@ -130,9 +147,11 @@
 @media only screen and (max-width: 1100px) {
   //  HIDES ANY MORE EVENT CARDS BEYOND 4
   .event-card-container {
-    a {
-      &:nth-child(n + 5) {
-        display: none;
+    .event-card-container__events {
+      a {
+        &:nth-child(n + 5) {
+          display: none;
+        }
       }
     }
   }

@@ -121,47 +121,56 @@ const UpcomingEvents = () => {
                 >
                   {value[2].loadingMessage}
                 </p>
-                {value[0].eventBriteState.map((event, key) => (
-                  <a
-                    href={event.eventURL}
-                    key={key}
-                    onClick={e =>
-                      eventLinkHandler(e, event.eventURL, event.eventTitle)
-                    }
-                  >
-                    <article
-                      className="up-card"
-                      style={{ backgroundImage: `url(${event.eventImage})` }}
+                <div
+                  className={`event-card-container__events ${
+                    value[3].apiLoaded ? "loaded" : ""
+                  }`}
+                >
+                  {value[0].eventBriteState.map((event, key) => (
+                    <a
+                      href={event.eventURL}
+                      key={key}
+                      onClick={e =>
+                        eventLinkHandler(e, event.eventURL, event.eventTitle)
+                      }
                     >
-                      <div className="up-card__overlay"></div>
-                      <div className="up-card__info">
-                        <div className="up-date">
-                          <p className="up-date__day">{event.eventDay}</p>
-                          <p className="up-date__month">{event.eventMonth}</p>
+                      <article
+                        className="up-card"
+                        style={{ backgroundImage: `url(${event.eventImage})` }}
+                      >
+                        <div className="up-card__overlay"></div>
+                        <div className="up-card__info">
+                          <div className="up-date">
+                            <p className="up-date__day">{event.eventDay}</p>
+                            <p className="up-date__month">{event.eventMonth}</p>
+                          </div>
+                          <h3>{event.eventTitle}</h3>
                         </div>
-                        <h3>{event.eventTitle}</h3>
-                      </div>
-                      <div className="up-card__location">
-                        <div className="up-card-location-icon">
-                          <svg
-                            viewBox="0 0 14 19"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M6.2806 18.29C0.983282 10.6105 0 9.82235 0 7C0 3.13399 3.13399 0 7 0C10.866 0 14 3.13399 14 7C14 9.82235 13.0167 10.6105 7.7194 18.29C7.37177 18.7922 6.6282 18.7922 6.2806 18.29ZM7 9.91666C8.61084 9.91666 9.91667 8.61084 9.91667 7C9.91667 5.38916 8.61084 4.08333 7 4.08333C5.38916 4.08333 4.08333 5.38916 4.08333 7C4.08333 8.61084 5.38916 9.91666 7 9.91666Z"
-                              fill="white"
-                            />
-                          </svg>
+                        <div className="up-card__location">
+                          <div className="up-card-location-icon">
+                            <svg
+                              viewBox="0 0 14 19"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M6.2806 18.29C0.983282 10.6105 0 9.82235 0 7C0 3.13399 3.13399 0 7 0C10.866 0 14 3.13399 14 7C14 9.82235 13.0167 10.6105 7.7194 18.29C7.37177 18.7922 6.6282 18.7922 6.2806 18.29ZM7 9.91666C8.61084 9.91666 9.91667 8.61084 9.91667 7C9.91667 5.38916 8.61084 4.08333 7 4.08333C5.38916 4.08333 4.08333 5.38916 4.08333 7C4.08333 8.61084 5.38916 9.91666 7 9.91666Z"
+                                fill="white"
+                              />
+                            </svg>
+                          </div>
+                          <h4 className="up-card-venue-name">
+                            {event.eventVenueName}
+                          </h4>
+                          ,
+                          <h4 className="up-card-location">
+                            {event.eventCity}
+                          </h4>
                         </div>
-                        <h4 className="up-card-venue-name">
-                          {event.eventVenueName}
-                        </h4>
-                        ,<h4 className="up-card-location">{event.eventCity}</h4>
-                      </div>
-                    </article>
-                  </a>
-                ))}
+                      </article>
+                    </a>
+                  ))}
+                </div>
               </div>
             )}
           </APIData.Consumer>

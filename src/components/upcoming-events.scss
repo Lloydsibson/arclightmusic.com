@@ -42,7 +42,7 @@
       // }
       .upcoming-events__events {
         flex-direction: row;
-        .event-card-container {
+        .event-card-container__events {
           flex-direction: row;
           align-items: center;
           justify-content: space-between;
@@ -71,7 +71,7 @@
       // }
       .upcoming-events__events {
         flex-direction: column;
-        .event-card-container {
+        .event-card-container__events {
           flex-direction: column;
           align-items: center;
           a {

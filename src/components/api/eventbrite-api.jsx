@@ -24,6 +24,7 @@ const EventBriteAPIData = ({ children }) => {
       // // IF EVENT DATA EXISTS...
       if (eventsData.length > 0) {
         for (const loopedEventData of eventsData) {
+          //console.log(eventsData)
           //console.log(loopedEventData)
           const eventID = await loopedEventData.id
           // FETCH VENUE INFO
@@ -112,8 +113,6 @@ const EventBriteAPIData = ({ children }) => {
           const eventTime12HR =
             time_part_array[0] + ":" + time_part_array[1] + ampm
 
-          // UPDATE STATE WITH DATA
-          setapiLoaded(true)
           setEventBriteState(result => [
             ...result,
             {
@@ -132,6 +131,8 @@ const EventBriteAPIData = ({ children }) => {
           ])
         }
         setLoadingMessage("Events Found")
+        // UPDATE STATE WITH DATA
+        setapiLoaded(true)
       } else {
         setLoadingMessage(
           <p>OMG! No Events - Help Us Change That! &#128521;</p>

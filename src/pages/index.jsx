@@ -185,9 +185,9 @@ const IndexPage = () => {
               height="100%"
               src="https://www.youtube.com/embed/0iwpzikOwZU"
               title="YouTube video player"
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
+              allowFullScreen
             ></iframe>
             {/* <StaticImage
               src="../images/rac-image.jpg"
