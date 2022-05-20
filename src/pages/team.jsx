@@ -159,7 +159,7 @@ const TeamPage = () => {
                 </p>
               </div>
             </div>
-            <div className="information__container">
+            {/* <div className="information__container">
               <div className="team-photo">
                 <StaticImage
                   src="../images/team-photo-owen.jpg"
@@ -186,7 +186,7 @@ const TeamPage = () => {
                   difference he will make.
                 </p>
               </div>
-            </div>
+            </div> */}
             {/* <div className="information__container">
               <div className="team-photo">
                 <StaticImage
