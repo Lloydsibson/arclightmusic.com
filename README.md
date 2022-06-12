@@ -4,7 +4,7 @@
   </a>
 </p>
 <h1 align="center">
-  Arclght Music
+  Arclight Music
 </h1>
 
 ## 🚀 Contact
