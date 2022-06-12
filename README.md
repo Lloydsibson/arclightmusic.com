@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://www.arclightmusic.co.uk">
-    <img alt="Arclight Music Logo" src="https://www.arclightmusic.co.uk/static/491f9adecb1a51481307422b395723c4/4f74d/website-logo.png" width="100" />
+    <img alt="Arclight Music Logo" src="https://arclightmusic.co.uk/static/491f9adecb1a51481307422b395723c4/073b4/website-logo.png" width="100" />
   </a>
 </p>
 <h1 align="center">
