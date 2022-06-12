@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://www.lloydsibson.com">
-    <img alt="Arclight Music Logo" src="[https://res.cloudinary.com/cloudinary-ls-images/image/upload/v1557013440/img/logo-large-tp.png](https://www.arclightmusic.co.uk/static/491f9adecb1a51481307422b395723c4/4f74d/website-logo.png)" width="100" />
+  <a href="https://www.arclightmusic.co.uk">
+    <img alt="Arclight Music Logo" src="https://www.arclightmusic.co.uk/static/491f9adecb1a51481307422b395723c4/4f74d/website-logo.png" width="100" />
   </a>
 </p>
 <h1 align="center">
