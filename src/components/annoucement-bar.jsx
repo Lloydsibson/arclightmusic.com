@@ -9,9 +9,9 @@ const AnnoucementBar = () => {
     <>
       <div className="annoucement-bar">
         <div className="annoucement-bar__inner-container">
-          <Link to="https://arclightmusic-25219482.hubspotpagebuilder.eu/trustpilot-15-percent-offer">
+          <Link to="/events">
             <h3>
-              Leave a review & get <span>15% off</span> our store
+              Support your local music scene <span>Today!</span>
             </h3>
           </Link>
         </div>
