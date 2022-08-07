@@ -199,11 +199,11 @@ const IndexPage = () => {
           </div>
           <div className="ep-03-buttons mobile">
             <Link to="/events" className="learn-more-btn donate">
-              <button>Buy Tickets</button>
+              <button disabled="disabled">Buy Tickets</button>
             </Link>
             <Link to="rac-festival" className="learn-more-btn alt">
               Learn More
-              <button disabled="disabled">Learn More</button>
+              <button>Learn More</button>
             </Link>
           </div>
         </div>
