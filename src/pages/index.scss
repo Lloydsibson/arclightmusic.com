@@ -148,14 +148,14 @@
       display: flex;
       justify-content: flex-end;
       position: relative;
-      padding-top: 52%;
-      iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-      }
+      // padding-top: 52%;
+      // iframe {
+      //   position: absolute;
+      //   top: 0;
+      //   left: 0;
+      //   width: 100%;
+      //   height: 100%;
+      // }
     }
     .ep-03__information {
       width: 45%;
@@ -177,11 +177,11 @@
             max-width: 214px;
             box-shadow: $boxshadow;
             border: 1px solid #37aa9c;
-            // opacity: 0.3;
+            opacity: 0.3;
             &:hover {
               background-color: $hightlightColourHover;
-              // opacity: 1;
-              // cursor: not-allowed;
+              opacity: 1;
+              cursor: not-allowed;
             }
           }
         }
@@ -218,7 +218,7 @@
           width: 100%;
           box-shadow: $boxshadow;
           border: 1px solid #37aa9c;
-          // opacity: 0.3;
+          opacity: 0.3;
           margin: 0;
           &:hover {
             background-color: $hightlightColourHover;
@@ -458,7 +458,7 @@
         width: 100%;
         justify-content: center;
         margin: 0;
-        padding-bottom: 48%;
+        // padding-bottom: 48%;
         .gatsby-image-wrapper > div {
           max-width: 500px !important;
         }

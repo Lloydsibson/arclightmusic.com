@@ -171,7 +171,7 @@ const IndexPage = () => {
             </h3>
             <div className="ep-03-buttons desktop">
               <Link to="/events" className="learn-more-btn donate">
-                <button>Buy Tickets</button>
+                <button disabled="disabled">Buy Tickets</button>
               </Link>
               <Link to="rac-festival" className="learn-more-btn alt">
                 Learn More
@@ -180,7 +180,7 @@ const IndexPage = () => {
             </div>
           </div>
           <div className="ep-03__image">
-            <iframe
+            {/* <iframe
               width="100%"
               height="100%"
               src="https://www.youtube.com/embed/od1C9uIqwKg"
@@ -188,14 +188,14 @@ const IndexPage = () => {
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
-            ></iframe>
-            {/* <StaticImage
+            ></iframe> */}
+            <StaticImage
               src="../images/rac-image.jpg"
               width={715}
               quality={95}
               formats={["AUTO", "WEBP", "AVIF"]}
               alt="live band"
-            /> */}
+            />
           </div>
           <div className="ep-03-buttons mobile">
             <Link to="/events" className="learn-more-btn donate">
@@ -203,7 +203,7 @@ const IndexPage = () => {
             </Link>
             <Link to="rac-festival" className="learn-more-btn alt">
               Learn More
-              <button>Learn More</button>
+              <button disabled="disabled">Learn More</button>
             </Link>
           </div>
         </div>
