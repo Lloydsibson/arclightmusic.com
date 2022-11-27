@@ -41,6 +41,7 @@ const EventBriteAPIData = ({ children }) => {
           const categoryResponse = await fetch(
             `https://www.eventbriteapi.com/v3/events/${eventID}/?expand=subcategory&token=M3QX3EGISISAIVAZQEGL`
           )
+
           const venueInfo = await venueResponse.json()
           const eventCity = venueInfo.venue.address.city
           const CategoryInfo = await categoryResponse.json()
@@ -53,7 +54,10 @@ const EventBriteAPIData = ({ children }) => {
           const eventImage = loopedEventData.logo.original.url
           const eventTitle = loopedEventData.name.text
           const eventVenueName = venueInfo.venue.name
-          const eventSubCategory = CategoryInfo.subcategory.name
+          const eventSubCategory =
+            CategoryInfo.subcategory !== null
+              ? CategoryInfo.subcategory.name
+              : "Other"
           const eventSummary = loopedEventData.description.text
           const eventDay = eventDateString.split("-")[2]
           const eventTime24HR = eventFullTime.slice(0, 5)

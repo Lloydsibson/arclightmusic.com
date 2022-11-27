@@ -142,6 +142,7 @@ const EventsPage = () => {
                       <option>Singer/Songwriter</option>
                       <option>Top 40</option>
                       <option>World</option>
+                      <option>Other</option>
                     </select>
                     <svg
                       height="14px"
