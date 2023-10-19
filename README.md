@@ -13,6 +13,7 @@
 
 <a href="https://www.linkedin.com/company/arclight-promotions/about/">https://www.linkedin.com/company/arclight-promotions/about/</a>
 
+<!--
 **Email**
 
 <a href="mail:to">Info@arclightmusic.co.uk</a>
@@ -20,6 +21,7 @@
 **Website**
 
 <a href="https://www.arclightmusic.co.uk">https://www.arclightmusic.co.uk</a>
+-->
 
 <!-- # Getting Started with Create React App
 
