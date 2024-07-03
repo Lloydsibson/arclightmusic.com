@@ -44,6 +44,10 @@ function Seo({ description, lang, meta, title, socialImage }) {
           content: metaDescription,
         },
         {
+          name: `robots`,
+          content: `no index, no follow`,
+        },
+        {
           property: `og:title`,
           content: title,
         },
