@@ -26,12 +26,6 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-robots-txt',
-      options: {
-        policy: [{userAgent: '*', disallow: ['/']}]
-      }
-    },
-    {
       resolve: `gatsby-plugin-hotjar`,
       options: {
         includeInDevelopment: false, // optional parameter to include script in development
