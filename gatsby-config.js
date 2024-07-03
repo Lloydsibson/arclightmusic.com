@@ -16,6 +16,7 @@ module.exports = {
     description: `Arclight Music was set up to help struggling schools fund music with music and give young musicians the chance to play shows with bigger names where other promoters...`,
     author: `monocode-uk`,
     siteUrl: `https://www.arclightmusic.co.uk/`,
+    robots: `content='noindex'`
   },
   plugins: [
     {
